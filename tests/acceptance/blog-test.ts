@@ -24,14 +24,14 @@ module('Acceptance | blog', function (hooks) {
     assert.strictEqual(ids[0], [...ids].sort().at(-1), 'newest first');
   });
 
-  test('a post renders its content, tags and author', async function (assert) {
+  test('a post renders its content and tags', async function (assert) {
     await visit('/2021-06-07-an-teallach');
 
     assert.dom('h1').hasText('An Teallach');
     assert.dom('.prose p').exists();
     assert.dom('[data-test-gallery-photo]').exists({ count: 4 });
     assert.dom('a[href="/tag/4-stars"]').hasText('★★★★☆');
-    assert.dom('a[href="/author/michal-bryxi"]').hasText('Michal Bryxi');
+    assert.dom('a[href^="/author/"]').doesNotExist('no author byline');
   });
 
   test('photos next to the Markdown get bundled URLs', async function (assert) {
@@ -62,13 +62,6 @@ module('Acceptance | blog', function (hooks) {
 
     assert.dom('h1').hasText('Munro');
     assert.dom('[data-test-post]').exists({ count: 4 });
-  });
-
-  test('the author page lists all posts', async function (assert) {
-    await visit('/author/michal-bryxi');
-
-    assert.dom('h1').hasText('Michal Bryxi');
-    assert.true(document.querySelectorAll('[data-test-post]').length >= 21);
   });
 
   test('a static page renders', async function (assert) {

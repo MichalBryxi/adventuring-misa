@@ -32,7 +32,6 @@ export const PostSchema = withDefaults({
     // Only loaded with the single post, the list pages don't need it
     { kind: 'field', name: 'html' },
     toMany('tags', 'tag'),
-    toMany('authors', 'author'),
   ],
 });
 
@@ -53,33 +52,12 @@ export const TagSchema = withDefaults({
   ],
 });
 
-export const AuthorSchema = withDefaults({
-  type: 'author',
-  fields: [
-    { kind: 'field', name: 'name' },
-    { kind: 'field', name: 'image' },
-    { kind: 'field', name: 'website' },
-    { kind: 'field', name: 'location' },
-    { kind: 'field', name: 'excerpt' },
-  ],
-});
-
-export const schemas = [PostSchema, PageSchema, TagSchema, AuthorSchema];
+export const schemas = [PostSchema, PageSchema, TagSchema];
 
 export interface Tag {
   [Type]: 'tag';
   id: string;
   name: string;
-  excerpt: string;
-}
-
-export interface Author {
-  [Type]: 'author';
-  id: string;
-  name: string;
-  image?: string;
-  website?: string;
-  location?: string;
   excerpt: string;
 }
 
@@ -123,7 +101,6 @@ export interface Post {
   gear?: GearItem[];
   html?: string;
   tags: Tag[];
-  authors: Author[];
 }
 
 export interface Page {

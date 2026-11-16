@@ -1,4 +1,4 @@
-// Checks the production build (pnpm build): every post, page, tag and author
+// Checks the production build (pnpm build): every post, page and tag
 // was prerendered with its content, and the feed exists.
 //
 // Usage: pnpm build && pnpm test:output
@@ -82,21 +82,13 @@ for (const post of posts) {
       assert.match(link, /href="\/assets\/[^"]+-\d+w-[^"]+\.jpg"/);
     }
 
-    for (const author of post.authors ?? []) {
-      assert.match(html, new RegExp(`href="/author/${author}"`));
-    }
+    assert.doesNotMatch(html, /href="\/author\//, 'no author byline');
   });
 }
 
 for (const tag of new Set(posts.flatMap((post) => post.tags ?? []))) {
   test(`tag ${tag}`, () => {
     assert.match(page(`/tag/${tag}`), /data-test-post=/);
-  });
-}
-
-for (const author of readAll(root, 'authors')) {
-  test(`author ${author.id}`, () => {
-    assert.match(page(`/author/${author.id}`), /data-test-post=/);
   });
 }
 

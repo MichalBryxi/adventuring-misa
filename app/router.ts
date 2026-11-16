@@ -12,6 +12,5 @@ Router.map(function () {
   this.route('post', { path: '/:post_id' });
   this.route('page', { path: '/page/:page_id' });
   this.route('tag', { path: '/tag/:tag_id' });
-  this.route('author', { path: '/author/:author_id' });
   this.route('not-found', { path: '/*path' });
 });

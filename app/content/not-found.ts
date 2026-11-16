@@ -1,5 +1,5 @@
 /**
- * An unknown post, page, tag or author renders the 404 page in place,
+ * An unknown post, page or tag renders the 404 page in place,
  * keeping the URL, instead of failing the route.
  */
 export async function orNotFound<Model>(load: () => Promise<Model>) {

@@ -8,10 +8,10 @@ import { schemas } from './schemas.ts';
  * which the build turns into modules (see lib/vite-plugin-blog.mjs).
  *
  *   GET /posts                 all posts, newest first
- *   GET /posts?tag=munro       posts with a tag (or ?author=)
+ *   GET /posts?tag=munro       posts with a tag
  *   GET /posts/<id>            one post, with its HTML
  *   GET /pages/<id>            one page, with its HTML
- *   GET /tags/<id>, /authors/<id>
+ *   GET /tags/<id>
  *
  * The front matter of every file is bundled; the HTML of a post or page
  * is a separate chunk, loaded when that post is opened.
@@ -37,11 +37,6 @@ const META = {
     import: 'default',
     eager: true,
   }),
-  authors: import.meta.glob<Meta>('/content/authors/*.md', {
-    query: '?meta',
-    import: 'default',
-    eager: true,
-  }),
 };
 
 const HTML: Partial<Record<keyof typeof META, Record<string, Loader>>> = {
@@ -57,7 +52,6 @@ const TYPES = {
   posts: 'post',
   pages: 'page',
   tags: 'tag',
-  authors: 'author',
 } as const;
 
 type Collection = keyof typeof META;
@@ -74,7 +68,6 @@ const INDEX = {
   posts: byId('posts'),
   pages: byId('pages'),
   tags: byId('tags'),
-  authors: byId('authors'),
 };
 
 const POSTS = [...INDEX.posts.values()]
@@ -117,33 +110,23 @@ function resource(collection: Collection, meta: Meta, html?: string) {
     ...(collection === 'posts' && {
       relationships: {
         tags: relationship('tag', meta.tags, `/posts/${meta.id}/tags`),
-        authors: relationship(
-          'author',
-          meta.authors,
-          `/posts/${meta.id}/authors`,
-        ),
       },
     }),
   };
 }
 
 /**
- * The tags and authors of the posts in a response.
+ * The tags of the posts in a response.
  */
 function included(posts: Meta[]) {
-  const ids = (key: 'tags' | 'authors') =>
-    new Set(posts.flatMap((post) => (post[key] as string[] | undefined) ?? []));
+  const ids = new Set(
+    posts.flatMap((post) => (post.tags as string[] | undefined) ?? []),
+  );
 
-  return [
-    ...[...ids('tags')].flatMap((id) => {
-      const entry = INDEX.tags.get(id);
-      return entry ? [resource('tags', entry.meta)] : [];
-    }),
-    ...[...ids('authors')].flatMap((id) => {
-      const entry = INDEX.authors.get(id);
-      return entry ? [resource('authors', entry.meta)] : [];
-    }),
-  ];
+  return [...ids].flatMap((id) => {
+    const entry = INDEX.tags.get(id);
+    return entry ? [resource('tags', entry.meta)] : [];
+  });
 }
 
 class NotFoundError extends Error {
@@ -165,12 +148,9 @@ async function findOne(collection: Collection, id: string) {
 
 function findPosts(filters: URLSearchParams) {
   const tag = filters.get('tag');
-  const author = filters.get('author');
 
   const posts = POSTS.filter(
-    (post) =>
-      (!tag || (post.tags as string[] | undefined)?.includes(tag)) &&
-      (!author || (post.authors as string[] | undefined)?.includes(author)),
+    (post) => !tag || (post.tags as string[] | undefined)?.includes(tag),
   );
 
   return {

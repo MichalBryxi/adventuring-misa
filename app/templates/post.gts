@@ -47,14 +47,6 @@ export default <template>
               class="order-first flex flex-wrap items-center gap-x-3 font-mono text-sm/7 text-slate-500"
             >
               <FormattedDate @date={{post.date}} />
-              {{#each post.authors as |author|}}
-                <span aria-hidden="true">/</span>
-                <LinkTo
-                  @route="author"
-                  @model={{author.id}}
-                  class="hover:text-slate-700"
-                >{{author.name}}</LinkTo>
-              {{/each}}
             </p>
             {{#if post.tags}}
               <ul

@@ -1,5 +1,5 @@
 [build]
-  # test:output fails the deploy if a post, page, tag or author wasn't prerendered
+  # test:output fails the deploy if a post, page or tag wasn't prerendered
   command = "pnpm build && pnpm test:output"
   publish = "dist"
 
@@ -39,6 +39,12 @@
     Content-Type = "application/vnd.google-earth.kml+xml"
 
 # The Katzenwegli post was first published under its old route name
+# There are no author pages: the whole blog is mine
+[[redirects]]
+  from = "/author/*"
+  to = "/"
+  status = 301
+
 [[redirects]]
   from = "/2026-11-15-chatzenpfad-t6"
   to = "/2026-11-15-katzenwegli-t6/"
