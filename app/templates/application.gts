@@ -10,18 +10,6 @@ import { Ridge } from '../components/ridge.gts';
 
 import type { TOC } from '@ember/component/template-only';
 
-const About: TOC<{ Element: HTMLElement }> = <template>
-  <section ...attributes>
-    <h2
-      class="flex items-center font-mono text-sm/7 font-medium text-slate-900"
-    >
-      <span class="h-2.5 w-2.5 rounded-full bg-emerald-300"></span>
-      <span class="ml-2.5">About</span>
-    </h2>
-    <p class="mt-2 text-base/7 text-slate-700">{{site.about}}</p>
-  </section>
-</template>;
-
 const Explore: TOC<{ Element: HTMLElement }> = <template>
   <section ...attributes>
     <h2
@@ -97,7 +85,6 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
             {{site.description}}
           </p>
         </div>
-        <About class="mt-12 hidden lg:block" />
         <Explore class="mt-10 lg:mt-12" />
       </div>
     </header>
@@ -115,8 +102,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
       class="border-t border-slate-200 bg-slate-50 py-10 sm:py-16 lg:hidden"
     >
       <div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4">
-        <About />
-        <p class="mt-8 font-mono text-sm/7 text-slate-500">
+        <p class="font-mono text-sm/7 text-slate-500">
           Written by
           <LinkTo
             @route="about-me"
