@@ -11,7 +11,7 @@ export default <template>
 
   <div class="pt-16 pb-12 sm:pb-4 lg:pt-12">
     <Container>
-      <h1 class="text-2xl/7 font-bold text-slate-900">Stories</h1>
+      <h1 class="text-2xl/7 font-bold text-slate-900">Adventures</h1>
       <p class="sr-only">{{site.description}}</p>
     </Container>
     <PostList @posts={{@model.posts}} />
