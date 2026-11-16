@@ -1,0 +1,41 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## What this is
+
+"Adventuring Míša" — a personal outdoor blog (trail running, hiking, T6 scrambles, Munros, gear reviews). It replaces `../sportsting-misa` (empress-blog), keeping its URLs. It is a compatless (Polaris) Ember 7 app on Vite, with WarpDrive for data and Tailwind CSS 4 for styling; the layout is adapted from the Tailwind Plus "Transmit" template (`~/Downloads/tailwind-plus-transmit`). Every page is prerendered to static HTML at build time and the app rehydrates it in the browser.
+
+## Commands
+
+Node 24 + pnpm 10 (`.node-version`, `mise.toml`, `packageManager`, `netlify.toml` — keep them in sync).
+
+- `pnpm start` — dev server (Vite, http://localhost:4200), content edits reload live
+- `pnpm build` — production build into `dist/`, including the prerender of every route
+- `pnpm test:output` — after `pnpm build`: every post/page/tag/author was prerendered with its content, RSS is complete (`tests/output/`, `node --test`). Netlify runs it after the build.
+- `pnpm test` — builds in test mode (no prerender) and runs the QUnit acceptance tests in headless Chrome against the real content
+- `pnpm lint` / `pnpm lint:fix`, `pnpm lint:types` (Glint)
+
+## Content
+
+All content is Markdown under `content/`, front matter in YAML:
+
+- `content/posts/<slug>/index.md` — a post; its photos and files sit next to it and are referenced relatively (`![…](./01.jpg)`, `image: ./cover.jpg`). The folder name is the URL (`/<slug>`), dated `YYYY-MM-DD-…`. Cross-links to other posts are absolute paths (`/2021-06-07-an-teallach`).
+- `content/pages/<slug>/index.md` — standalone pages (`/page/<slug>`)
+- `content/tags/<id>.md` — `name:` plus a description body. Every tag a post uses needs a file here (the build fails otherwise). Ratings are tags `1-star` … `5-stars`.
+- `content/authors/<id>.md`
+- `content/cover.jpg` — the sidebar image
+- `public/gpx/` — GPX/KML route files. They stay outside the bundler because the swisstopo map embed needs a stable absolute URL for the KML.
+
+Markdown is not prettier-formatted.
+
+## How it fits together
+
+- `lib/vite-plugin-blog.mjs` makes the Markdown importable: `index.md?meta` is the front matter plus an excerpt, `index.md` is the rendered HTML (`lib/markdown.mjs`, unified/remark/rehype with GFM tables and raw HTML). Relative asset paths become imports, so Vite fingerprints the photos. It also writes `rss.xml`.
+- `app/content/handler.ts` is a WarpDrive request handler that answers JSON:API requests (`/posts`, `/posts/<id>`, `/tags/<id>`, …) from those modules — there is no server or fetch. Front matter of everything is in the main bundle; a post's HTML is a lazy chunk. Only front-matter keys that have a field in `app/content/schemas.ts` reach the store: add a field there to use a new key.
+- Photos are resized at build time by `@responsive-image/vite-plugin` (480/960/1440 px, WebP + JPEG; `vite.config.mjs`). The blog plugin imports every relative photo with `?responsive`: photos in the Markdown get `srcset`/`sizes`/`width`/`height` from `app/content/photo.ts`, covers are rendered with `<ResponsiveImage>` and looked up in `app/content/covers.ts` (the `cover` export of the `?meta` module, kept out of the store), and the RSS feed links the 960 px JPEGs. The first build encodes every photo and is slow; later builds use the plugin's cache.
+- `app/content/requests.ts` — the requests the routes make; `app/routes/*` await them so the prerender has the data.
+- `site.mjs` — title, description, sidebar text and navigation, shared by the app and the build.
+- Prerendering is `vite-ember-ssr`'s `emberSsg` (`vite.config.mjs`); the route list comes from `lib/content.mjs`. `app/app-ssr.ts` is its entry, `app/entry.ts` rehydrates in the browser. The SSG plugin is limited to `vite build`: its `closeBundle` also runs when a dev server stops or restarts and would prerender over `dist/`. vite-ember-ssr only supports compatless apps: no `@embroider/compat`, no `ember-cli-build`, no classic addons.
+- Styling: Tailwind utility classes in the `.gts` templates; post bodies use `@tailwindcss/typography` (`app/components/prose.gts`).
+- `netlify.toml` — CSP and other headers, GPX headers, redirects of old URLs.
