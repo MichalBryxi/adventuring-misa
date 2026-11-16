@@ -67,6 +67,8 @@ export interface Tag {
 export interface Facts {
   date?: string;
   grade?: string;
+  /** Places on the way, in order; altitude in m */
+  points?: { name: string; altitude?: number; link?: string }[];
   /** km */
   distance?: number;
   /** m */
