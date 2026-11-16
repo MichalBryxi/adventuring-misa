@@ -111,5 +111,8 @@
     "edition": "octane"
   },
   "type": "module",
-  "packageManager": "pnpm@10.34.9"
+  "packageManager": "pnpm@10.34.9",
+  "dependencies": {
+    "ember-intl": "9.4.0"
+  }
 }
