@@ -3,6 +3,10 @@ import { click, currentURL, triggerKeyEvent, visit } from '@ember/test-helpers';
 
 import { setupApplicationTest } from '../helpers/index.ts';
 
+import { allPosts } from '../../app/content/requests.ts';
+
+import type Store from '../../app/services/store.ts';
+
 // These run the real app against the real content/
 module('Acceptance | blog', function (hooks) {
   setupApplicationTest(hooks);
@@ -116,5 +120,29 @@ module('Acceptance | blog', function (hooks) {
 
     await click('[data-test-lightbox-close]');
     assert.dom('[data-test-lightbox]').doesNotExist();
+  });
+
+  test('a post shows its facts before the story', async function (assert) {
+    await visit('/2026-11-15-katzenwegli-t6');
+
+    assert.dom('[data-test-facts]').exists();
+    assert.dom('[data-test-fact="Ascent"] td').hasText('1,820 m');
+    assert.dom('[data-test-fact="Time"] td').hasText('5 h 36 min');
+    assert
+      .dom('[data-test-fact="Grade"] a')
+      .hasText('T6')
+      .hasAttribute('href', /SAC-Wanderskala/);
+    assert.dom('[data-test-fact="Links"] a').hasText('Strava');
+  });
+
+  test('posts can be filtered by their facts', async function (assert) {
+    const store = this.owner.lookup('service:store') as Store;
+    const { content } = await store.request(allPosts());
+
+    const bigClimbs = content.data
+      .filter((post) => (post.facts?.ascent ?? 0) > 2000)
+      .map((post) => post.id);
+
+    assert.deepEqual(bigClimbs, ['2019-09-21-salomon-ring-of-steall-skyrace']);
   });
 });

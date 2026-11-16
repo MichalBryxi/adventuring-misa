@@ -58,6 +58,13 @@ for (const post of posts) {
     }
     assert.match(html, /<meta property="og:title"/);
 
+    // The facts: front matter, as a table before the story
+    assert.equal(
+      /data-test-facts/.test(html),
+      post.facts !== undefined,
+      'facts table',
+    );
+
     // The gallery: front matter, each photo a link to its largest JPEG
     // (1440 px, or less for a smaller original)
     const gallery = post.gallery ?? [];
@@ -104,6 +111,8 @@ test('the RSS feed has every post, with absolute image URLs', () => {
   assert.doesNotMatch(rss, /src="\.\//, 'relative image URLs in the feed');
   assert.doesNotMatch(rss, /__(ASSET|PHOTO)_\d+__/);
   assert.match(rss, /<enclosure url="https:\/\/[^"]+-960w-[^"]+\.jpg"/);
+  // So are the facts tables
+  assert.match(rss, /<th>Ascent<\/th><td>1,820 m<\/td>/);
   // Gallery photos are in the feed too
   assert.match(rss, /Photo gallery/);
 });
