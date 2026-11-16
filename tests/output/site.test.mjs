@@ -1,0 +1,97 @@
+// Checks the production build (pnpm build): every post, page, tag and author
+// was prerendered with its content, and the feed exists.
+//
+// Usage: pnpm build && pnpm test:output
+
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+
+import { readAll } from '../../lib/content.mjs';
+import site from '../../site.mjs';
+
+const root = join(import.meta.dirname, '../..');
+const dist = join(root, 'dist');
+
+const escape = (text) =>
+  String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+function page(url) {
+  const file = join(dist, url, 'index.html');
+
+  assert.ok(existsSync(file), `${url} was not prerendered`);
+
+  return readFileSync(file, 'utf8');
+}
+
+function titleOf(html) {
+  return html.match(/<title>([^<]*)<\/title>/)?.[1];
+}
+
+const posts = readAll(root, 'posts');
+
+test('the index lists every post', () => {
+  const html = page('/');
+
+  assert.equal(titleOf(html), escape(site.title));
+
+  for (const post of posts) {
+    assert.match(html, new RegExp(`data-test-post="${post.id}"`), post.id);
+  }
+});
+
+for (const post of posts) {
+  test(`post ${post.id}`, () => {
+    const html = page(`/${post.id}`);
+
+    assert.equal(titleOf(html), escape(`${post.title} – ${site.title}`));
+    assert.match(html, /class="prose/);
+    // Photos are resized (lib/vite-plugin-blog.mjs, app/content/photo.ts)
+    assert.doesNotMatch(html, /<img[^>]*src="\.\//, 'unbundled photo');
+    if (/<img[^>]*loading="lazy"/.test(html)) {
+      assert.match(html, /srcset="[^"]*480w/, 'photos without srcset');
+    }
+    assert.match(html, /<meta property="og:title"/);
+
+    for (const author of post.authors ?? []) {
+      assert.match(html, new RegExp(`href="/author/${author}"`));
+    }
+  });
+}
+
+for (const tag of new Set(posts.flatMap((post) => post.tags ?? []))) {
+  test(`tag ${tag}`, () => {
+    assert.match(page(`/tag/${tag}`), /data-test-post=/);
+  });
+}
+
+for (const author of readAll(root, 'authors')) {
+  test(`author ${author.id}`, () => {
+    assert.match(page(`/author/${author.id}`), /data-test-post=/);
+  });
+}
+
+for (const { id, title } of readAll(root, 'pages')) {
+  test(`page ${id}`, () => {
+    assert.equal(
+      titleOf(page(`/page/${id}`)),
+      escape(`${title} – ${site.title}`),
+    );
+  });
+}
+
+test('the RSS feed has every post, with absolute image URLs', () => {
+  const rss = readFileSync(join(dist, 'rss.xml'), 'utf8');
+
+  for (const post of posts)
+    assert.ok(rss.includes(`/${post.id}</link>`), post.id);
+
+  assert.doesNotMatch(rss, /src="\.\//, 'relative image URLs in the feed');
+  assert.doesNotMatch(rss, /__(ASSET|PHOTO)_\d+__/);
+  assert.match(rss, /<enclosure url="https:\/\/[^"]+-960w-[^"]+\.jpg"/);
+});
