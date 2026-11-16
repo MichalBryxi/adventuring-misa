@@ -32,6 +32,10 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-gallery-photo]').exists({ count: 4 });
     assert.dom('a[href="/tag/4-stars"]').hasText('★★★★☆');
     assert.dom('a[href^="/author/"]').doesNotExist('no author byline');
+    assert
+      .dom('[data-test-owner]')
+      .exists({ count: 2 }, 'sidebar and footer')
+      .hasAttribute('href', '/page/about-me');
   });
 
   test('photos next to the Markdown get bundled URLs', async function (assert) {
