@@ -68,11 +68,15 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-post]').exists({ count: 4 });
   });
 
-  test('a static page renders', async function (assert) {
+  test('the About me page renders its sections', async function (assert) {
     await visit('/page/about-me');
 
     assert.dom('h1').hasText('Michal Bryxí');
-    assert.dom('.prose a[href*="strava.com"]').exists();
+    assert.dom('[data-test-card="Paragliding"]').includesText('IPPI 4');
+    assert
+      .dom('[data-test-timeline="Basic avalanche training"] time')
+      .hasText('Feb 2024');
+    assert.dom('[data-test-link="Strava"]').hasAttribute('href', /strava\.com/);
   });
 
   test('an unknown post is a 404', async function (assert) {

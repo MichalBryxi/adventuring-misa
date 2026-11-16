@@ -92,6 +92,13 @@ for (const tag of new Set(posts.flatMap((post) => post.tags ?? []))) {
   });
 }
 
+test('page about-me', () => {
+  const html = page('/page/about-me');
+
+  assert.equal(titleOf(html), escape(`Michal Bryxí – ${site.title}`));
+  assert.match(html, /data-test-section="Outdoors"/);
+});
+
 for (const { id, title } of readAll(root, 'pages')) {
   test(`page ${id}`, () => {
     assert.equal(
