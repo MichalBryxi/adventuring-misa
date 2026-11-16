@@ -1,0 +1,5 @@
+---
+name: Schweiz
+image:
+imageMeta:
+---
