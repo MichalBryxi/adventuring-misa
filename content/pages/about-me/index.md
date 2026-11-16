@@ -29,8 +29,6 @@ Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburg
 - [SAC boulder route-setting course](https://www.sac-cas.ch/de/leistungssport/sportklettern/routenbaukurse/) (2024)
 - Paragliding licence: IPPI 4
 
-My [outdoor CV](https://michalbryxi.github.io/2025/Michal_Bryxi_outdoor_CV.pdf) has all of it in one place.
-
 ## Behind the screen
 
 By day I'm a full-stack web developer, mostly with [Ember.js](https://emberjs.com). I've built front ends at Puppet and CrowdStrike, and for eleven years I've run [beauty-pay.cz](https://beauty-pay.cz), a booking and management app for beauty salons. At [EmberFest 2026](https://emberfest.eu) in Prague I gave a talk about it: [4,207 Days of Uptime: Evolving an Ember App Without a Rewrite](https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime).
@@ -43,5 +41,6 @@ Some of the code ends up outdoors too: [Magic Pass places as GPX](/2023-05-10-ma
 - [Mastodon](https://mastodon.world/@MichalBryxi)
 - [GitHub](https://github.com/MichalBryxi)
 - [LinkedIn](https://www.linkedin.com/in/michalbryxi)
+- [Outdoor CV](https://michalbryxi.github.io/2025/Michal_Bryxi_outdoor_CV.pdf) (PDF)
 - [RSS feed](/rss.xml) of this blog
 - [Sportsting Míša](https://sportsting-misa.pudr.com), the blog before this one
