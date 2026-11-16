@@ -16,6 +16,8 @@ Write a post: create `content/posts/YYYY-MM-DD-slug/index.md`, put its photos ne
 
 ## Licence
 
-- **Code**: [MIT](LICENSE).
+This is the source of my own website, not a blog template or theme to build yours from.
+
+- **Code**: [MIT](LICENSE), except the layout files listed in [`LICENSE`](LICENSE).
+- **Design**: the layout (`app/templates/` and a few components) is derived from [Transmit](https://tailwindcss.com/plus/templates/transmit), a [Tailwind Plus](https://tailwindcss.com/plus) template. Tailwind Labs Inc. owns its copyright, and it is used here under the [Tailwind Plus licence](https://tailwindcss.com/plus/license), which covers this site only. Those files are not MIT licensed: please don't copy them for your own site.
 - **Content** (posts, pages, photos in `content/`, routes in `public/gpx/`): © Michal Bryxí, [CC BY-NC-SA 4.0](content/LICENSE.md).
-- **Design**: the layout is derived from [Transmit](https://tailwindcss.com/plus/templates/transmit), a [Tailwind Plus](https://tailwindcss.com/plus) template, used here under the [Tailwind Plus licence](https://tailwindcss.com/plus/license). That licence doesn't allow re-distributing the template or its derivatives on their own, so please don't extract the layout as a theme for your own site.

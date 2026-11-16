@@ -4,7 +4,7 @@
   "private": true,
   "description": "Adventuring Míša — a personal outdoor blog, built with Ember, WarpDrive, Vite and Tailwind",
   "repository": "github:MichalBryxi/adventuring-misa",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "author": "Michal Bryxí",
   "exports": {
     "./tests/*": "./tests/*",

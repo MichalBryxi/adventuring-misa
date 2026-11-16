@@ -1,3 +1,25 @@
+Scope
+
+This MIT licence covers the code in this repository EXCEPT:
+
+1. The page layout and styling derived from "Transmit", a Tailwind Plus
+   template (https://tailwindcss.com/plus/templates/transmit), copyright
+   Tailwind Labs Inc. These files are used under the Tailwind Plus licence
+   (https://tailwindcss.com/plus/license) as part of this website, and no
+   licence to them is granted to you:
+
+     app/templates/  (all files)
+     app/components/container.gts
+     app/components/formatted-date.gts
+     app/components/not-found.gts
+     app/components/post-list.gts
+     app/components/prose.gts
+
+2. The posts, pages, photos and route files in content/ and public/gpx/,
+   licensed under CC BY-NC-SA 4.0, see content/LICENSE.md.
+
+---
+
 MIT License
 
 Copyright (c) 2026 Michal Bryxí
