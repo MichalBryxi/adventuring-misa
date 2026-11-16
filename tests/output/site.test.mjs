@@ -58,6 +58,16 @@ for (const post of posts) {
     }
     assert.match(html, /<meta property="og:title"/);
 
+    // The gallery: front matter, each photo a link to its largest JPEG
+    // (1440 px, or less for a smaller original)
+    const gallery = post.gallery ?? [];
+    const links = html.match(/<a [^>]*data-test-gallery-photo[^>]*>/g) ?? [];
+
+    assert.equal(links.length, gallery.length, 'gallery photos');
+    for (const link of links) {
+      assert.match(link, /href="\/assets\/[^"]+-\d+w-[^"]+\.jpg"/);
+    }
+
     for (const author of post.authors ?? []) {
       assert.match(html, new RegExp(`href="/author/${author}"`));
     }
@@ -94,4 +104,6 @@ test('the RSS feed has every post, with absolute image URLs', () => {
   assert.doesNotMatch(rss, /src="\.\//, 'relative image URLs in the feed');
   assert.doesNotMatch(rss, /__(ASSET|PHOTO)_\d+__/);
   assert.match(rss, /<enclosure url="https:\/\/[^"]+-960w-[^"]+\.jpg"/);
+  // Gallery photos are in the feed too
+  assert.match(rss, /Photo gallery/);
 });

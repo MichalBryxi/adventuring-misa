@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { click, currentURL, visit } from '@ember/test-helpers';
+import { click, currentURL, triggerKeyEvent, visit } from '@ember/test-helpers';
 
 import { setupApplicationTest } from '../helpers/index.ts';
 
@@ -24,16 +24,26 @@ module('Acceptance | blog', function (hooks) {
     await visit('/2021-06-07-an-teallach');
 
     assert.dom('h1').hasText('An Teallach');
-    assert.dom('.prose img').exists();
+    assert.dom('.prose p').exists();
+    assert.dom('[data-test-gallery-photo]').exists({ count: 4 });
     assert.dom('a[href="/tag/4-stars"]').hasText('★★★★☆');
     assert.dom('a[href="/author/michal-bryxi"]').hasText('Michal Bryxi');
   });
 
   test('photos next to the Markdown get bundled URLs', async function (assert) {
-    await visit('/2026-11-15-katzenwegli-t6');
+    // A post that keeps its screenshots in the text, and one with a gallery
+    await visit('/2024-01-01-windy-colour-scale-of-wind-for-paragliding');
 
     const sources = [...document.querySelectorAll('.prose img')].map(
       (img) => img.getAttribute('src') ?? '',
+    );
+
+    await visit('/2026-11-15-katzenwegli-t6');
+
+    sources.push(
+      ...[...document.querySelectorAll('[data-test-gallery] img')].map(
+        (img) => img.getAttribute('src') ?? '',
+      ),
     );
 
     assert.true(sources.length > 0);
@@ -76,5 +86,35 @@ module('Acceptance | blog', function (hooks) {
 
     assert.strictEqual(currentURL(), '/2021-06-07-an-teallach');
     assert.dom('h1').hasText('An Teallach');
+  });
+
+  test('a photo from the gallery opens in a lightbox', async function (assert) {
+    await visit('/2026-11-15-katzenwegli-t6');
+
+    assert.dom('[data-test-gallery-photo]').exists({ count: 8 });
+    assert.dom('[data-test-lightbox]').doesNotExist();
+
+    await click('[data-test-gallery-photo]');
+
+    assert.dom('[data-test-lightbox]').exists();
+    assert.true(
+      (document.querySelector('[data-test-lightbox]') as HTMLDialogElement)
+        .open,
+      'opens as a modal dialog',
+    );
+    assert.dom('[data-test-lightbox-position]').hasText('1 / 8');
+    assert.dom('[data-test-lightbox-caption]').hasAnyText();
+
+    await click('[data-test-lightbox-next]');
+    assert.dom('[data-test-lightbox-position]').hasText('2 / 8');
+
+    await triggerKeyEvent('[data-test-lightbox]', 'keydown', 'ArrowLeft');
+    await triggerKeyEvent('[data-test-lightbox]', 'keydown', 'ArrowLeft');
+    assert
+      .dom('[data-test-lightbox-position]')
+      .hasText('8 / 8', 'wraps around');
+
+    await click('[data-test-lightbox-close]');
+    assert.dom('[data-test-lightbox]').doesNotExist();
   });
 });
