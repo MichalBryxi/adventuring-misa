@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
+/* Frontile: the drawer of the mobile menu (app/components/mobile-nav.gts) */
+@import "@frontile/theme";
+
 @plugin "@tailwindcss/typography";
+@plugin "@frontile/theme/plugin/default";
+
+/* Tailwind doesn't look in node_modules: Frontile's own classes */
+@source "../../node_modules/frontile";
+@source "../../node_modules/@frontile";
 
 @theme {
   --font-sans:
