@@ -39,9 +39,17 @@ facts:
     "SAC route": "[Von Stechelberg über das Katzenwegli](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)"
     "Start / finish": "[Stechelberg](https://en.wikipedia.org/wiki/Stechelberg), 910 m"
     "Destination": "[Silberhornhütte](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/), 2663 m (turned back at ~2650 m)"
-    "Gear": "microspikes; no ice axe (mistake ⚠️); no rope"
   links:
     "Strava": "https://www.strava.com/activities/11735388468"
+gear:
+  - item: Microspikes
+    packed: true
+  - item: Ice axe
+    packed: false
+    note: "⚠️ Mistake. On the snowfield on the way down I had nothing for my hands and no way to stop a slide."
+  - item: Rope
+    packed: false
+    note: "The waterfall traverse has bolts for anyone carrying a rope. Without one, I made a move I couldn't reverse."
 ---
 
 *The T6 that taught me what “mandatory” means.*
