@@ -5,7 +5,7 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-date: Sun Nov 15 2026 12:00:00 GMT+0100 (Central European Standard Time)
+date: Tue Jun 25 2024 12:00:00 GMT+0200 (Central European Summer Time)
 tags:
   - hiking
   - schweiz
@@ -28,7 +28,6 @@ gallery:
   - src: ./08.jpg
     caption: "Stream hopping on the way down"
 facts:
-  date: "2024-06-25"
   grade: "T6"
   points:
     - name: "Stechelberg"

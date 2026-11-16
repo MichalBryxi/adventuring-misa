@@ -5,7 +5,7 @@ imageMeta:
   attribution: Leo Francis Photography
   attributionLink: https://instagram.com/leofrancisphotography?igshid=MzRlODBiNWFlZA==
 featured: true
-date: Thu Oct 05 2023 07:27:49 GMT+0200 (GMT+02:00)
+date: Sun Sep 17 2023 07:27:49 GMT+0200 (GMT+02:00)
 tags:
 gallery:
   - src: ./2023-10-05-run-for-love-day1-01.jpg

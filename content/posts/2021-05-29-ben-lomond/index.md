@@ -5,7 +5,7 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-date: Wed May 29 2021 11:56:46 GMT+0100 (British Summer Time)
+date: Sat May 29 2021 11:56:46 GMT+0100 (British Summer Time)
 tags:
   - 2-stars
   - munro
