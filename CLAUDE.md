@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-"Adventuring Míša" — a personal outdoor blog (trail running, hiking, T6 scrambles, Munros, gear reviews). It replaces `../sportsting-misa` (empress-blog), keeping its URLs. It is a compatless (Polaris) Ember 7 app on Vite, with WarpDrive for data and Tailwind CSS 4 for styling; the layout is adapted from the Tailwind Plus "Transmit" template (`~/Downloads/tailwind-plus-transmit`). Every page is prerendered to static HTML at build time and the app rehydrates it in the browser.
+"Adventuring Míša" — a personal outdoor blog (trail running, hiking, T6 scrambles, Munros, gear reviews). It replaces sportsting-misa.pudr.com (`../sportsting-misa`) (empress-blog), keeping its URLs. It is a compatless (Polaris) Ember 7 app on Vite, with WarpDrive for data and Tailwind CSS 4 for styling; the layout is adapted from the Tailwind Plus "Transmit" template (licensed for this site only, see README). Every page is prerendered to static HTML at build time and the app rehydrates it in the browser.
 
 ## Commands
 

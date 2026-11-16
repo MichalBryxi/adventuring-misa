@@ -4,8 +4,8 @@
   "compilerOptions": {
     "allowJs": true,
     "paths": {
-      "adventures-misa/tests/*": ["./tests/*"],
-      "adventures-misa/*": ["./app/*"],
+      "adventuring-misa/tests/*": ["./tests/*"],
+      "adventuring-misa/*": ["./app/*"],
       "*": ["./types/*"]
     },
     "types": [

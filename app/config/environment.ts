@@ -1,5 +1,5 @@
 const ENV = {
-  modulePrefix: 'adventures-misa',
+  modulePrefix: 'adventuring-misa',
   environment: import.meta.env.DEV ? 'development' : 'production',
   rootURL: '/',
   locationType: 'history',
