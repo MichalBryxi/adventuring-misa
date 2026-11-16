@@ -1,0 +1,66 @@
+[build]
+  # test:output fails the deploy if a post, page, tag or author wasn't prerendered
+  command = "pnpm build && pnpm test:output"
+  publish = "dist"
+
+[build.environment]
+  # Node version comes from .node-version
+  PNPM_VERSION = "10.34.9"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # The share-free, analytics-free site: own scripts only. Satoshi comes from
+    # Fontshare; posts embed YouTube and the swisstopo map.
+    Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://api.fontshare.com; font-src 'self' https://cdn.fontshare.com; img-src 'self' https://s.gravatar.com; connect-src 'self'; frame-src https://www.youtube.com/embed/ https://www.youtube-nocookie.com/embed/ https://map.geo.admin.ch/; manifest-src 'self'; base-uri 'self'; form-action 'none'"
+
+# Fingerprinted by Vite: never change, cache forever
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Route files: the swisstopo map viewer (map.geo.admin.ch) fetches the KML cross-origin,
+# and the GPX should download instead of opening as XML
+[[headers]]
+  for = "/gpx/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/gpx/*.gpx"
+  [headers.values]
+    Content-Type = "application/gpx+xml"
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/gpx/*.kml"
+  [headers.values]
+    Content-Type = "application/vnd.google-earth.kml+xml"
+
+# The Katzenwegli post was first published under its old route name
+[[redirects]]
+  from = "/2026-11-15-chatzenpfad-t6"
+  to = "/2026-11-15-katzenwegli-t6/"
+  status = 301
+
+[[redirects]]
+  from = "/2026-11-15-chatzenpfad-t6/*"
+  to = "/2026-11-15-katzenwegli-t6/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/gpx/2026-11-15-chatzenpfad-t6.gpx"
+  to = "/gpx/2026-11-15-katzenwegli-t6.gpx"
+  status = 301
+
+[[redirects]]
+  from = "/gpx/2026-11-15-chatzenpfad-t6.kml"
+  to = "/gpx/2026-11-15-katzenwegli-t6.kml"
+  status = 301
+
+# Anything that wasn't prerendered: the app renders its 404 page
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
