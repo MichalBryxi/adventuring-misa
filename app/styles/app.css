@@ -7,3 +7,8 @@
     "Satoshi", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+/* The page behind an open photo (app/components/gallery.gts) stays put */
+html:has(dialog[open]) {
+  overflow: hidden;
+}

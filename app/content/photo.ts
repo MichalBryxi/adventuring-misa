@@ -22,9 +22,7 @@ export function photoAttributes(photo: ImageData) {
   const height = photo.aspectRatio
     ? Math.round(fallback / photo.aspectRatio)
     : undefined;
-  const srcset = widths
-    .map((width) => `${photo.imageUrlFor(width, 'webp')} ${width}w`)
-    .join(', ');
+  const srcset = srcsetOf(photo);
 
   return [
     `src="${photo.imageUrlFor(fallback, 'jpeg')}"`,
@@ -33,6 +31,25 @@ export function photoAttributes(photo: ImageData) {
     `width="${fallback}"`,
     height ? `height="${height}"` : '',
   ].join(' ');
+}
+
+/**
+ * Every width of a photo, for the browser to pick from.
+ */
+export function srcsetOf(photo: ImageData, format: 'webp' | 'jpeg' = 'webp') {
+  return (photo.availableWidths ?? PHOTO_WIDTHS)
+    .map((width) => `${photo.imageUrlFor(width, format)} ${width}w`)
+    .join(', ');
+}
+
+/**
+ * The largest JPEG, for links to a photo.
+ */
+export function largestUrl(photo: ImageData) {
+  return photo.imageUrlFor(
+    (photo.availableWidths ?? PHOTO_WIDTHS).at(-1) ?? 1440,
+    'jpeg',
+  );
 }
 
 /**

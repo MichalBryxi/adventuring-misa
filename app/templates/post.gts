@@ -7,11 +7,13 @@ import { Container } from '../components/container.gts';
 import { postCover } from '../content/covers.ts';
 import { PROSE_SIZES, photoUrl } from '../content/photo.ts';
 import { FormattedDate } from '../components/formatted-date.gts';
+import { Gallery } from '../components/gallery.gts';
 import { Head } from '../components/head.gts';
 import { NotFound } from '../components/not-found.gts';
 import { Prose } from '../components/prose.gts';
 
 import type { TOC } from '@ember/component/template-only';
+import type { GalleryPhoto } from '../content/gallery.ts';
 import type { Post } from '../content/schemas.ts';
 
 const path = (id: string) => `/${id}`;
@@ -101,6 +103,10 @@ export default <template>
             <Prose @html={{post.html}} />
           {{/if}}
 
+          {{#if @model.gallery.length}}
+            <Gallery @photos={{@model.gallery}} />
+          {{/if}}
+
           <nav
             class="mt-16 grid gap-6 border-t border-slate-200 pt-8 text-sm/6 font-bold sm:grid-cols-2"
             aria-label="More stories"
@@ -127,5 +133,12 @@ export default <template>
     <NotFound />
   {{/if}}
 </template> satisfies TOC<{
-  Args: { model: { post: Post; newer?: Post; older?: Post } | null };
+  Args: {
+    model: {
+      post: Post;
+      newer?: Post;
+      older?: Post;
+      gallery: GalleryPhoto[];
+    } | null;
+  };
 }>;
