@@ -21,7 +21,13 @@ Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburg
 - **Biking.** Bikepacking from Czechia to the sea, from Havana to the westernmost point of Cuba, and along part of Ireland's Wild Atlantic Way. I'm an active [Warmshowers](https://www.warmshowers.org) host, so if you're cycling through Interlaken, get in touch.
 - **Guiding.** I've guided e-bike tours around Interlaken, for Loop Tours in 2024 and [Flying Wheels](https://www.flyingwheels.ch) in 2025.
 
-Courses I've done recently: first aid (2024), basic avalanche training (2024), powder skiing at the [Cool School](https://www.coolschool.ch/) in the Lötschental (2024), and the [SAC boulder route-setting course](https://www.sac-cas.ch/de/leistungssport/sportklettern/routenbaukurse/) (2024).
+## Courses & certificates
+
+- First aid (2024)
+- Basic avalanche training (2024)
+- Powder skiing at the [Cool School](https://www.coolschool.ch/) in the Lötschental (2024)
+- [SAC boulder route-setting course](https://www.sac-cas.ch/de/leistungssport/sportklettern/routenbaukurse/) (2024)
+- Paragliding licence: IPPI 4
 
 My [outdoor CV](https://michalbryxi.github.io/2025/Michal_Bryxi_outdoor_CV.pdf) has all of it in one place.
 
