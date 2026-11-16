@@ -14,8 +14,10 @@ This MIT licence covers the code in this repository EXCEPT:
      app/components/not-found.gts
      app/components/post-list.gts
      app/components/prose.gts
+     app/components/sections.gts
 
 2. The posts, pages, photos and route files in content/ and public/gpx/,
+   and the text of the About me page in app/templates/about-me.gts,
    licensed under CC BY-NC-SA 4.0, see content/LICENSE.md.
 
 ---
