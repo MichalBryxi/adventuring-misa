@@ -77,12 +77,7 @@ export class TagFilter extends Component<{ Element: HTMLElement }> {
           class="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 leading-none font-medium lg:justify-start"
         >
           {{#each group.tags as |tag|}}
-            <li class="flex items-baseline gap-1">
-              <TagLink @tag={{tag}} @selected={{this.selected}} />
-              <span
-                class="font-mono text-xs text-slate-400"
-              >{{tag.count}}</span>
-            </li>
+            <li><TagLink @tag={{tag}} @selected={{this.selected}} /></li>
           {{/each}}
         </ul>
       {{/each}}
