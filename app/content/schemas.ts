@@ -25,6 +25,8 @@ export const PostSchema = withDefaults({
     { kind: 'field', name: 'image' },
     { kind: 'field', name: 'imageMeta' },
     { kind: 'field', name: 'featured' },
+    // Typed for filtering, plus the rows to show (lib/facts.mjs)
+    { kind: 'field', name: 'facts' },
     // Only loaded with the single post, the list pages don't need it
     { kind: 'field', name: 'html' },
     toMany('tags', 'tag'),
@@ -79,6 +81,23 @@ export interface Author {
   excerpt: string;
 }
 
+/**
+ * The `facts:` front matter, read at build time by lib/facts.mjs.
+ */
+export interface Facts {
+  date?: string;
+  grade?: string;
+  /** km */
+  distance?: number;
+  /** m */
+  ascent?: number;
+  /** h:mm or h:mm:ss */
+  time?: string;
+  movingTime?: string;
+  /** The table to show: labels are text, values HTML */
+  rows: { label: string; html: string }[];
+}
+
 export interface Post {
   [Type]: 'post';
   id: string;
@@ -88,6 +107,7 @@ export interface Post {
   image?: string;
   imageMeta?: { attribution?: string; attributionLink?: string };
   featured?: boolean;
+  facts?: Facts;
   html?: string;
   tags: Tag[];
   authors: Author[];

@@ -6,6 +6,7 @@ import { pageTitle } from 'ember-page-title';
 import { Container } from '../components/container.gts';
 import { postCover } from '../content/covers.ts';
 import { PROSE_SIZES, photoUrl } from '../content/photo.ts';
+import { Facts } from '../components/facts.gts';
 import { FormattedDate } from '../components/formatted-date.gts';
 import { Gallery } from '../components/gallery.gts';
 import { Head } from '../components/head.gts';
@@ -98,6 +99,10 @@ export default <template>
           {{/let}}
 
           <hr class="my-12 border-slate-200" />
+
+          {{#if post.facts}}
+            <Facts @facts={{post.facts}} />
+          {{/if}}
 
           {{#if post.html}}
             <Prose @html={{post.html}} />
