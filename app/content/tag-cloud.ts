@@ -36,8 +36,9 @@ export interface CloudTag {
 }
 
 /**
- * Every tag used by a post, alphabetically, sized by how many posts use it,
- * each in the next colour.
+ * Every tag used by a post, sized by how many posts use it, each in the next
+ * colour. Like a word cloud, the biggest are in the middle and the smaller
+ * ones fan out to both sides.
  */
 export const TAG_CLOUD: CloudTag[] = (() => {
   const counts = new Map<string, number>();
@@ -66,7 +67,11 @@ export const TAG_CLOUD: CloudTag[] = (() => {
           : Math.round(((count - min) / (max - min)) * (SIZES.length - 1))
       ]!,
     }))
-    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+    .reduce<Omit<CloudTag, 'colour'>[]>(
+      (cloud, tag, index) => (index % 2 ? [tag, ...cloud] : [...cloud, tag]),
+      [],
+    )
     .map((tag, index) => ({
       ...tag,
       colour: COLOURS[index % COLOURS.length]!,

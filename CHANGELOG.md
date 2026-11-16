@@ -9,7 +9,7 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 - About me page built from data in `app/templates/about-me.gts`: cards for Outdoors and Computers, a timeline of courses and certificates, talks, and links to find me elsewhere.
 - About me content: what I do outdoors, courses and certificates, my projects (beauty-pay.cz, winds.mobi, Forkcast, Magic Pass on the map, paragliding flight stats, this blog), my EmberFest 2026 talk, and Strava, Mastodon, GitHub, LinkedIn and my outdoor CV.
 - "Written by" in the sidebar and footer links to the About me page.
-- Tag cloud under Explore in the sidebar, each tag sized by how many posts use it (star ratings left out).
+- Tag cloud in the sidebar under its own Tags heading: each tag in its own colour, sized by how many posts use it, the biggest in the middle (star ratings left out).
 - Facts table before the story, from a post's `facts:` front matter: date, location, grade (SAC grades link to the scale), points on the way with altitudes, distance, ascent, duration or moving time, free-form rows and links. The values are typed, so posts can be filtered by them.
 - Gear checklist after the story, from a post's `gear:` front matter: what I had, what I didn't, and why it mattered.
 - Photo gallery at the end of a post, from its `gallery:` front matter, as a masonry grid with a lightbox.

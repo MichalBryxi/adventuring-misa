@@ -41,10 +41,20 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
         <a href="/rss.xml" class="hover:text-slate-900">RSS feed</a>
       </li>
     </ul>
+  </section>
+</template>;
+
+const Tags: TOC<{ Element: HTMLElement }> = <template>
+  <section ...attributes>
+    <h2
+      class="flex items-center justify-center font-mono text-sm/7 font-medium text-slate-900 lg:justify-start"
+    >
+      <span class="h-2.5 w-2.5 rounded-full bg-amber-300"></span>
+      <span class="ml-2.5">Tags</span>
+    </h2>
     <ul
       role="list"
-      aria-label="Tags"
-      class="mt-6 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 font-medium lg:justify-start"
+      class="mt-4 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 leading-none font-medium"
       data-test-tag-cloud
     >
       {{#each TAG_CLOUD as |tag|}}
@@ -107,6 +117,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
           </p>
         </div>
         <Explore class="mt-10 lg:mt-12" />
+        <Tags class="mt-10 lg:mt-12" />
       </div>
     </header>
 
