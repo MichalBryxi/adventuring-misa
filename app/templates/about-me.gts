@@ -115,12 +115,17 @@ const SECTIONS: Section[] = [
       {
         heading: 'Bikepacking weather',
         icon: '🌦️',
-        text: `<a href="https://forkcast.vast.earth">Forkcast</a>, a <a href="https://vast.earth">vast.earth</a> project, shows what the weather usually does along a bike route, day by day, so you can plan a long trip months ahead.`,
+        text: `<a href="https://forkcast.vast.earth">Forkcast</a> shows what the weather usually does along a bike route, day by day, so you can plan a long trip months ahead.`,
       },
       {
-        heading: 'Small tools',
-        icon: '🧰',
-        text: `<a href="/2023-05-10-magic-pass-places-as-gpx">Magic Pass places as GPX</a>, and a <a href="https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv">Skytraxx vario to CSV export</a> for my paragliding flights.`,
+        heading: 'Magic Pass on the map',
+        icon: '🗺️',
+        text: `<a href="/2023-05-10-magic-pass-places-as-gpx">Every Magic Pass place as a GPX</a>, so you can see on a map where the pass is valid.`,
+      },
+      {
+        heading: 'Paragliding flight stats',
+        icon: '📈',
+        text: `<a href="https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv">Vario Skytraxx to CSV</a> exports the statistics of my flights from a Skytraxx 2.0 vario.`,
       },
       {
         heading: 'This blog',

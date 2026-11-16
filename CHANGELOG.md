@@ -7,7 +7,7 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 ### Added
 
 - About me page built from data in `app/templates/about-me.gts`: cards for Outdoors and Computers, a timeline of courses and certificates, talks, and links to find me elsewhere.
-- About me content: what I do outdoors, courses and certificates, my projects (beauty-pay.cz, winds.mobi, Forkcast, small tools, this blog), my EmberFest 2026 talk, and Strava, Mastodon, GitHub, LinkedIn and my outdoor CV.
+- About me content: what I do outdoors, courses and certificates, my projects (beauty-pay.cz, winds.mobi, Forkcast, Magic Pass on the map, paragliding flight stats, this blog), my EmberFest 2026 talk, and Strava, Mastodon, GitHub, LinkedIn and my outdoor CV.
 - "Written by" in the sidebar and footer links to the About me page.
 - Facts table before the story, from a post's `facts:` front matter: date, location, grade (SAC grades link to the scale), points on the way with altitudes, distance, ascent, duration or moving time, free-form rows and links. The values are typed, so posts can be filtered by them.
 - Gear checklist after the story, from a post's `gear:` front matter: what I had, what I didn't, and why it mattered.
