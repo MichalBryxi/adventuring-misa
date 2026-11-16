@@ -1,15 +1,13 @@
-import { useLegacyStore } from '@warp-drive/legacy';
+import { useRecommendedStore } from '@warp-drive/core';
 import { JSONAPICache } from '@warp-drive/json-api';
 
-const Store = useLegacyStore({
-  linksMode: false,
+import { ContentHandler } from '../content/handler.ts';
+import { schemas } from '../content/schemas.ts';
+
+const Store = useRecommendedStore({
   cache: JSONAPICache,
-  handlers: [
-    // -- your handlers here
-  ],
-  schemas: [
-    // -- your schemas here
-  ],
+  handlers: [ContentHandler],
+  schemas,
 });
 
 type Store = InstanceType<typeof Store>;
