@@ -3,7 +3,8 @@
  */
 export default {
   title: 'Adventuring Míša',
-  description: '🪂 + ⛰️🏃‍♂️ + 🧗‍♂️ + 🚴‍♂️ + ⛷️ + 🗺️ + 🌱',
+  description:
+    'Paragliding + trail running + climbing + biking + skiing + exploring + vegan',
   host: 'https://adventuring-misa.pudr.com',
   // Whose blog it is, in the sidebar
   owner: 'Michal Bryxí',
