@@ -47,6 +47,13 @@ export const leadsNowhere = (selected: string[], id: string) =>
     (tags) => tags.includes(id) && selected.every((tag) => tags.includes(tag)),
   );
 
+/**
+ * How many posts have all the selected tags.
+ */
+export const matchingCount = (selected: string[]) =>
+  POST_TAGS.filter((tags) => selected.every((tag) => tags.includes(tag)))
+    .length;
+
 const counts = new Map<string, number>();
 
 for (const tags of POST_TAGS) {

@@ -119,6 +119,27 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-filter]').doesNotExist();
   });
 
+  test('the mobile menu opens the sidebar in a drawer', async function (assert) {
+    await visit('/');
+    await click('[data-test-menu-button]');
+
+    assert.dom('[data-test-mobile-nav]').exists();
+    assert.dom('[data-test-show-posts]').hasText('Show 21 adventures');
+
+    await click('[data-test-mobile-nav] [data-test-cloud-tag="munro"]');
+
+    assert.strictEqual(currentURL(), '/?tags=munro');
+    assert
+      .dom('[data-test-mobile-nav]')
+      .exists('picking a tag keeps the drawer open');
+    assert.dom('[data-test-show-posts]').hasText('Show 4 adventures');
+
+    await click('[data-test-show-posts]');
+
+    assert.dom('[data-test-mobile-nav]').doesNotExist();
+    assert.dom('[data-test-post]').exists({ count: 4 });
+  });
+
   test('a filter nothing matches says so', async function (assert) {
     await visit('/?tags=munro,rating/5-stars');
 

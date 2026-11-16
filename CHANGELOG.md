@@ -22,6 +22,7 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 
 ### Changed
 
+- On phones and tablets the sidebar is a menu: a slim bar at the top with a menu button opens the links and tags in a drawer from the left (Frontile). Tags picked there keep it open, and its button shows how many adventures match; the menu button shows how many filters are on.
 - Rebuilt from sportsting-misa.pudr.com (empress-blog) as a compatless Ember 7 app on Vite, with WarpDrive and Tailwind CSS, keeping the old post URLs.
 - Layout adapted from the Tailwind Plus "Transmit" template.
 - h2 headings stand out more from h3.

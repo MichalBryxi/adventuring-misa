@@ -1,3 +1,5 @@
+import type RouterService from '@ember/routing/router-service';
+
 /**
  * The tags the front page is filtered by, in its `tags` query parameter:
  * `/?tags=munro,4-stars` lists the posts that have all of them.
@@ -18,4 +20,15 @@ export function toggleTag(selected: string[], tag: string): string {
       ? selected.filter((id) => id !== tag)
       : [...selected, tag]
   ).join(SEPARATOR);
+}
+
+/**
+ * The tags the page is filtered by now: only the front page filters.
+ */
+export function currentTags(router: RouterService): string[] {
+  const route = router.currentRoute;
+
+  return route?.name === 'index'
+    ? selectedTags(route.queryParams['tags'] as string | undefined)
+    : [];
 }
