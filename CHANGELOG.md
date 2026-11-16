@@ -11,7 +11,7 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 - "Written by" in the sidebar and footer links to the About me page.
 - Tag cloud in the sidebar under its own Tags heading: each tag in its own colour, sized by how many posts use it, the biggest in the middle (star ratings left out).
 - Tags filter the front page: click tags in the sidebar to add or remove them, and `/?tags=…` lists the posts that have all of them, with the filter shown above the list.
-- Tags can have a parent tag (`parent:` in the tag file); the sidebar shows them grouped under its name. The star ratings are grouped under Rating.
+- Tags can have a parent tag (`parent:` in the tag file); the sidebar shows them grouped under its name. The star ratings are grouped under Rating, and SAC hiking grades under T-grade (Katzenwegli is T6).
 - Facts table before the story, from a post's `facts:` front matter: date, location, grade (SAC grades link to the scale), points on the way with altitudes, distance, ascent, duration or moving time, free-form rows and links. The values are typed, so posts can be filtered by them.
 - Gear checklist after the story, from a post's `gear:` front matter: what I had, what I didn't, and why it mattered.
 - Photo gallery at the end of a post, from its `gallery:` front matter, as a masonry grid with a lightbox.
