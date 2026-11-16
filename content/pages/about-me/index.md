@@ -33,7 +33,12 @@ Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburg
 
 By day I'm a full-stack web developer, mostly with [Ember.js](https://emberjs.com). I've built front ends at Puppet and CrowdStrike, and for eleven years I've run [beauty-pay.cz](https://beauty-pay.cz), a booking and management app for beauty salons. At [EmberFest 2026](https://emberfest.eu) in Prague I gave a talk about it: [4,207 Days of Uptime: Evolving an Ember App Without a Rewrite](https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime).
 
-Some of the code ends up outdoors too: [Magic Pass places as GPX](/2023-05-10-magic-pass-places-as-gpx), a [Skytraxx vario to CSV export](https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv) for my paragliding flights, and this blog itself, which is [open source](https://github.com/MichalBryxi/adventuring-misa).
+Much of my code ends up outdoors:
+
+- **[winds.mobi](https://winds.mobi)**, real-time wind from weather stations across the Alps and beyond, which paragliders check before they fly. I build its [new web client](https://github.com/winds-mobi/winds-mobi-client-web).
+- **[Forkcast](https://forkcast.vast.earth)**, a [vast.earth](https://vast.earth) project that shows what the weather usually does along a bikepacking route, day by day, so you can plan a long trip months ahead.
+
+Smaller ones too: [Magic Pass places as GPX](/2023-05-10-magic-pass-places-as-gpx), a [Skytraxx vario to CSV export](https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv) for my paragliding flights, and this blog itself, which is [open source](https://github.com/MichalBryxi/adventuring-misa).
 
 ## Find me
 
