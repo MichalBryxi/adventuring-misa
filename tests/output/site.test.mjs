@@ -65,6 +65,13 @@ for (const post of posts) {
       'facts table',
     );
 
+    // The gear: front matter, as a checklist
+    assert.equal(
+      /data-test-gear\b/.test(html),
+      post.gear !== undefined,
+      'gear checklist',
+    );
+
     // The gallery: front matter, each photo a link to its largest JPEG
     // (1440 px, or less for a smaller original)
     const gallery = post.gallery ?? [];

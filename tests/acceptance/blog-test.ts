@@ -145,4 +145,18 @@ module('Acceptance | blog', function (hooks) {
 
     assert.deepEqual(bigClimbs, ['2019-09-21-salomon-ring-of-steall-skyrace']);
   });
+
+  test('a post shows its gear as a checklist', async function (assert) {
+    await visit('/2026-11-15-katzenwegli-t6');
+
+    assert.dom('[data-test-gear-item]').exists({ count: 3 });
+    assert
+      .dom('[data-test-gear-item="Microspikes"]')
+      .hasAttribute('data-test-packed', 'true');
+    assert
+      .dom('[data-test-gear-item="Ice axe"]')
+      .hasAttribute('data-test-packed', 'false')
+      .includesText('Mistake');
+    assert.dom('[data-test-fact="Gear"]').doesNotExist('not a fact any more');
+  });
 });
