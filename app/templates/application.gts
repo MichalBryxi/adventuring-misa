@@ -44,7 +44,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
     <ul
       role="list"
       aria-label="Tags"
-      class="mt-6 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 font-medium text-slate-500 lg:justify-start"
+      class="mt-6 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 font-medium lg:justify-start"
       data-test-tag-cloud
     >
       {{#each TAG_CLOUD as |tag|}}
@@ -52,7 +52,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
           <LinkTo
             @route="tag"
             @model={{tag.id}}
-            class="{{tag.size}} hover:text-emerald-700"
+            class="{{tag.size}} {{tag.colour}} hover:underline"
             title="{{tag.count}} {{if (eq tag.count 1) 'post' 'posts'}}"
             data-test-cloud-tag={{tag.id}}
           >{{tag.name}}</LinkTo>

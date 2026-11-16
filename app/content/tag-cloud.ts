@@ -18,15 +18,26 @@ const RATING = /^\d-stars?$/;
 // Smallest to biggest
 const SIZES = ['text-xs', 'text-sm', 'text-base', 'text-lg', 'text-xl'];
 
+// The accents of the section headings, dark enough to read as text
+const COLOURS = [
+  'text-emerald-600',
+  'text-sky-600',
+  'text-amber-600',
+  'text-rose-600',
+  'text-violet-600',
+];
+
 export interface CloudTag {
   id: string;
   name: string;
   count: number;
   size: string;
+  colour: string;
 }
 
 /**
- * Every tag used by a post, alphabetically, sized by how many posts use it.
+ * Every tag used by a post, alphabetically, sized by how many posts use it,
+ * each in the next colour.
  */
 export const TAG_CLOUD: CloudTag[] = (() => {
   const counts = new Map<string, number>();
@@ -55,5 +66,9 @@ export const TAG_CLOUD: CloudTag[] = (() => {
           : Math.round(((count - min) / (max - min)) * (SIZES.length - 1))
       ]!,
     }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((tag, index) => ({
+      ...tag,
+      colour: COLOURS[index % COLOURS.length]!,
+    }));
 })();
