@@ -8,5 +8,6 @@ export default {
   host: 'https://adventuring-misa.pudr.com',
   // Whose blog it is, in the sidebar
   owner: 'Michal Bryxí',
+  /** @type {{ label: string; route: string; id?: string }[]} */
   navigation: [{ label: 'About me', route: 'about-me' }],
 };
