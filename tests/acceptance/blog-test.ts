@@ -30,7 +30,7 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('h1').hasText('An Teallach');
     assert.dom('.prose p').exists();
     assert.dom('[data-test-gallery-photo]').exists({ count: 4 });
-    assert.dom('a[href="/?tags=4-stars"]').hasText('★★★★☆');
+    assert.dom('a[href="/?tags=rating%2F4-stars"]').hasText('★★★★☆');
     assert.dom('a[href^="/author/"]').doesNotExist('no author byline');
     assert
       .dom('[data-test-owner]')
@@ -53,10 +53,10 @@ module('Acceptance | blog', function (hooks) {
       .hasText('Munro')
       .hasAttribute('href', '/?tags=munro');
     assert
-      .dom('[data-test-tag-cloud] [data-test-cloud-tag="4-stars"]')
+      .dom('[data-test-tag-cloud] [data-test-cloud-tag="rating/4-stars"]')
       .doesNotExist('ratings are a group of their own');
     assert.dom('[data-test-tag-group="rating"]').hasText('Rating');
-    assert.dom('[data-test-cloud-tag="4-stars"]').hasText('★★★★☆');
+    assert.dom('[data-test-cloud-tag="rating/4-stars"]').hasText('★★★★☆');
     assert.true(size('munro') > size('shoes'), 'more posts, bigger tag');
   });
 
@@ -90,15 +90,15 @@ module('Acceptance | blog', function (hooks) {
     assert.strictEqual(currentURL(), '/?tags=munro');
     assert.dom('[data-test-post]').exists({ count: 4 });
     assert
-      .dom('[data-test-cloud-tag="5-stars"]')
+      .dom('[data-test-cloud-tag="rating/5-stars"]')
       .hasAttribute('data-test-leads-nowhere', '', 'no ★★★★★ Munro yet');
     assert
-      .dom('[data-test-cloud-tag="2-stars"]')
+      .dom('[data-test-cloud-tag="rating/2-stars"]')
       .doesNotHaveAttribute('data-test-leads-nowhere', 'but ★★☆☆☆ ones');
 
-    await click('[data-test-cloud-tag="4-stars"]');
+    await click('[data-test-cloud-tag="rating/4-stars"]');
 
-    assert.strictEqual(currentURL(), '/?tags=munro%2C4-stars');
+    assert.strictEqual(currentURL(), '/?tags=munro%2Crating%2F4-stars');
     assert.dom('[data-test-post]').exists({ count: 2 }, 'Munros AND ★★★★☆');
     assert.dom('[data-test-filter-tag]').exists({ count: 2 });
     assert
@@ -109,7 +109,7 @@ module('Acceptance | blog', function (hooks) {
 
     assert.strictEqual(
       currentURL(),
-      '/?tags=4-stars',
+      '/?tags=rating%2F4-stars',
       'a selected tag toggles off',
     );
 
@@ -120,7 +120,7 @@ module('Acceptance | blog', function (hooks) {
   });
 
   test('a filter nothing matches says so', async function (assert) {
-    await visit('/?tags=munro,5-stars');
+    await visit('/?tags=munro,rating/5-stars');
 
     assert.dom('[data-test-post]').doesNotExist();
     assert.dom('[data-test-no-posts]').exists();

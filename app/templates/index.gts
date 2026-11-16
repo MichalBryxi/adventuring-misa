@@ -1,17 +1,19 @@
 import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 
+import { t } from 'ember-intl';
+
 import site from '../../site.mjs';
 import { Container } from '../components/container.gts';
 import { Head } from '../components/head.gts';
 import { PostList } from '../components/post-list.gts';
+import { tagKey } from '../content/tag-cloud.ts';
 
 import type { TOC } from '@ember/component/template-only';
 import type { Post } from '../content/schemas.ts';
 
 interface Filter {
   id: string;
-  name: string;
   without: string;
 }
 
@@ -34,9 +36,9 @@ export default <template>
               @route="index"
               @query={{hash tags=tag.without}}
               class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-0.5 font-medium text-emerald-900 ring-1 ring-emerald-200 hover:bg-emerald-100"
-              title="Remove {{tag.name}}"
+              title="Remove {{t (tagKey tag.id)}}"
               data-test-filter-tag={{tag.id}}
-            >{{tag.name}}<span aria-hidden="true">×</span></LinkTo>
+            >{{t (tagKey tag.id)}}<span aria-hidden="true">×</span></LinkTo>
           {{/each}}
           <LinkTo
             @route="index"

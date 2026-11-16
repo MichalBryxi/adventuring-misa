@@ -2,8 +2,10 @@ import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 
 import { ResponsiveImage } from '@responsive-image/ember';
+import { t } from 'ember-intl';
 
 import { postCover } from '../content/covers.ts';
+import { tagKey } from '../content/tag-cloud.ts';
 import { Container } from './container.gts';
 import { FormattedDate } from './formatted-date.gts';
 
@@ -41,10 +43,10 @@ const PostEntry: TOC<{ Args: { post: Post } }> = <template>
             {{#each @post.tags as |tag|}}
               <LinkTo
                 @route="index"
-                @query={{hash tags=tag.id}}
+                @query={{hash tags=tag}}
                 class="text-sm/6 font-medium text-slate-400 hover:text-slate-600"
               >
-                #{{tag.name}}
+                #{{t (tagKey tag)}}
               </LinkTo>
             {{/each}}
           </div>

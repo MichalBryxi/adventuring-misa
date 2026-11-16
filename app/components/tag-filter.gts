@@ -3,7 +3,14 @@ import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 import { service } from '@ember/service';
 
-import { leadsNowhere, TAG_CLOUD, TAG_GROUPS } from '../content/tag-cloud.ts';
+import { t } from 'ember-intl';
+
+import {
+  leadsNowhere,
+  TAG_CLOUD,
+  TAG_GROUPS,
+  tagKey,
+} from '../content/tag-cloud.ts';
 import { selectedTags, toggleTag } from '../content/tag-filter.ts';
 
 import type { TOC } from '@ember/component/template-only';
@@ -31,14 +38,14 @@ const TagLink: TOC<{
     data-test-selected={{includes @selected @tag.id}}
     data-test-leads-nowhere={{leadsNowhere @selected @tag.id}}
     data-test-cloud-tag={{@tag.id}}
-  >{{@tag.name}}</LinkTo>
+  >{{t (tagKey @tag.id)}}</LinkTo>
 </template>;
 
 /**
  * The tags in the sidebar, as a filter of the front page: each one adds
  * itself to the `tags` query parameter, or takes itself out, and the
- * front page lists the posts that have all of them. Tags with a parent
- * are under its name, after the cloud.
+ * front page lists the posts that have all of them. Tags in a group
+ * (rating/4-stars) are under its name, after the cloud.
  */
 export class TagFilter extends Component<{ Element: HTMLElement }> {
   @service declare router: RouterService;
@@ -73,7 +80,7 @@ export class TagFilter extends Component<{ Element: HTMLElement }> {
         <h3
           class="mt-6 text-center font-mono text-xs/6 font-medium text-slate-500 lg:text-left"
           data-test-tag-group={{group.id}}
-        >{{group.name}}</h3>
+        >{{t (tagKey group.id)}}</h3>
         <ul
           role="list"
           class="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 leading-none font-medium lg:justify-start"

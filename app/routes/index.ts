@@ -2,7 +2,6 @@ import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 
 import { allPosts, postsTagged } from '../content/requests.ts';
-import { tagName } from '../content/tag-cloud.ts';
 import { selectedTags, toggleTag } from '../content/tag-filter.ts';
 
 import type Store from '../services/store.ts';
@@ -23,7 +22,6 @@ export default class IndexRoute extends Route {
       // Each with the filter it leaves when removed
       filter: selected.map((id) => ({
         id,
-        name: tagName(id),
         without: toggleTag(selected, id),
       })),
     };

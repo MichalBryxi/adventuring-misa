@@ -7,7 +7,7 @@ imageMeta:
 featured: true
 date: Fri Jun 25 2021 22:39:23 GMT+0100 (British Summer Time)
 tags:
-  - 4-stars
+  - rating/4-stars
   - climbing
 gallery:
   - src: ./02.jpg

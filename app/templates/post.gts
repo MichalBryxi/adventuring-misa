@@ -2,10 +2,12 @@ import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 
 import { ResponsiveImage } from '@responsive-image/ember';
+import { t } from 'ember-intl';
 import { pageTitle } from 'ember-page-title';
 
 import { Container } from '../components/container.gts';
 import { postCover } from '../content/covers.ts';
+import { tagKey } from '../content/tag-cloud.ts';
 import { PROSE_SIZES, photoUrl } from '../content/photo.ts';
 import { Facts } from '../components/facts.gts';
 import { FormattedDate } from '../components/formatted-date.gts';
@@ -59,9 +61,9 @@ export default <template>
                   <li>
                     <LinkTo
                       @route="index"
-                      @query={{hash tags=tag.id}}
+                      @query={{hash tags=tag}}
                       class="inline-flex rounded-full bg-slate-100 px-3 py-0.5 text-sm/6 font-medium text-slate-700 hover:bg-emerald-100 hover:text-emerald-900"
-                    >{{tag.name}}</LinkTo>
+                    >{{t (tagKey tag)}}</LinkTo>
                   </li>
                 {{/each}}
               </ul>

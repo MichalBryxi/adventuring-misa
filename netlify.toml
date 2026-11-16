@@ -39,7 +39,38 @@
     Content-Type = "application/vnd.google-earth.kml+xml"
 
 # The Katzenwegli post was first published under its old route name
-# Tags are a filter of the front page now, not pages of their own
+# Tags are a filter of the front page now, not pages of their own.
+# The ratings and grades are in groups: they come first, the first match wins.
+[[redirects]]
+  from = "/tag/1-star"
+  to = "/?tags=rating/1-star"
+  status = 301
+
+[[redirects]]
+  from = "/tag/2-stars"
+  to = "/?tags=rating/2-stars"
+  status = 301
+
+[[redirects]]
+  from = "/tag/3-stars"
+  to = "/?tags=rating/3-stars"
+  status = 301
+
+[[redirects]]
+  from = "/tag/4-stars"
+  to = "/?tags=rating/4-stars"
+  status = 301
+
+[[redirects]]
+  from = "/tag/5-stars"
+  to = "/?tags=rating/5-stars"
+  status = 301
+
+[[redirects]]
+  from = "/tag/t6"
+  to = "/?tags=t-grade/t6"
+  status = 301
+
 [[redirects]]
   from = "/tag/:id"
   to = "/?tags=:id"

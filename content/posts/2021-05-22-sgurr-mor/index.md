@@ -7,7 +7,7 @@ imageMeta:
 featured: true
 date: Sat May 22 2021 09:19:42 GMT+0100 (British Summer Time)
 tags:
-  - 4-stars
+  - rating/4-stars
   - munro
 gallery:
   - src: ./02.jpg

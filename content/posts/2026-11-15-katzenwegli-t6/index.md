@@ -10,7 +10,7 @@ tags:
   - hiking
   - schweiz
   - type-3-fun
-  - t6
+  - t-grade/t6
 gallery:
   - src: ./01.jpg
     caption: "Morning on the way up, above the Lauterbrunnen valley"

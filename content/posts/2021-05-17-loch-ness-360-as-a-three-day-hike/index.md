@@ -7,7 +7,7 @@ imageMeta:
 featured: true
 date: Sat May 15 2021 22:00:00 GMT+0100 (British Summer Time)
 tags:
-  - 4-stars
+  - rating/4-stars
   - hiking
 gallery:
   - src: ./2021-05-17-loch-ness-360-map.jpg

@@ -7,7 +7,7 @@ imageMeta:
 featured: true
 date: Sat Jul 02 2022 07:54:32 GMT+0200 (Central European Summer Time)
 tags:
-  - 5-stars
+  - rating/5-stars
   - schweiz
 gallery:
   - src: ./03.jpg

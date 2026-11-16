@@ -7,7 +7,7 @@ imageMeta:
 featured: true
 date: Sun Aug 03 2019 09:23:03 GMT+0100 (BST)
 tags:
-  - 4-stars
+  - rating/4-stars
   - running
   - race
 gallery:

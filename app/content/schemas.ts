@@ -9,13 +9,6 @@ import type { Type } from '@warp-drive/core/types/symbols';
  * it just needs a field to be read.
  */
 
-const toMany = (name: string, type: string) => ({
-  kind: 'hasMany' as const,
-  name,
-  type,
-  options: { async: false as const, inverse: null, linksMode: true as const },
-});
-
 export const PostSchema = withDefaults({
   type: 'post',
   fields: [
@@ -31,7 +24,8 @@ export const PostSchema = withDefaults({
     { kind: 'field', name: 'gear' },
     // Only loaded with the single post, the list pages don't need it
     { kind: 'field', name: 'html' },
-    toMany('tags', 'tag'),
+    // Ids like munro or rating/4-stars, named in translations/
+    { kind: 'field', name: 'tags' },
   ],
 });
 
@@ -44,18 +38,7 @@ export const PageSchema = withDefaults({
   ],
 });
 
-export const TagSchema = withDefaults({
-  type: 'tag',
-  fields: [{ kind: 'field', name: 'name' }],
-});
-
-export const schemas = [PostSchema, PageSchema, TagSchema];
-
-export interface Tag {
-  [Type]: 'tag';
-  id: string;
-  name: string;
-}
+export const schemas = [PostSchema, PageSchema];
 
 /**
  * The `facts:` front matter, read at build time by lib/facts.mjs.
@@ -98,7 +81,7 @@ export interface Post {
   facts?: Facts;
   gear?: GearItem[];
   html?: string;
-  tags: Tag[];
+  tags?: string[];
 }
 
 export interface Page {

@@ -12,7 +12,6 @@ import { schemas } from './schemas.ts';
  *   GET /posts?tag=a&tag=b     posts with all of the tags
  *   GET /posts/<id>            one post, with its HTML
  *   GET /pages/<id>            one page, with its HTML
- *   GET /tags/<id>
  *
  * The front matter of every file is bundled; the HTML of a post or page
  * is a separate chunk, loaded when that post is opened.
@@ -33,11 +32,6 @@ const META = {
     import: 'default',
     eager: true,
   }),
-  tags: import.meta.glob<Meta>('/content/tags/*.md', {
-    query: '?meta',
-    import: 'default',
-    eager: true,
-  }),
 };
 
 const HTML: Partial<Record<keyof typeof META, Record<string, Loader>>> = {
@@ -52,7 +46,6 @@ const HTML: Partial<Record<keyof typeof META, Record<string, Loader>>> = {
 const TYPES = {
   posts: 'post',
   pages: 'page',
-  tags: 'tag',
 } as const;
 
 type Collection = keyof typeof META;
@@ -68,19 +61,11 @@ const byId = (collection: Collection) =>
 const INDEX = {
   posts: byId('posts'),
   pages: byId('pages'),
-  tags: byId('tags'),
 };
 
 const POSTS = [...INDEX.posts.values()]
   .map(({ meta }) => meta)
   .sort((a, b) => String(b.date).localeCompare(String(a.date)));
-
-function relationship(type: string, ids: unknown, from: string) {
-  return {
-    data: ((ids as string[] | undefined) ?? []).map((id) => ({ type, id })),
-    links: { related: from },
-  };
-}
 
 /**
  * The attributes each type declares in its schema. Front-matter keys
@@ -108,26 +93,7 @@ function resource(collection: Collection, meta: Meta, html?: string) {
     type,
     id: meta.id,
     attributes,
-    ...(collection === 'posts' && {
-      relationships: {
-        tags: relationship('tag', meta.tags, `/posts/${meta.id}/tags`),
-      },
-    }),
   };
-}
-
-/**
- * The tags of the posts in a response.
- */
-function included(posts: Meta[]) {
-  const ids = new Set(
-    posts.flatMap((post) => (post.tags as string[] | undefined) ?? []),
-  );
-
-  return [...ids].flatMap((id) => {
-    const entry = INDEX.tags.get(id);
-    return entry ? [resource('tags', entry.meta)] : [];
-  });
 }
 
 class NotFoundError extends Error {
@@ -143,7 +109,6 @@ async function findOne(collection: Collection, id: string) {
 
   return {
     data: resource(collection, entry.meta, html),
-    included: collection === 'posts' ? included([entry.meta]) : [],
   };
 }
 
@@ -156,7 +121,6 @@ function findPosts(filters: URLSearchParams) {
 
   return {
     data: posts.map((post) => resource('posts', post)),
-    included: included(posts),
   };
 }
 
