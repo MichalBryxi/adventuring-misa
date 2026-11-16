@@ -1,21 +1,18 @@
+import './styles/app.css';
 import '@warp-drive/ember/install';
-import Application from '@ember/application';
-import compatModules from '@embroider/virtual/compat-modules';
-import Resolver from 'ember-resolver';
-import loadInitializers from 'ember-load-initializers';
-import config from 'adventures-misa/config/environment';
-import { importSync, isDevelopingApp, macroCondition } from '@embroider/macros';
-import setupInspector from '@embroider/legacy-inspector-support/ember-source-4.12';
 
-if (macroCondition(isDevelopingApp())) {
-  importSync('./deprecation-workflow');
-}
+import EmberApp from 'ember-strict-application-resolver';
+import PageTitleService from 'ember-page-title/services/page-title';
 
-export default class App extends Application {
+import config from './config/environment.ts';
+import Router from './router.ts';
+
+export default class App extends EmberApp {
   modulePrefix = config.modulePrefix;
-  podModulePrefix = config.podModulePrefix;
-  Resolver = Resolver.withModules(compatModules);
-  inspector = setupInspector(this);
+  modules = {
+    './router': Router,
+    './services/page-title': PageTitleService,
+    ...import.meta.glob('./{routes,templates}/**/*.{ts,gts}', { eager: true }),
+    ...import.meta.glob('./services/*.ts', { eager: true }),
+  };
 }
-
-loadInitializers(App, config.modulePrefix, compatModules);
