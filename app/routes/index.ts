@@ -1,16 +1,31 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 
-import { allPosts } from '../content/requests.ts';
+import { allPosts, postsTagged } from '../content/requests.ts';
+import { tagName } from '../content/tag-cloud.ts';
+import { selectedTags, toggleTag } from '../content/tag-filter.ts';
 
 import type Store from '../services/store.ts';
 
 export default class IndexRoute extends Route {
   @service declare store: Store;
 
-  async model() {
-    const { content } = await this.store.request(allPosts());
+  queryParams = { tags: { refreshModel: true } };
 
-    return { posts: content.data };
+  async model({ tags }: { tags?: string }) {
+    const selected = selectedTags(tags);
+    const { content } = await this.store.request(
+      selected.length ? postsTagged(...selected) : allPosts(),
+    );
+
+    return {
+      posts: content.data,
+      // Each with the filter it leaves when removed
+      filter: selected.map((id) => ({
+        id,
+        name: tagName(id),
+        without: toggleTag(selected, id),
+      })),
+    };
   }
 }

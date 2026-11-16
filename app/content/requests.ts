@@ -13,9 +13,14 @@ function get(url: string, type: string, op: 'findRecord' | 'query') {
 export const allPosts = () =>
   withReactiveResponse<Post[]>(get('/posts', 'post', 'query'));
 
-export const postsTagged = (tag: string) =>
+// Posts with all of the tags
+export const postsTagged = (...tags: string[]) =>
   withReactiveResponse<Post[]>(
-    get(`/posts?tag=${encodeURIComponent(tag)}`, 'post', 'query'),
+    get(
+      `/posts?${tags.map((tag) => `tag=${encodeURIComponent(tag)}`).join('&')}`,
+      'post',
+      'query',
+    ),
   );
 
 export const findPost = (id: string) =>

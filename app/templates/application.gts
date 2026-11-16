@@ -7,11 +7,9 @@ import { pageTitle } from 'ember-page-title';
 import site from '../../site.mjs';
 import cover from '../../content/cover.jpg?responsive';
 import { Ridge } from '../components/ridge.gts';
-import { TAG_CLOUD } from '../content/tag-cloud.ts';
+import { TagFilter } from '../components/tag-filter.gts';
 
 import type { TOC } from '@ember/component/template-only';
-
-const eq = (a: unknown, b: unknown) => a === b;
 
 const Explore: TOC<{ Element: HTMLElement }> = <template>
   <section ...attributes>
@@ -42,34 +40,6 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
         <span class="text-sky-500" aria-hidden="true">→</span>
         <a href="/rss.xml" class="hover:text-emerald-700">RSS feed</a>
       </li>
-    </ul>
-  </section>
-</template>;
-
-const Tags: TOC<{ Element: HTMLElement }> = <template>
-  <section ...attributes>
-    <h2
-      class="flex items-center justify-center font-mono text-sm/7 font-medium text-slate-900 lg:justify-start"
-    >
-      <span class="h-2.5 w-2.5 rounded-full bg-amber-300"></span>
-      <span class="ml-2.5">Tags</span>
-    </h2>
-    <ul
-      role="list"
-      class="mt-4 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 leading-none font-medium"
-      data-test-tag-cloud
-    >
-      {{#each TAG_CLOUD as |tag|}}
-        <li>
-          <LinkTo
-            @route="tag"
-            @model={{tag.id}}
-            class="{{tag.size}} {{tag.colour}} hover:underline"
-            title="{{tag.count}} {{if (eq tag.count 1) 'post' 'posts'}}"
-            data-test-cloud-tag={{tag.id}}
-          >{{tag.name}}</LinkTo>
-        </li>
-      {{/each}}
     </ul>
   </section>
 </template>;
@@ -119,7 +89,7 @@ const Tags: TOC<{ Element: HTMLElement }> = <template>
           </p>
         </div>
         <Explore class="mt-10 lg:mt-12" />
-        <Tags class="mt-10 lg:mt-12" />
+        <TagFilter class="mt-10 lg:mt-12" />
       </div>
     </header>
 

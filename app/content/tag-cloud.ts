@@ -1,4 +1,4 @@
-type Meta = { id: string; name?: string; tags?: string[] };
+type Meta = { id: string; name?: string; parent?: string; tags?: string[] };
 
 const POSTS = import.meta.glob<Meta>('/content/posts/*/index.md', {
   query: '?meta',
@@ -6,14 +6,15 @@ const POSTS = import.meta.glob<Meta>('/content/posts/*/index.md', {
   eager: true,
 });
 
-const TAGS = import.meta.glob<Meta>('/content/tags/*.md', {
-  query: '?meta',
-  import: 'default',
-  eager: true,
-});
-
-// The star ratings of reviews are tags too, but not topics to explore
-const RATING = /^\d-stars?$/;
+const TAGS = new Map(
+  Object.values(
+    import.meta.glob<Meta>('/content/tags/*.md', {
+      query: '?meta',
+      import: 'default',
+      eager: true,
+    }),
+  ).map((tag) => [tag.id, tag]),
+);
 
 // Smallest to biggest
 const SIZES = ['text-xs', 'text-sm', 'text-base', 'text-lg', 'text-xl'];
@@ -35,45 +36,78 @@ export interface CloudTag {
   colour: string;
 }
 
-/**
- * Every tag used by a post, sized by how many posts use it, each in the next
- * colour. Like a word cloud, the biggest are in the middle and the smaller
- * ones fan out to both sides.
- */
-export const TAG_CLOUD: CloudTag[] = (() => {
-  const counts = new Map<string, number>();
+export interface TagGroup {
+  id: string;
+  name: string;
+  tags: CloudTag[];
+}
 
-  for (const post of Object.values(POSTS)) {
-    for (const tag of post.tags ?? []) {
-      if (!RATING.test(tag)) counts.set(tag, (counts.get(tag) ?? 0) + 1);
-    }
+export const tagName = (id: string) => TAGS.get(id)?.name ?? id;
+
+const counts = new Map<string, number>();
+
+for (const post of Object.values(POSTS)) {
+  for (const tag of post.tags ?? []) {
+    counts.set(tag, (counts.get(tag) ?? 0) + 1);
   }
+}
 
-  const names = new Map(
-    Object.values(TAGS).map((tag) => [tag.id, tag.name ?? tag.id]),
-  );
-  const values = [...counts.values()];
-  const min = Math.min(...values);
-  const max = Math.max(...values);
+// A tag with a parent (`parent:` in its file) is shown in that group
+const parentOf = (id: string) => TAGS.get(id)?.parent;
+const used = [...counts.keys()];
+const topLevel = used.filter((id) => !parentOf(id));
+const values = topLevel.map((id) => counts.get(id)!);
+const min = Math.min(...values);
+const max = Math.max(...values);
 
-  return [...counts]
-    .map(([id, count]) => ({
-      id,
-      name: names.get(id) ?? id,
-      count,
-      size: SIZES[
-        max === min
-          ? 2
-          : Math.round(((count - min) / (max - min)) * (SIZES.length - 1))
-      ]!,
-    }))
-    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
-    .reduce<Omit<CloudTag, 'colour'>[]>(
-      (cloud, tag, index) => (index % 2 ? [tag, ...cloud] : [...cloud, tag]),
-      [],
-    )
-    .map((tag, index) => ({
-      ...tag,
-      colour: COLOURS[index % COLOURS.length]!,
-    }));
-})();
+const sizeOf = (count: number) =>
+  SIZES[
+    max === min
+      ? 2
+      : Math.round(((count - min) / (max - min)) * (SIZES.length - 1))
+  ]!;
+
+/**
+ * Every top-level tag used by a post, sized by how many posts use it, each
+ * in the next colour. Like a word cloud, the biggest are in the middle and
+ * the smaller ones fan out to both sides.
+ */
+export const TAG_CLOUD: CloudTag[] = topLevel
+  .map((id) => ({
+    id,
+    name: tagName(id),
+    count: counts.get(id)!,
+    size: sizeOf(counts.get(id)!),
+  }))
+  .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+  .reduce<Omit<CloudTag, 'colour'>[]>(
+    (cloud, tag, index) => (index % 2 ? [tag, ...cloud] : [...cloud, tag]),
+    [],
+  )
+  .map((tag, index) => ({
+    ...tag,
+    colour: COLOURS[index % COLOURS.length]!,
+  }));
+
+/**
+ * The tags that have a parent, under it, by name: one colour and size a
+ * group, as they are values of one thing (★★★★★ … ★☆☆☆☆).
+ */
+export const TAG_GROUPS: TagGroup[] = [
+  ...new Set(used.map(parentOf).filter((id) => id !== undefined)),
+]
+  .sort((a, b) => tagName(a).localeCompare(tagName(b)))
+  .map((parent, index) => ({
+    id: parent,
+    name: tagName(parent),
+    tags: used
+      .filter((id) => parentOf(id) === parent)
+      .map((id) => ({
+        id,
+        name: tagName(id),
+        count: counts.get(id)!,
+        size: 'text-sm',
+        colour: COLOURS[(index + 2) % COLOURS.length]!,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name)),
+  }));

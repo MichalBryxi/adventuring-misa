@@ -12,7 +12,9 @@ export default class App extends EmberApp {
   modules = {
     './router': Router,
     './services/page-title': PageTitleService,
-    ...import.meta.glob('./{routes,templates}/**/*.{ts,gts}', { eager: true }),
+    ...import.meta.glob('./{controllers,routes,templates}/**/*.{ts,gts}', {
+      eager: true,
+    }),
     ...import.meta.glob('./services/*.ts', { eager: true }),
   };
 }

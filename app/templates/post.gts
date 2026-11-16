@@ -1,3 +1,4 @@
+import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 
 import { ResponsiveImage } from '@responsive-image/ember';
@@ -57,8 +58,8 @@ export default <template>
                 {{#each post.tags as |tag|}}
                   <li>
                     <LinkTo
-                      @route="tag"
-                      @model={{tag.id}}
+                      @route="index"
+                      @query={{hash tags=tag.id}}
                       class="inline-flex rounded-full bg-slate-100 px-3 py-0.5 text-sm/6 font-medium text-slate-700 hover:bg-emerald-100 hover:text-emerald-900"
                     >{{tag.name}}</LinkTo>
                   </li>

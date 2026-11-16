@@ -9,6 +9,7 @@ import { schemas } from './schemas.ts';
  *
  *   GET /posts                 all posts, newest first
  *   GET /posts?tag=munro       posts with a tag
+ *   GET /posts?tag=a&tag=b     posts with all of the tags
  *   GET /posts/<id>            one post, with its HTML
  *   GET /pages/<id>            one page, with its HTML
  *   GET /tags/<id>
@@ -147,10 +148,10 @@ async function findOne(collection: Collection, id: string) {
 }
 
 function findPosts(filters: URLSearchParams) {
-  const tag = filters.get('tag');
+  const tags = filters.getAll('tag');
 
-  const posts = POSTS.filter(
-    (post) => !tag || (post.tags as string[] | undefined)?.includes(tag),
+  const posts = POSTS.filter((post) =>
+    tags.every((tag) => (post.tags as string[] | undefined)?.includes(tag)),
   );
 
   return {
