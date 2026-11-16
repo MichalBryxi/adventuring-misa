@@ -26,19 +26,21 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
     ></div>
     <ul
       role="list"
-      class="mt-4 flex flex-wrap justify-center gap-x-8 gap-y-2 text-base/7 font-medium text-slate-700 lg:flex-col lg:gap-4"
+      class="mt-4 flex flex-wrap justify-center gap-x-8 gap-y-2 text-base/7 font-semibold text-slate-900 lg:flex-col lg:gap-3"
     >
       {{#each site.navigation as |item|}}
-        <li class="flex">
+        <li class="flex items-center gap-2">
+          <span class="text-sky-500" aria-hidden="true">→</span>
           <LinkTo
             @route={{item.route}}
             @models={{if item.id (array item.id) (array)}}
-            class="hover:text-slate-900"
+            class="hover:text-emerald-700"
           >{{item.label}}</LinkTo>
         </li>
       {{/each}}
-      <li class="flex">
-        <a href="/rss.xml" class="hover:text-slate-900">RSS feed</a>
+      <li class="flex items-center gap-2">
+        <span class="text-sky-500" aria-hidden="true">→</span>
+        <a href="/rss.xml" class="hover:text-emerald-700">RSS feed</a>
       </li>
     </ul>
   </section>
