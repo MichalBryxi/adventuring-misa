@@ -27,6 +27,8 @@ export const PostSchema = withDefaults({
     { kind: 'field', name: 'featured' },
     // Typed for filtering, plus the rows to show (lib/facts.mjs)
     { kind: 'field', name: 'facts' },
+    // What I had with me, and what I missed (lib/gear.mjs)
+    { kind: 'field', name: 'gear' },
     // Only loaded with the single post, the list pages don't need it
     { kind: 'field', name: 'html' },
     toMany('tags', 'tag'),
@@ -98,6 +100,16 @@ export interface Facts {
   rows: { label: string; html: string }[];
 }
 
+/**
+ * One line of the `gear:` front matter, read at build time by lib/gear.mjs.
+ */
+export interface GearItem {
+  item: string;
+  packed: boolean;
+  /** Why it mattered, as HTML */
+  note?: string;
+}
+
 export interface Post {
   [Type]: 'post';
   id: string;
@@ -108,6 +120,7 @@ export interface Post {
   imageMeta?: { attribution?: string; attributionLink?: string };
   featured?: boolean;
   facts?: Facts;
+  gear?: GearItem[];
   html?: string;
   tags: Tag[];
   authors: Author[];

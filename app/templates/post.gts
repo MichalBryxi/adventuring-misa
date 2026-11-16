@@ -8,6 +8,7 @@ import { postCover } from '../content/covers.ts';
 import { PROSE_SIZES, photoUrl } from '../content/photo.ts';
 import { Facts } from '../components/facts.gts';
 import { FormattedDate } from '../components/formatted-date.gts';
+import { Gear } from '../components/gear.gts';
 import { Gallery } from '../components/gallery.gts';
 import { Head } from '../components/head.gts';
 import { NotFound } from '../components/not-found.gts';
@@ -106,6 +107,10 @@ export default <template>
 
           {{#if post.html}}
             <Prose @html={{post.html}} />
+          {{/if}}
+
+          {{#if post.gear.length}}
+            <Gear @gear={{post.gear}} class="mt-16" />
           {{/if}}
 
           {{#if @model.gallery.length}}
