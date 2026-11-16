@@ -39,7 +39,6 @@ facts:
     "SAC route": "[Von Stechelberg über das Katzenwegli](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)"
     "Start / finish": "[Stechelberg](https://en.wikipedia.org/wiki/Stechelberg), 910 m"
     "Destination": "[Silberhornhütte](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/), 2663 m (turned back at ~2650 m)"
-    "Conditions": "unexpected snow above ~2450 m"
     "Gear": "microspikes; no ice axe (mistake ⚠️); no rope"
   links:
     "Strava": "https://www.strava.com/activities/11735388468"
@@ -59,7 +58,7 @@ The second crux is a traverse across a dried-out waterfall, with a few bolts in 
 
 Once across, I realised I could not reverse that move. From here it would either go, or end with a helicopter. What kept me going was knowing that the T6 joins a T5 higher up. Finish the hard bit, and it's just a moderately easy walk off. At least that's what I thought.
 
-Above the waterfall the terrain eased into grass and a bit of scree, up to the big boulder basin below the hut. Then came the thing I did not expect at the end of June: about 200 vertical metres through a solid layer of snow, all the way up to the point where my T6 joined the T5 I'd planned to descend.
+Above the waterfall the terrain eased into grass and a bit of scree, up to the big boulder basin below the hut. Then came the thing I did not expect at the end of June: about 200 vertical metres through a solid layer of snow, from around 2450 m all the way up to the point where my T6 joined the T5 I'd planned to descend.
 
 I found some dry rocks, sat down and planned the descent. Scared by the snow, my slow progress and the unknown snowfields ahead, I did not go on to the hut that day.
 
