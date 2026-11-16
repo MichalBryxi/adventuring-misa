@@ -34,10 +34,10 @@ facts:
   ascent: 1820
   duration: "5:36"
   more:
-    "SAC route": "[Von Stechelberg über das Katzenwegli](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)"
     "Start / finish": "[Stechelberg](https://en.wikipedia.org/wiki/Stechelberg), 910 m"
     "Destination": "[Silberhornhütte](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/), 2663 m (turned back at ~2650 m)"
   links:
+    "SAC route": "https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/"
     "Strava": "https://www.strava.com/activities/11735388468"
 gear:
   - item: Microspikes
