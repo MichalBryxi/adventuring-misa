@@ -12,6 +12,9 @@ tags:
   - 4-stars
   - running
   - race
+gallery:
+  - src: ./01.png
+    caption: "Strava profile"
 ---
 
 A vertical kilometre is a very niche type of sport for a very special kind of people.
@@ -54,8 +57,6 @@ which was checked at the start of the race.
 - [Photo album](https://photos.app.goo.gl/iVfrrmbQbRcHgpAQA)
 - [Strava](https://www.strava.com/activities/2724984368/overview)
 - [Relive](https://www.relive.cc/view/vXvLYYApp1O)
-
-![Strava profile](./01.png)
 
 ## Verdict
 

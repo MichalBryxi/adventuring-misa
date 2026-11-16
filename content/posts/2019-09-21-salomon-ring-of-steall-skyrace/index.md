@@ -12,6 +12,17 @@ tags:
   - 5-stars
   - running
   - race
+gallery:
+  - src: ./03.jpg
+    caption: "First ridge"
+  - src: ./01.jpg
+    caption: "Trying to pretend that I can still run"
+  - src: ./05.jpg
+    caption: "Last hill and some of us changed it to sunbathing competition"
+  - src: ./04.jpg
+    caption: "My selfie with hopelessly lying person behind me"
+  - src: ./02.png
+    caption: "Strava profile"
 ---
 
 An epic adventure in the Scottish Mamores.
@@ -54,7 +65,6 @@ For those who got hooked onto [bagging the Munros](https://www.munromap.co.uk),
 the good news is that you will get **four** of them on the way.
 Admittedly although it's a very effective way to collect Munros,
 it's definitely not the wisest one.
-
 
 ### First half
 
@@ -102,8 +112,6 @@ he just pointed at his knee and mumbled something about an injury.
 He was here to support his brother who was competing.
 We gave each other high-five and continued each our own way.
 What a legend.
-
-![First ridge](./03.jpg)
 
 First *Munro* awaits us at **km 8**
 and my watch shows **1092 m** above sea level.
@@ -246,8 +254,6 @@ he turned back once again and shouted:
 "Maybe I'm your guardian angel".
 I have not met him in the event village after that.
 
-![Trying to pretend that I can still run](./01.jpg)
-
 The last ridge was awesome.
 It got sharper, rockier.
 Terrain way more technical.
@@ -270,10 +276,6 @@ while not obstructing the path to the people behind me.
 Finally, at **km 21.8** we meet the last *Munro* - **Am Bodach**.
 At this point, we already got our **~2400 m** of climbs.
 My gummi bears are gone.
-
-![Last hill and some of us changed it to sunbathing competition](./05.jpg)
-
-![My selfie with hopelessly lying person behind me](./04.jpg)
 
 Slow descent to **km 22.6** and we're rejoining the trail that took us here.
 Former slightly muddy terrain became a mud trap.
@@ -332,8 +334,6 @@ What an adventure.
 - [Strava](https://www.strava.com/activities/2728138351/overview)
 - [Relive](https://www.relive.cc/view/vxOQAAYmX2O)
 
-![Strava profile](./02.png)
-
 ## Verdict
 
 ### Pros
@@ -355,7 +355,6 @@ What an adventure.
  - The weather in this area is mostly shite.
 
 ## Extras
-
 
 - [Ring of Steall Skyrace 💪💥 Golden Trail World Series 🏴󠁧󠁢󠁳󠁣󠁴󠁿🏆](https://www.facebook.com/RingOfSteallSkyrace/videos/521861648567096/)
 - [Day 2 at Salomon Skyline Scotland 2019](https://www.facebook.com/RingOfSteallSkyrace/videos/447323952554420/)

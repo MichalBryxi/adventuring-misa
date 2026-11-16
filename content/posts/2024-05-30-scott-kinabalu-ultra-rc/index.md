@@ -12,6 +12,11 @@ tags:
   - review
   - gear
   - shoes
+gallery:
+  - src: ./01.jpg
+    caption: "Scott Kinabalu Ultra RC"
+  - src: ./02.jpg
+    caption: "Scott Kinabalu Ultra RC"
 ---
 
 Official webpage of [SCOTT for Kinabalu Ultra RC](https://www.scott-sports.com/us/en/kinabalu-ultra-rc) says:
@@ -28,8 +33,3 @@ Sadly I have to report that this was the pair of shoes with the **shortest lifes
 That's it. The shoes clocked pretty much **exactly 345.4km** (thanks [Strava](https://www.strava.com/settings/gear)). They are really destroyed from the upper mesh part, which developed the usual "squat holes", my specific "toe hole" and other minor wounds. And parts of the under-grippy-sole, has pretty much transformed to a completely flat surface with next to zero grip.
 
 All and all this is _way less_ than what I'd expect from running shoes. So if you see them for a very good price ... you'll get what you pay for.
-
-## Pictures
-
-![Scott Kinabalu Ultra RC](./01.jpg)
-![Scott Kinabalu Ultra RC](./02.jpg)

@@ -11,6 +11,11 @@ date: Sat Jun 26 2021 18:59:08 GMT+0100 (British Summer Time)
 tags:
   - 3-stars
   - climbing
+gallery:
+  - src: ./02.jpg
+    caption: "Duntelchaig - Drum; Wet start of the path"
+  - src: ./03.jpg
+    caption: "Duntelchaig - Drum; Views from the top"
 ---
 
 I never climbed a trad multi-pitch before. And one has to start somewhere, right? So why not at the most annoying multi-pitch trad climb ever?
@@ -21,15 +26,11 @@ After that, you arrive at the crag and have to identify the correct route. Which
 
 After a bit, my climbing partner points at a birch tree next to a waterfall and says: "This is it". Because I have no idea how to tell whether that's correct my willingness to gear up and start climbing is as enthusiastic as when someone has to go for a root canal.
 
-![Duntelchaig - Drum; Wet start of the path](./02.jpg)
-
 After the **first pitch**, which is wet and full of greenery, we built an anchor at another birch tree. Then we swapped positions and I try to pretend that I know what to do with the clingy clangys.
 
 **Second pitch** is just one short traverse that finishes with a massive ledge for a very comfortable anchor building.
 
 Followed by **third pitch** which is pretty much just a walk on a slab that finishes with quite a bold two moves through a chimney.
-
-![Duntelchaig - Drum; Views from the top](./03.jpg)
 
 The views from the top are beautiful and a break for a snack and a picture is very much recommended.
 

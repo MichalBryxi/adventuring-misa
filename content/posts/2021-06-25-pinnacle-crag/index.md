@@ -11,6 +11,9 @@ date: Fri Jun 25 2021 22:39:23 GMT+0100 (British Summer Time)
 tags:
   - 4-stars
   - climbing
+gallery:
+  - src: ./02.jpg
+    caption: "Pinnalce Crag"
 ---
 
 Closest **trad climbing** area from _Inverness_. Very short access. No gardening required.
@@ -19,8 +22,6 @@ Closest **trad climbing** area from _Inverness_. Very short access. No gardening
 > -UKC-
 
 Lead my first Very Difficult trad route here called [Tapered Groove](https://www.ukclimbing.com/logbook/crags/pinnacle_crag-2705/tapered_groove-44308). Beautiful views on nearby **Loch Duntelchaig** available from the top. Pleasant rock with a lot of features, comfortable belaying spots and easy down-climb walk-off.
-
-![Pinnalce Crag](./02.jpg)
 
 ## Notes
 

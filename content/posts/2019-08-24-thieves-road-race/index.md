@@ -12,6 +12,19 @@ tags:
   - 2-stars
   - running
   - race
+gallery:
+  - src: ./map.jpg
+    caption: "Thieves Road Race 2019 course map"
+  - src: ./graph.jpg
+    caption: "Thieves Road Race 2019 elevation profile"
+  - src: ./01.jpg
+    caption: "My selfie with group of runners in the background. Lesley vawing my way."
+  - src: ./02.jpg
+    caption: "My watch showing the furtherst distance I've ever run till now - 50km."
+  - src: ./03.jpg
+    caption: "Beautiful view on a field with stone wall & a gate."
+  - src: ./04.jpg
+    caption: "Sheeps running away from me."
 ---
 
 Report from my first proper ultra.
@@ -34,8 +47,6 @@ the route is actually going to be pretty **serious trail**. Suddenly my road sho
 
 The centre-point of the whole race is [Edderston farm](https://goo.gl/maps/XtH922TCcuPTxgVA9) in Peebles. This is where the registration happens, where you have your drop bag and where the race finish.
 
-![Thieves Road Race 2019 course map](./map.jpg)
-
 ## The day before
 
 Unfortunately because the registration ends at *8:00am* it is **not** possible to take morning bus from Edinburgh to Peebles. So I bought a return ticket for *10£* on the bus [X62](https://www.bordersbuses.co.uk/services/X62), and pitched a tent for *12£* in [Crossburn caravans](https://www.crossburn-caravans.com).
@@ -47,8 +58,6 @@ Since this was the *first* year of *Thieves Road Race*, the number of participan
 Registration time. Say hello to organizers, pick up your bib, prepare drop bag, fill my water bottles, load running vest with "food", take starting selfie, get to the bus and off we go to the start. Took us nearly an hour to get to the start, so this long day started at *09:21am*.
 
 ## The race
-
-![Thieves Road Race 2019 elevation profile](./graph.jpg)
 
 First **3km** was on a nice dusty road. Once we started gaining some altitude, the terrain changed to being seriously boggy & wet, with next to zero chance of keeping your shoes dry.
 
@@ -110,8 +119,3 @@ Get medal, sit down, drink, drink more, eat something savoury, get inside the co
 - Sometimes **marking** would really need some more thought. In some places I had really doubts whether "this way" or "that way".
 - The wording about **terrain** on the website was kidna misleading. Doing this as my first ultra and having less of a willpower, I would most probably give up at some point. Although the sweepers were very friendly and supportive, I would not recommend this course to beginners.
 - Water was my Achilles the whole route. I would recommend taking **1.5l** of water **at minimum**. Again the fixtures said "means of carrying water", which does not really give an impression of how much one should take.
-
-![My selfie with group of runners in the background. Lesley vawing my way.](./01.jpg)
-![My watch showing the furtherst distance I've ever run till now - 50km.](./02.jpg)
-![Beautiful view on a field with stone wall & a gate.](./03.jpg)
-![Sheeps running away from me.](./04.jpg)

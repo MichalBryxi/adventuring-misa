@@ -12,6 +12,23 @@ tags:
   - hiking
   - schweiz
   - type-3-fun
+gallery:
+  - src: ./01.jpg
+    caption: "Morning on the way up, above the Lauterbrunnen valley"
+  - src: ./02.jpg
+    caption: "Looking back over the Lauterbrunnen valley"
+  - src: ./04.jpg
+    caption: "Steep terrain under the rock face"
+  - src: ./03.jpg
+    caption: "One of the waterfalls on the way up"
+  - src: ./07.jpg
+    caption: "Back on bare rock, following the T5 markers"
+  - src: ./10.jpg
+    caption: "Down a rocky gully"
+  - src: ./11.jpg
+    caption: "Ledges along the T5"
+  - src: ./08.jpg
+    caption: "Stream hopping on the way down"
 ---
 
 *The T6 that taught me what “mandatory” means.*
@@ -33,23 +50,15 @@ tags:
 
 ## The story
 
-![Morning on the way up, above the Lauterbrunnen valley](./01.jpg)
-
 ### Going up
 
 The first part zigzags steeply up through forest, past a waterfall and over debris. The pathfinding isn't fun, but it goes. Then the route runs under the rock face, where occasional red dots mark the way. That's unusual for a T6.
 
-![Looking back over the Lauterbrunnen valley](./02.jpg)
-
 The first crux is a big, steep scree field. Anything coming from above would hit me, and a slip would send me off the cliff below. I crossed it carefully. It wasn't nice, but I could still have turned back.
-
-![Steep terrain under the rock face](./04.jpg)
 
 The second crux is a traverse across a dried-out waterfall, with a few bolts in the rock for anyone carrying a rope. I didn't have one. I tried a few moves, then committed to one that was well beyond what was reasonable: pulling myself sideways across a slab of rock that might have been crumbly, with nothing to hold onto, to reach the remains of the path on the other side.
 
 Once across, I realised I could not reverse that move. From here it would either go, or end with a helicopter. What kept me going was knowing that the T6 joins a T5 higher up. Finish the hard bit, and it's just a moderately easy walk off. At least that's what I thought.
-
-![One of the waterfalls on the way up](./03.jpg)
 
 Above the waterfall the terrain eased into grass and a bit of scree, up to the big boulder basin below the hut. Then came the thing I did not expect at the end of June: about 200 vertical metres through a solid layer of snow, all the way up to the point where my T6 joined the T5 I'd planned to descend.
 
@@ -65,15 +74,7 @@ I didn't call [Rega](https://www.rega.ch/en). I was sure it would go, and it did
 
 Round the corner the slope eased onto bare rock, and the rest was easy: a few chains, a gorge, some stream hopping.
 
-![Back on bare rock, following the T5 markers](./07.jpg)
-
-![Down a rocky gully](./10.jpg)
-
-![Ledges along the T5](./11.jpg)
-
 About 5½ hours up and 2–3 down. Very happy to be off it. Proper [type 3 fun](https://www.rei.com/blog/climb/fun-scale).
-
-![Stream hopping on the way down](./08.jpg)
 
 ## What I take on a T6 now
 

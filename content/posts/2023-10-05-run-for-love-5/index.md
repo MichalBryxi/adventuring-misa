@@ -9,6 +9,29 @@ authors:
   - michal-bryxi
 date: Thu Oct 05 2023 07:27:49 GMT+0200 (GMT+02:00)
 tags:
+gallery:
+  - src: ./2023-10-05-run-for-love-day1-01.jpg
+    caption: "Bridge next to our hotel."
+  - src: ./2023-10-05-run-for-love-day1-02.jpg
+    caption: "Three people running through the forest. The picture is taken from the drone. Sun flares are going in between the trees."
+  - src: ./2023-10-05-run-for-love-day1-03.jpg
+    caption: "Me and Hannah running through the finish gate"
+  - src: ./2023-10-05-run-for-love-day2-01.jpg
+    caption: "People crossing a river."
+  - src: ./2023-10-05-run-for-love-day2-02.jpg
+    caption: "Me and Hannah running through the forest."
+  - src: ./2023-10-05-run-for-love-day2-03.jpg
+    caption: "Me and Hannah running through the forest."
+  - src: ./2023-10-05-run-for-love-day3-01.jpg
+    caption: "Finisher beer. Me holding bottle of Staropramen against Swedish lake."
+  - src: ./2023-10-05-run-for-love-day4-01.jpg
+    caption: "Drone view looking down on forest, wooden path and few runners."
+  - src: ./2023-10-05-run-for-love-day5-01.jpg
+    caption: "Me and Hannah running on tarmac towards the camera"
+  - src: ./2023-10-05-run-for-love-day5-02.jpg
+    caption: "Me and Leti going through the forest."
+  - src: ./2023-10-05-run-for-love-day5-03.jpg
+    caption: "Me, Hannah and Leti at the finish line."
 ---
 
 First times are always special. First kiss, first tattoo, first multi-stage race. They don't have to be good or bad, they are just special. And exactly that was my first multi-stage event called [Run For Love](https://triberunforlove.com/).
@@ -47,8 +70,6 @@ Arrival at [Sweden´s first wind-powered hotel](https://www.hotellhoga-kusten.se
 - Altitude gain: 1'600 m
 - Start: 06:30
 
-![Bridge next to our hotel.](./2023-10-05-run-for-love-day1-01.jpg)
-
 We wake up in a mysterious, misty mood. Breakfast. The hotel lobby is full of people who look very positive and energetic, yet some of them are nervously walking around, trying to remember what they forgot to put into their running vests and might need during the run. Group photo in front of huge inflatable TRIBE gate, line-up for the start, countdown and off we go.
 
 I'm intentionally starting pretty much at the end. The idea is that I want to slowly progress from group to group to group and have some small talks with other runners as I go. Before my arrival, I did not know anyone.
@@ -56,8 +77,6 @@ I'm intentionally starting pretty much at the end. The idea is that I want to sl
 After a few hundred meters the Högakustenbron bridge appears from the fog above our heads. One kilometre more and we're running over another bridge having the fog all around. Despite the creepy atmosphere everyone is smiling and the group is consuming the initial kilometres quickly.
 
 The first climb of the day and one of the most magical views of the whole trip opens up when the early morning sun flares are cutting through the mist between the trees of the pine forest.
-
-![Three people running through the forest. The picture is taken from the drone. Sun flares are going in between the trees.](./2023-10-05-run-for-love-day1-02.jpg)
 
 The aid stations are plus minus every 10 km and one can very easily spot them from the distance by volunteers enthusiastically cheering at us as we are approaching. The stations are equipped with various goodies varying from water, oranges, bananas, crisps, blueberries and tons of other yummy-looking things that I never tried as I did not want to be an ass and to ask for every single thing if it's vegan. The stations also oftentimes had someone from the human-repair team ready to provide their expertise.
 
@@ -74,8 +93,6 @@ On the last few kilometres, Hannah's watch shows one cool feature that mine lack
 Running through the finish line. Group selfie. Yay, made it through the first day. Swim in the lake. Shower. Food. Prepare to sleep in the tent. Visit the ache-fix station. All while trying to cheer at those who are continuously arriving. Quite tired after the long day, but overall I arrived in a better condition than expected.
 
 - Elapsed time: [7h 43min](https://www.strava.com/activities/9873031576)
-
-![Me and Hannah running through the finish gate](./2023-10-05-run-for-love-day1-03.jpg)
 
 At the finish line met a girl who had an accident and accidentally headbutted Sweden. Sweden won and she had to be fast-forwarded to the finish line. She was still a bit in shock, but relatively cheerful given the situation.
 
@@ -98,15 +115,9 @@ I'm again intentionally starting in the back and as the kilometres go moving my 
 
 About halfway through the route the line on the map starts going through dodgy parts of the forest. We're trying to somehow follow, but the path won't be anywhere nearby. Kinda used to this from the navigation efforts during geocaching, so I'm just heading forward where the map shows me in the hope that the path will eventually re-appear. It did. We walked for another couple hundred meters and the map showed that we had to cross a river. Sadly the map did not show us a way to any bridge nearby. But our shoes were completely drenched anyway, so we did not care about this small route detour.
 
-![People crossing a river.](./2023-10-05-run-for-love-day2-01.jpg)
-
 On the next bits Hannah and I felt better than the rest of the group and so we decided to leg it. Entering an area of boulder fields and wooden paths as we're climbing up to the highest point of the route which had a tiny loop on the very top. The idea there was to show us around and give us some kick-ass views. The fog was so thick that we nearly missed a TV tower that was placed on the top of the same hill.
 
-![Me and Hannah running through the forest.](./2023-10-05-run-for-love-day2-02.jpg)
-
 Finished the loop and went to the final stretch. Few technical bits are protected with ropes. More boulder fields. Beach crossing. More wooden paths. Completely useless bridge in the middle of nowhere on a boulder field. And we're approaching the finish line.
-
-![Me and Hannah running through the forest.](./2023-10-05-run-for-love-day2-03.jpg)
 
 Final 500m of runnable beach, arriving through the gate while everyone that has already arrived is cheering at us. We've made it!
 
@@ -132,8 +143,6 @@ The last 6km goes to the forest and a horrible, horrible bog. My progress gets v
 Last 500m and I can hear music behind me. A runner with a boom box. No, I won't let anyone in front. I'm pushing all I can, but he just appears next to me like in the "12 tasks for Asterix" and effortlessly hop-by-hop reaches the finish line in front of me while I'm using my sprint speed to comically fall behind.
 
 - Elapsed time: [3h 48min](https://www.strava.com/activities/9885570341)
-
-![Finisher beer. Me holding bottle of Staropramen against Swedish lake.](./2023-10-05-run-for-love-day3-01.jpg)
 
 Cheeky non-alcoholic beer, dinner, thinking, second dinner, and even more snacks. Sauna and cold swim in the lake. The body aches solidly this time. The station for contemplating bad life decisions is full (as always) and despite my downhill muscles being solidly overworked I'm not given any tape or drugs.
 
@@ -166,8 +175,6 @@ Thanks to my previous training for [Harder Run](https://www.jungfrau-marathon.ch
 
 On the tallest climb of the day, the route turns up and follows a set of fixed ropes and ladders on a very steep incline. A little bit of mountain goating and I'm at the top. Resting while waiting for the group to arrive. Descend with the group. What we gained in altitude we immediately lost. I'm slowly plopping behind the group as my quadriceps are killing me.
 
-![Drone view looking down on forest, wooden path and few runners.](./2023-10-05-run-for-love-day4-01.jpg)
-
 The last pit stop was at the corner of the lake where the crew prepared a bonfire and interested people could toast some marshmallows to go. And from here we're ready for the final climb of the day. Only about 12 km to go, but the body is tired from the accumulated kilometres and the long days before.
 
 After a bit of climbing on some more technical parts, we arrive at a rocky plateau. Sadly the views are shy and so they are hiding behind a fog of clouds. But navigation is quite simple as we have to stick to the ridge and follow the blue dots that are painted on the rocks.
@@ -193,21 +200,15 @@ Optimism, hope, outlook. All those emotions can be felt through the waking up ca
 
 Hannah, Leti and I team up right from the start. The first 10km are mostly on paths/tarmac, The legs are surprisingly fresh after yesterday so we're flying through. Leti has a slower start and sends me and Hannah ahead, which makes my companion happy as she can realise herself in her discipline of road running. I'm trying hard to not fall behind.
 
-![Me and Hannah running on tarmac towards the camera](./2023-10-05-run-for-love-day5-01.jpg)
-
 After the first pit stop path goes up through the forest on some challenging terrain, so we slow down and suddenly we can hear a group catching up with us, this group brought Leti back, and so the trio is reunited.
 
 Kilometres don't go fast. We walk a lot. We pain a lot. But we keep going. After all those days volunteers at the pit stops still keep cheering at us and giving us smiles. Some brave ones even give hugs. This is better motivation than anything else.
-
-![Me and Leti going through the forest.](./2023-10-05-run-for-love-day5-02.jpg)
 
 Time passes in uncountable quantities, but one leg goes in front of the other like clockwork. One, two, one, two, one... Suddenly we're over the last hill and we can see the city. With my eyes, I'm scanning the concrete jungle to find a familiar blue-yellow pattern. My tired memory serves me information about the hotel on the coast, so I narrowed my attention to that part of the city. "There!", I scream ecstatically, "The gate is next to the tall, grey building!". The team morale suddenly jumps four levels up. We're at the sight of the finish line.
 
 Quick navigation through the maze of the city. Unexpected detour around and behind the hotel. Nervous waiting at the zebra crossing for the green person. And we're "sprinting" through the finish line.
 
 - Elapsed time: [5h 15min](https://www.strava.com/activities/9899301541)
-
-![Me, Hannah and Leti at the finish line.](./2023-10-05-run-for-love-day5-03.jpg)
 
 Team hug. Laughter. Big emotions. Happiness. Everyone who already finished gets out of the hotel restaurant and gives us big applause and hugs. We did it!
 

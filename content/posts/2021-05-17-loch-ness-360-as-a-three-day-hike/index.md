@@ -11,6 +11,25 @@ date: Sun May 17 2021 22:00:00 GMT+0100 (British Summer Time)
 tags:
   - 4-stars
   - hiking
+gallery:
+  - src: ./2021-05-17-loch-ness-360-map.jpg
+    caption: "Loch Ness 360° map"
+  - src: ./2021-05-17-loch-ness-360-day1-hike.jpg
+    caption: "Forests above Inverness"
+  - src: ./2021-05-17-loch-ness-360-day1-view-site.jpg
+    caption: "Perfect spot for camping"
+  - src: ./2021-05-17-loch-ness-360-day1-camp-site.jpg
+    caption: "The Viewcatcher"
+  - src: ./2021-05-17-loch-ness-360-day2-fort-augustus.jpg
+    caption: "Loch Ness view from Fort Augustus"
+  - src: ./2021-05-17-loch-ness-360-day2-waterfall.jpg
+    caption: "Foyers waterfall"
+  - src: ./2021-05-17-loch-ness-360-day3-loch-ness.jpg
+    caption: "Loch Ness views"
+  - src: ./2021-05-17-loch-ness-360-day3-dores.jpg
+    caption: "Loch Ness view from Dores"
+  - src: ./2021-05-17-loch-ness-360-profile.png
+    caption: "Loch Ness 360 3 day hike route"
 ---
 
 Loch Ness 360° refers to a loop that joins [Great Glen Way](https://www.highland.gov.uk/greatglenway/) 
@@ -25,8 +44,6 @@ up to (quite bonkers) [LochNess360° Challenge](https://lochness360.com/lochness
 We decided to do the middle one. 
 Sort of. 
 We did it in three days but via hiking.
-
-![Loch Ness 360° map](./2021-05-17-loch-ness-360-map.jpg)
 
 ## Logistics
 
@@ -54,8 +71,6 @@ Beautiful old forest with mossy stone walls lined the first kilometres of the pa
 Exchanged with the stunning views of the Loch Ness itself.
 Meadows with cute lambs included (limited to seasonal availability).
 
-![Forests above Inverness](./2021-05-17-loch-ness-360-day1-hike.jpg)
-
 The first lunch stop was not planned and happened at Abriachan **Eco-Campsite & Cafe**
 which lured us in with their wild & hippie "billboards" on the way.
 If you're into fancy dining,
@@ -75,13 +90,9 @@ we had 5 more km to go,
 so we pushed a little bit more.
 Which turned out to be a good call given the fatigue the next day.
 
-![Perfect spot for camping](./2021-05-17-loch-ness-360-day1-view-site.jpg)
-
 Our final destination for the day was at an artistic attraction called **The Viewcatcher**.
 Not an amazing spot to sleep at, to be honest,
 but we found a spot to pitch a tent.
-
-![The Viewcatcher](./2021-05-17-loch-ness-360-day1-camp-site.jpg)
 
 ### Points of Interest
 
@@ -100,8 +111,6 @@ which happened to be **Caledonian Canal Centre**.
 And I can't explain why (probably the tiredness),
 but their bean burger & fries were from another planet 👨🏻‍🍳👌🏻.
 
-![Loch Ness view from Fort Augustus](./2021-05-17-loch-ness-360-day2-fort-augustus.jpg)
-
 Since Fort Augustus is the lowest point of the whole route,
 the next part was mostly about hiking uphill.
 The first few kilometres was an idyllic stroll through the meadows full of sheep & lambs.
@@ -119,8 +128,6 @@ a quick snap of the local waterfall
 and quickly get keys from our lovely accommodation at **Foyers Roost**
 which deserves an extra shout for providing us with a hot meal way past kitchen closing time.
 
-![Foyers waterfall](./2021-05-17-loch-ness-360-day2-waterfall.jpg)
-
 #### Points of Interest
 
 - [Caledonian Canal Centre](https://g.page/CaledonianCanalCentre?share)
@@ -135,14 +142,10 @@ we departed from the Foyers and hiked up the first big hill.
 After that, we got the view of Loch Ness again.
 It is surprising that despite its name most of the hike the lake is not visible at all.
 
-![Loch Ness views](./2021-05-17-loch-ness-360-day3-loch-ness.jpg)
-
 Hiking through the deep forests here on steep zig zags is very relaxing.
 Occasional jumps over fallen timber is a welcome addition to the set of daily activities.
 A little bit of rest in **Dores** to get a picture from the other side of the lake
 and final push to get back to Inverness.
-
-![Loch Ness view from Dores](./2021-05-17-loch-ness-360-day3-dores.jpg)
 
 ## Conclusion
 
@@ -164,5 +167,3 @@ and final push to get back to Inverness.
 | [Day 2](https://www.strava.com/activities/5309266638) |  42.5 |   949 |       9:24 |
 | [Day 3](https://www.strava.com/activities/5313255369) |  35.0 |   527 |       7:32 |
 | Sum   | 129.5 | 2,531 |      27:41 |
-
-![Loch Ness 360 3 day hike route](./2021-05-17-loch-ness-360-profile.png)

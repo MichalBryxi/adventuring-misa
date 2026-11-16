@@ -12,6 +12,17 @@ tags:
   - 4-stars
   - running
   - race
+gallery:
+  - src: ./2019-08-03-tromso-skyrace-tromsdalstind-02.jpg
+    caption: "Me and my random friends at the start of the race"
+  - src: ./2019-08-03-tromso-skyrace-tromsdalstind-03.jpg
+    caption: "Obligatory selfie from the summit of Tromsdalstinden"
+  - src: ./2019-08-03-tromso-skyrace-tromsdalstind-04.jpg
+    caption: "Picture from the top of the mountain with a person in the back who just scrambled up the snow patch"
+  - src: ./2019-08-03-tromso-skyrace-tromsdalstind-map.jpg
+    caption: "Tromsø skyrace - Tromsdalstind race map"
+  - src: ./2019-08-03-tromso-skyrace-tromsdalstind-graph.png
+    caption: "Tromsø skyrace - Tromsdalstind elevation profile"
 ---
 
 Amazing views & heavy legs.
@@ -26,8 +37,6 @@ Nordic eternal day did not allow me to sleep properly, but the day of the race I
 
 Morning, registration, prepare food and water, mandatory selfie with my new friends and off we go.
 
-![Me and my random friends at the start of the race](./2019-08-03-tromso-skyrace-tromsdalstind-02.jpg)
-
 ## The race
 
 Start is at the sea level. First **3 km** were quick, flat tarmac. We crossed the bridge from the island part and started hiking up the first hill. **5.5 km** in and we're at the first water station at *Storsteinen* (**421 m**). Next high point is at **km 9** the summit of *Bønntuva* (**769 m**). Followed by quick descent back to **504 m** where we needed to cross the river. Volunteers over there warned us that this is the last place where we can refill our water supplies. Apparently thanks to lack of fauna in the area it's perfectly safe to drink from any creek.
@@ -36,17 +45,11 @@ Till here I was pretty fine and was running most of the time (except for extreme
 
 Summit of *Tromsdalstinden*, quick selfie, admire the person that just scrambled up the snow patch on the other side of the mountain - he was running the *Hamperokken Skyrace* (57 km). And start descending. The boulders we had to jump from/to were really big at this point. Descend really steep and a lot of unstable soil. Thanks to my Elvis legs I was not worried, because my progress was extremely slow. I can see on my [Strava flyby](https://labs.strava.com/flyby/viewer/#2587033578?c=ukms005f&z=C&t=1THLSC) that I started falling behind. At one point one lady passed by me so fast like the rough terrain was non existent. She was way faster on the descent than anyone else I met.
 
-![Obligatory selfie from the summit of Tromsdalstinden](./2019-08-03-tromso-skyrace-tromsdalstind-03.jpg)
-![Picture from the top of the mountain with a person in the back who just scrambled up the snow patch](./2019-08-03-tromso-skyrace-tromsdalstind-04.jpg)
-
 At **km 20** we finally meet another river. It was only **8.5 km** since the last water source, but my water levels (*1 l* in sum) were pretty low.
 
 Next part was pretty much flat, very nice running. But my energy levels were so low, that I'm struggling to even keep half-and-half of running/walking ratio. The only socially enforced run is happening at **km 24** and here is why: I was told about this before. Apparently [Kílian](https://en.wikipedia.org/wiki/Kílian_Jornet_Burgada) loves to joke about this part during the briefing. At this point you can se Tromsø right in front of you. You can see the beautiful dusty path getting there. But instead of going back to Tromsø the route goes "nope" and turns sharp left back to the hills. There were several volunteers making sure exhausted runners know where to go. And of course I did not want to just walk past them, so a little bit of running happened here.
 
 Another **184 m** of altitude gain and we're back on the summit of *Storsteinen*. From here (**km 27**), it's only going downhill. My energy levels are deeply in red numbers and I have to descend **420 m** of altitude. After getting back on tarmac we had just *3 km* to go. Very supportive volunteers on every corner showed us the way. Cross the bridge, run next to the marinas, pretend to speed up for the last kilometer or so and finally sweet, sweet finish line.
-
-![Tromsø skyrace - Tromsdalstind race map](./2019-08-03-tromso-skyrace-tromsdalstind-map.jpg)
-![Tromsø skyrace - Tromsdalstind elevation profile](./2019-08-03-tromso-skyrace-tromsdalstind-graph.png)
 
 ## Stats
 

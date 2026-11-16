@@ -11,6 +11,9 @@ date: Wed May 29 2021 11:56:46 GMT+0100 (British Summer Time)
 tags:
   - 2-stars
   - munro
+gallery:
+  - src: ./01.jpg
+    caption: "Views from the top of Ben Lomond"
 ---
 
 Ben Lomond holds two records: 
@@ -26,8 +29,6 @@ I would recommend going either **very early** or **after ~2 pm** to avoid proble
 
 The route itself is relatively steep,
 almost without any bog and gives great views on the Loch Lomond itself.
-
-![Views from the top of Ben Lomond](./01.jpg)
 
 ## Conclusion
 

@@ -11,6 +11,17 @@ date: Thu Jul 21 2022 07:54:32 GMT+0200 (Central European Summer Time)
 tags:
   - 5-stars
   - schweiz
+gallery:
+  - src: ./03.jpg
+    caption: "Me on Tannhorn"
+  - src: ./02.jpg
+    caption: "Hardergrat view towards Brienz"
+  - src: ./05.jpg
+    caption: "Obligatory selfie"
+  - src: ./04.jpg
+    caption: "Finally some running opportunities"
+  - src: ./06.png
+    caption: "Strava of Hardergrat trail run top to top"
 ---
 
 If you Google the "ridge hike in Switzerland",
@@ -86,28 +97,19 @@ but good shoes,
 slow moves
 and three points of contact rule should anyone reasonably fit get through.
 
-![Me on Tannhorn](./03.jpg)
-
 Speaking about the relativity of the perception of the dangers:
 We've met quite a few people that just run the ridge as they'd be on tarmac.
 And also a few that were genuinely scared for their lives when the ridge got narrow.
 So it depends 🤷‍♂️.
 
-![Hardergrat view towards Brienz](./02.jpg)
-
 Moving along the grassy tops we got an amazing set of views,
 which can be only described as:
 What you see on Instagram looks way worse than reality.
-
-
-![Obligatory selfie](./05.jpg)
 
 When we passed 3/4 of the route,
 the terrain became runnable and we could enjoy some "wheee" and "uiii".
 As a bonus the path occasionally snaked into the forest,
 so we could get a tiny break from the omnipresent sun.
-
-![Finally some running opportunities](./04.jpg)
 
 Beer at the Harder Kulm kiosk
 and late evening funicular down back to Interlaken.
@@ -142,8 +144,6 @@ then you should try it.
 | Descent     |         2013m |
 | Duration    |      8h 03min |
 | Moving time |      4h 00min |
-
-![Strava of Hardergrat trail run top to top](./06.png)
 
 - [Strava recording of Hardergrat trail run top to top](https://www.strava.com/activities/7403876714)
 - [Brienzergrat FKT](https://fastestknowntime.com/route/brienzergrat-switzerland) (5h 42m 34s) 😱

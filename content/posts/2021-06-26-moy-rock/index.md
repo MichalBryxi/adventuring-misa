@@ -11,6 +11,9 @@ date: Sat Jun 26 2021 08:02:42 GMT+0100 (British Summer Time)
 tags:
  - 5-stars
  - climbing
+gallery:
+  - src: ./02.jpg
+    caption: "Moy Rock (Dingwall)"
 ---
 
 Most popular **sport climbing** area around _Inverness_. Very short access. Well climbed, but some of the routes in the shadows are covered in moss. 
@@ -24,8 +27,6 @@ Better take helmets. Even though these are sports routes, the conglomerate _can_
 Before climbing take a look at notes on UKC about the possibility of birds nesting and avoid those few routes.
 
 Make sure to **not** park in front of the gate and **not** on the road which is extremely busy. It's not hard to spot the places where people usually park at the verge. It's a little bit of a jump, but most cars should be able to do it.
-
-![Moy Rock (Dingwall)](./02.jpg)
 
 ## Notes
 

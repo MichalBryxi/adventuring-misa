@@ -11,13 +11,16 @@ date: Sat Jun 26 2021 09:19:42 GMT+0100 (British Summer Time)
 tags:
   - 4-stars
   - munro
+gallery:
+  - src: ./02.jpg
+    caption: "Sgùrr Mòr"
+  - src: ./04.png
+    caption: "Route to Sgùrr Mòr with elevation profile1"
 ---
 
 Every Scottish hike that starts too easy will inevitably surprise you. An attempt to summit Sgùrr Mòr is one of those.
 
 The quick and mostly flat start of the hike goes through a forest and sticks to dirt paths. But once we crossed the first bridge the real fun started. The grade of the hike on walkhighlands is **4 boots** with **bog factor 4** and I don't think it's overstated. Our day was unusually sunny, but after we crossed the river we could forget that we ever had dry shoes. We headed South, roughly followed the river and then hopelessly tried to find something that might look like a path. Eventually, we gave up and went directly to _Loch Gorm_.
-
-![Sgùrr Mòr](./02.jpg)
 
 From there on we could again identify the intended path that heads up the hill. It is nice, dry & rocky and leads to the top of **An Coileachan**.
 
@@ -39,8 +42,6 @@ This is one of the Munro bagging experiences that I'll always remember and talk 
 > -walkhighlands-
 
 ## Stats
-
-![Route to Sgùrr Mòr with elevation profile1](./04.png)
 
 - Distance: 26.51 km
 - Moving time: 6h 59min
