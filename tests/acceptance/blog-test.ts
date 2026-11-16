@@ -123,7 +123,7 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-fact="Duration"] td').hasText('5 h 36 min');
     assert
       .dom('[data-test-fact="Points"] td')
-      .hasText('Stechelberg, 910 m → Silberhornhütte, 2,663 m');
+      .hasText('Stechelberg (910 m) → Silberhornhütte (2,663 m)');
     assert
       .dom('[data-test-fact="Grade"] a')
       .hasText('T6')
