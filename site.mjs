@@ -12,6 +12,6 @@ export default {
   navigation: [
     { label: 'Munros', route: 'tag', id: 'munro' },
     { label: 'Type 3 fun', route: 'tag', id: 'type-3-fun' },
-    { label: 'About me', route: 'page', id: 'about-me' },
+    { label: 'About me', route: 'about-me' },
   ],
 };

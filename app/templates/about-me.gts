@@ -1,0 +1,181 @@
+import { htmlSafe } from '@ember/template';
+
+import { ResponsiveImage } from '@responsive-image/ember';
+import { pageTitle } from 'ember-page-title';
+
+import photo from '../../content/about-me.jpg?responsive';
+import { Container } from '../components/container.gts';
+import { Head } from '../components/head.gts';
+import { Sections } from '../components/sections.gts';
+import { PROSE_SIZES, photoUrl } from '../content/photo.ts';
+
+import type { TOC } from '@ember/component/template-only';
+import type { Section } from '../components/sections.gts';
+
+// The About me page is one of a kind, so its content lives here as data
+// rather than in content/. Text is HTML.
+
+const TITLE = 'Michal Bryxí';
+
+const INTRO = htmlSafe(
+  `Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburgh and Inverness, and now I live in <a href="https://en.wikipedia.org/wiki/Interlaken">Interlaken</a>, between the lakes, with the Swiss Alps on the doorstep. This blog is where I write up my adventures in the mountains and things around.`,
+);
+
+const SECTIONS: Section[] = [
+  {
+    title: 'Outdoors',
+    layout: 'cards',
+    items: [
+      {
+        heading: 'Trail running',
+        icon: '🏃',
+        text: `Races up to 100 km: Baroko 100, Matterhorn Ultraks Extreme, E51, Ben Nevis Ultra, the <a href="/2019-09-21-salomon-ring-of-steall-skyrace">Ring of Steall</a>, the <a href="/2019-08-24-thieves-road-race">Thieves Road</a>, the <a href="/2019-08-03-tromso-skyrace-tromsdalstinden">Tromsø Skyrace</a>, the Niesen Treppenlauf and the Vertical Kilometre du Mont Blanc. All the race reports are under <a href="/tag/race">race</a>.`,
+      },
+      {
+        heading: 'Hiking and scrambling',
+        icon: '🥾',
+        text: `From <a href="/tag/munro">Munros</a> in Scotland to <a href="/2026-11-15-katzenwegli-t6">T6 routes</a> in the Bernese Oberland.`,
+      },
+      {
+        heading: 'Climbing',
+        icon: '🧗',
+        text: `A hobby climber up to 6b+, mostly sport, plus bouldering, multi-pitch and trad, and via ferratas up to D. I've introduced plenty of people to climbing and bouldering, and did the SAC course for setting boulder routes.`,
+      },
+      {
+        heading: 'Paragliding',
+        icon: '🪂',
+        text: `Solo pilot (IPPI 4), flying in Switzerland, around Central Europe and in Nepal.`,
+      },
+      {
+        heading: 'Skiing and ski touring',
+        icon: '⛷️',
+        text: `I taught myself to ski on the pistes a few years ago, and now I'm heading off them, ski touring for the freedom of the open Alps.`,
+      },
+      {
+        heading: 'Biking',
+        icon: '🚴',
+        text: `Bikepacking from Czechia to the sea, from Havana to the westernmost point of Cuba, and along part of Ireland's Wild Atlantic Way. I'm an active <a href="https://www.warmshowers.org">Warmshowers</a> host, so if you're cycling through Interlaken, get in touch.`,
+      },
+      {
+        heading: 'Guiding',
+        icon: '🚵',
+        text: `I've guided e-bike tours around Interlaken, for Loop Tours in 2024 and <a href="https://www.flyingwheels.ch">Flying Wheels</a> in 2025.`,
+      },
+    ],
+  },
+  {
+    title: 'Courses & certificates',
+    layout: 'timeline',
+    items: [
+      {
+        heading: 'Powder skiing',
+        icon: '⛷️',
+        date: '2024-01',
+        text: `At the <a href="https://www.coolschool.ch/">Cool School</a> in the Lötschental.`,
+      },
+      {
+        heading: 'Basic avalanche training',
+        icon: '🏔️',
+        date: '2024-02',
+        text: `With <a href="https://outdoor.ch">Outdoor+</a> on First.`,
+      },
+      {
+        heading: 'First aid',
+        icon: '🩹',
+        date: '2024-04',
+        text: `In Interlaken.`,
+      },
+      {
+        heading: 'Boulder route setting',
+        icon: '🧗',
+        date: '2024-10',
+        text: `The <a href="https://www.sac-cas.ch/de/leistungssport/sportklettern/routenbaukurse/">SAC course</a> in Yverdon-les-Bains.`,
+      },
+      {
+        heading: 'Paragliding licence',
+        icon: '🪂',
+        text: `IPPI 4.`,
+      },
+    ],
+  },
+  {
+    title: 'Computers',
+    layout: 'cards',
+    items: [
+      {
+        heading: 'Beauty salons',
+        icon: '💇',
+        text: `<a href="https://beauty-pay.cz">beauty-pay.cz</a>, a booking and management app for beauty salons, which I've run for eleven years.`,
+      },
+      {
+        heading: 'Paragliding weather',
+        icon: '🌬️',
+        text: `<a href="https://winds.mobi">winds.mobi</a> shows real-time wind from weather stations across the Alps and beyond, and paragliders check it before they fly. I build its <a href="https://github.com/winds-mobi/winds-mobi-client-web">new web client</a>.`,
+      },
+      {
+        heading: 'Bikepacking weather',
+        icon: '🌦️',
+        text: `<a href="https://forkcast.vast.earth">Forkcast</a>, a <a href="https://vast.earth">vast.earth</a> project, shows what the weather usually does along a bike route, day by day, so you can plan a long trip months ahead.`,
+      },
+      {
+        heading: 'Small tools',
+        icon: '🧰',
+        text: `<a href="/2023-05-10-magic-pass-places-as-gpx">Magic Pass places as GPX</a>, and a <a href="https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv">Skytraxx vario to CSV export</a> for my paragliding flights.`,
+      },
+      {
+        heading: 'This blog',
+        icon: '📝',
+        text: `<a href="https://github.com/MichalBryxi/adventuring-misa">Open source</a>, like winds.mobi and Forkcast.`,
+      },
+    ],
+  },
+  {
+    title: 'Talks',
+    layout: 'cards',
+    items: [
+      {
+        heading: 'EmberFest 2026, Prague',
+        icon: '🎤',
+        text: `<a href="https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime">4,207 Days of Uptime: Evolving an Ember App Without a Rewrite</a>, on eleven years of beauty-pay.cz without a rewrite.`,
+      },
+    ],
+  },
+  {
+    title: 'Find me',
+    layout: 'links',
+    items: [
+      { heading: 'Strava', link: 'https://www.strava.com/athletes/14041018' },
+      { heading: 'Mastodon', link: 'https://mastodon.world/@MichalBryxi' },
+      { heading: 'GitHub', link: 'https://github.com/MichalBryxi' },
+      { heading: 'LinkedIn', link: 'https://www.linkedin.com/in/michalbryxi' },
+      {
+        heading: 'Outdoor CV (PDF)',
+        link: 'https://michalbryxi.github.io/2025/Michal_Bryxi_outdoor_CV.pdf',
+      },
+      { heading: 'RSS feed', link: '/rss.xml' },
+    ],
+  },
+];
+
+export default <template>
+  {{pageTitle TITLE}}
+  <Head @title={{TITLE}} @image={{photoUrl photo}} @path="/page/about-me" />
+
+  <article class="py-16 lg:py-36" data-test-page="about-me">
+    <Container>
+      <h1 class="text-4xl font-bold text-slate-900">{{TITLE}}</h1>
+      <ResponsiveImage
+        @src={{photo}}
+        @sizes={{PROSE_SIZES}}
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        class="mt-10 rounded-2xl shadow-xl shadow-slate-200"
+      />
+      <p
+        class="mt-12 text-lg/8 text-slate-700 [&_a]:text-emerald-700 [&_a]:underline hover:[&_a]:text-emerald-900"
+      >{{INTRO}}</p>
+      <Sections @sections={{SECTIONS}} class="mt-16" />
+    </Container>
+  </article>
+</template> satisfies TOC<{ Args: { model: unknown } }>;

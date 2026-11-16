@@ -1,3 +1,4 @@
+import { array } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 
 import { ResponsiveImage } from '@responsive-image/ember';
@@ -40,7 +41,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
         <li class="flex">
           <LinkTo
             @route={{item.route}}
-            @model={{item.id}}
+            @models={{if item.id (array item.id) (array)}}
             class="hover:text-slate-900"
           >{{item.label}}</LinkTo>
         </li>
@@ -64,8 +65,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
       >
         <span class="font-mono text-slate-500">Written by</span>
         <LinkTo
-          @route="page"
-          @model="about-me"
+          @route="about-me"
           class="mt-6 font-bold text-slate-900 hover:text-emerald-700"
           data-test-owner
         >{{site.owner}}</LinkTo>
@@ -119,8 +119,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
         <p class="mt-8 font-mono text-sm/7 text-slate-500">
           Written by
           <LinkTo
-            @route="page"
-            @model="about-me"
+            @route="about-me"
             class="font-bold text-slate-900 hover:text-emerald-700"
             data-test-owner
           >{{site.owner}}</LinkTo>
