@@ -63,7 +63,12 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
         class="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:px-12 lg:text-sm/7 lg:whitespace-nowrap lg:[writing-mode:vertical-rl]"
       >
         <span class="font-mono text-slate-500">Written by</span>
-        <span class="mt-6 font-bold text-slate-900">{{site.owner}}</span>
+        <LinkTo
+          @route="page"
+          @model="about-me"
+          class="mt-6 font-bold text-slate-900 hover:text-emerald-700"
+          data-test-owner
+        >{{site.owner}}</LinkTo>
       </div>
       <div
         class="relative z-10 mx-auto px-4 pt-10 pb-4 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:px-8 lg:py-12 xl:px-12"
@@ -113,7 +118,12 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
         <About />
         <p class="mt-8 font-mono text-sm/7 text-slate-500">
           Written by
-          <span class="font-bold text-slate-900">{{site.owner}}</span>
+          <LinkTo
+            @route="page"
+            @model="about-me"
+            class="font-bold text-slate-900 hover:text-emerald-700"
+            data-test-owner
+          >{{site.owner}}</LinkTo>
         </p>
       </div>
     </footer>
