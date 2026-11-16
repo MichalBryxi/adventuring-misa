@@ -7,8 +7,11 @@ import { pageTitle } from 'ember-page-title';
 import site from '../../site.mjs';
 import cover from '../../content/cover.jpg?responsive';
 import { Ridge } from '../components/ridge.gts';
+import { TAG_CLOUD } from '../content/tag-cloud.ts';
 
 import type { TOC } from '@ember/component/template-only';
+
+const eq = (a: unknown, b: unknown) => a === b;
 
 const Explore: TOC<{ Element: HTMLElement }> = <template>
   <section ...attributes>
@@ -37,6 +40,24 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
       <li class="flex">
         <a href="/rss.xml" class="hover:text-slate-900">RSS feed</a>
       </li>
+    </ul>
+    <ul
+      role="list"
+      aria-label="Tags"
+      class="mt-6 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 font-medium text-slate-500 lg:justify-start"
+      data-test-tag-cloud
+    >
+      {{#each TAG_CLOUD as |tag|}}
+        <li>
+          <LinkTo
+            @route="tag"
+            @model={{tag.id}}
+            class="{{tag.size}} hover:text-emerald-700"
+            title="{{tag.count}} {{if (eq tag.count 1) 'post' 'posts'}}"
+            data-test-cloud-tag={{tag.id}}
+          >{{tag.name}}</LinkTo>
+        </li>
+      {{/each}}
     </ul>
   </section>
 </template>;

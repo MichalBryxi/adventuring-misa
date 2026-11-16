@@ -1,0 +1,59 @@
+type Meta = { id: string; name?: string; tags?: string[] };
+
+const POSTS = import.meta.glob<Meta>('/content/posts/*/index.md', {
+  query: '?meta',
+  import: 'default',
+  eager: true,
+});
+
+const TAGS = import.meta.glob<Meta>('/content/tags/*.md', {
+  query: '?meta',
+  import: 'default',
+  eager: true,
+});
+
+// The star ratings of reviews are tags too, but not topics to explore
+const RATING = /^\d-stars?$/;
+
+// Smallest to biggest
+const SIZES = ['text-xs', 'text-sm', 'text-base', 'text-lg', 'text-xl'];
+
+export interface CloudTag {
+  id: string;
+  name: string;
+  count: number;
+  size: string;
+}
+
+/**
+ * Every tag used by a post, alphabetically, sized by how many posts use it.
+ */
+export const TAG_CLOUD: CloudTag[] = (() => {
+  const counts = new Map<string, number>();
+
+  for (const post of Object.values(POSTS)) {
+    for (const tag of post.tags ?? []) {
+      if (!RATING.test(tag)) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    }
+  }
+
+  const names = new Map(
+    Object.values(TAGS).map((tag) => [tag.id, tag.name ?? tag.id]),
+  );
+  const values = [...counts.values()];
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+
+  return [...counts]
+    .map(([id, count]) => ({
+      id,
+      name: names.get(id) ?? id,
+      count,
+      size: SIZES[
+        max === min
+          ? 2
+          : Math.round(((count - min) / (max - min)) * (SIZES.length - 1))
+      ]!,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+})();

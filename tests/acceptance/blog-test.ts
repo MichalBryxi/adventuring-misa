@@ -38,6 +38,26 @@ module('Acceptance | blog', function (hooks) {
       .hasAttribute('href', '/page/about-me');
   });
 
+  test('the sidebar has a tag cloud sized by use', async function (assert) {
+    await visit('/');
+
+    const size = (id: string) =>
+      parseFloat(
+        getComputedStyle(
+          document.querySelector(`[data-test-cloud-tag="${id}"]`)!,
+        ).fontSize,
+      );
+
+    assert
+      .dom('[data-test-cloud-tag="munro"]')
+      .hasText('Munro')
+      .hasAttribute('href', '/tag/munro');
+    assert
+      .dom('[data-test-cloud-tag="4-stars"]')
+      .doesNotExist('ratings are left out');
+    assert.true(size('munro') > size('shoes'), 'more posts, bigger tag');
+  });
+
   test('photos next to the Markdown get bundled URLs', async function (assert) {
     // A post that keeps its screenshots in the text, and one with a gallery
     await visit('/2024-01-01-windy-colour-scale-of-wind-for-paragliding');
