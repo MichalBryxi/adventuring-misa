@@ -1,1 +1,9 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans:
+    "Satoshi", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
