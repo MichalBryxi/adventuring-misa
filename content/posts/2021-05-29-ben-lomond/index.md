@@ -14,6 +14,13 @@ tags:
 gallery:
   - src: ./01.jpg
     caption: "Views from the top of Ben Lomond"
+facts:
+  distance: 12.71
+  ascent: 936
+  movingTime: "3:31"
+  links:
+    "Strava": "https://www.strava.com/activities/5378395027"
+    "Walkhighlands": "https://www.walkhighlands.co.uk/lochlomond/ben-lomond.shtml"
 ---
 
 Ben Lomond holds two records: 
@@ -35,11 +42,3 @@ almost without any bog and gives great views on the Loch Lomond itself.
 Ben Lomond is a very beginner-friendly Munro.
 Thanks to that it's oftentimes quite busy.
 The views are nice, but nothing exceptional.
-
-## Stats
-
-- Distance: 12.71 km
-- Moving time: 3h 31min
-- Elevation gain: 936m
-- [Strava activity](https://www.strava.com/activities/5378395027)
-- [Ben Lomond on walkhighlands.co.uk](https://www.walkhighlands.co.uk/lochlomond/ben-lomond.shtml)

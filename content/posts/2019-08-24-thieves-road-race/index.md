@@ -25,6 +25,20 @@ gallery:
     caption: "Beautiful view on a field with stone wall & a gate."
   - src: ./04.jpg
     caption: "Sheeps running away from me."
+facts:
+  location: "[UK - Scotland - Peebles](https://goo.gl/maps/PzCZTYbym2fDngAq8)"
+  distance: 69.7
+  ascent: 1690
+  time: "10:06:42"
+  more:
+    "Price": "42£"
+    "Position": "17 of 41"
+    "Category position": "4 of 9"
+    "Loss on the winner": "2:23:58"
+    "Pace": "08:42 min/km"
+  links:
+    "Photo album": "https://photos.app.goo.gl/SYag7819YM22XT4JA"
+    "Strava": "https://www.strava.com/activities/2648084820/overview"
 ---
 
 Report from my first proper ultra.
@@ -90,20 +104,6 @@ As I was approaching the finish line the sun was already really low and I rememb
 A little bit of getting lost on the last bits. See the finish line at the bottom of the hill. Enthusiastic cheering from the crowd of organisers and a phony attempt of run through the finish line.
 
 Get medal, sit down, drink, drink more, eat something savoury, get inside the cottage, drink more tea, change clothes and finally realise what just happened.
-
-## Stats
-
-- Location: [UK - Scotland - Peebles](https://goo.gl/maps/PzCZTYbym2fDngAq8)
-- Price: 42£
-- Distance: 69.7km
-- Altitude gain: 1690m
-- Time: 10:06:42
-- Position: 17 of 41
-- Category position: 4 of 9
-- Loss on the winner: 2:23:58
-- Pace: 08:42min/km
-- [Photo album](https://photos.app.goo.gl/SYag7819YM22XT4JA)
-- [Strava](https://www.strava.com/activities/2648084820/overview)
 
 ## Verdict
 

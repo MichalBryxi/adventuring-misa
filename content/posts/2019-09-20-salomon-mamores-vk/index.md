@@ -15,6 +15,20 @@ tags:
 gallery:
   - src: ./01.png
     caption: "Strava profile"
+facts:
+  location: "[UK - Scotland - Peebles](https://goo.gl/maps/QZEhFqK7aTtBJTvh8)"
+  distance: 4.98
+  ascent: 1018
+  time: "1:17:31"
+  more:
+    "Price": "29£"
+    "Position": "17 of 41"
+    "Category position": "94 of 199"
+    "Loss on the winner": "0:32:48"
+  links:
+    "Photo album": "https://photos.app.goo.gl/iVfrrmbQbRcHgpAQA"
+    "Strava": "https://www.strava.com/activities/2724984368/overview"
+    "Relive": "https://www.relive.cc/view/vXvLYYApp1O"
 ---
 
 A vertical kilometre is a very niche type of sport for a very special kind of people.
@@ -43,20 +57,6 @@ Despite the unusual dry & sunny weather the extreme bogginess of the midsection 
 
 Slightly surprising was [mandatory equipment](http://www.skylinescotland.com/mamores-vk/information/#displayMandatoryClothingEquipment) (fell/mountain running shoes, waterproof top with hood, waterproof trousers/pants, hat, gloves/glove-mittens suitable for the weather conditions and whistle) 
 which was checked at the start of the race.
-
-## Stats
-
-- Location: [UK - Scotland - Peebles](https://goo.gl/maps/QZEhFqK7aTtBJTvh8)
-- Price: 29£
-- Distance: 4.98km
-- Altitude gain: 1018m
-- Time: 1:17:31
-- Position: 17 of 41
-- Category position: 94 of 199
-- Loss on the winner: 0:32:48
-- [Photo album](https://photos.app.goo.gl/iVfrrmbQbRcHgpAQA)
-- [Strava](https://www.strava.com/activities/2724984368/overview)
-- [Relive](https://www.relive.cc/view/vXvLYYApp1O)
 
 ## Verdict
 

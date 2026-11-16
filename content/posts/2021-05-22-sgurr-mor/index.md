@@ -16,6 +16,15 @@ gallery:
     caption: "Sgùrr Mòr"
   - src: ./04.png
     caption: "Route to Sgùrr Mòr with elevation profile1"
+facts:
+  distance: 26.51
+  ascent: 1231
+  movingTime: "6:59"
+  more:
+    "Parking": "[57.725036, -4.894009](https://goo.gl/maps/88oRueomLqyTJ6FG8)"
+  links:
+    "Strava": "https://www.strava.com/activities/5340874466"
+    "Walkhighlands": "https://www.walkhighlands.co.uk/fortwilliam/sgurr-mor.shtml"
 ---
 
 Every Scottish hike that starts too easy will inevitably surprise you. An attempt to summit Sgùrr Mòr is one of those.
@@ -40,12 +49,3 @@ This is one of the Munro bagging experiences that I'll always remember and talk 
 > Sgùrr Mòr , a rocky and steep peak between Loch Quoich and lonely Glen Kingie, must rank amongst the remotest Munros.
 > Very rough and remote walking. Much of the route is pathless, some parts steep and others are boggy; there are no easy escape routes.
 > -walkhighlands-
-
-## Stats
-
-- Distance: 26.51 km
-- Moving time: 6h 59min
-- Elevation gain: 1'231m
-- [Strava activity](https://www.strava.com/activities/5340874466)
-- [Sgùrr Mòr on walkhighlands.co.uk](https://www.walkhighlands.co.uk/fortwilliam/sgurr-mor.shtml)
-- [Parking](https://goo.gl/maps/88oRueomLqyTJ6FG8) - 57.725036, -4.894009

@@ -20,6 +20,15 @@ gallery:
     caption: "Last hilltop - Sail Liath"
   - src: ./07.png
     caption: "Strava of An Teallach"
+facts:
+  distance: 20.63
+  ascent: 1316
+  movingTime: "5:03"
+  more:
+    "Parking": "[57.840167218662415, -5.215196767640914](https://goo.gl/maps/YNkV2ew7gk4MyXWQ7), can get pretty busy"
+  links:
+    "Strava": "https://www.strava.com/activities/5430832371"
+    "Walkhighlands": "https://www.walkhighlands.co.uk/ullapool/anteallach.shtml"
 ---
 
 In Scotland there are a lot of positive stories about An Teallach. Beautiful views, bold scrambles, Michellin-like stone towers. And I'm happy to report that we've got all of that.
@@ -49,11 +58,3 @@ After that a quick jog through the forests on somewhat good paths, and some _2k_
 ## Conclusion
 
 **An Teallach** definitelly stood up to its name. The views from the top are some of the most dramatic ones one can get in the Scottish Highlands. The whole route is pretty much guaranteed to be dry. If you're unsure about unstable terrain, this one might scare you a little bit, but I really think it's very much worth a go.
-## Stats
-
-- Distance: 20.63km
-- Moving time: 5h 03min
-- Elevation gain: 1,316m
-- [Strava activity](https://www.strava.com/activities/5430832371)
-- [An Teallach on walkhighlands.co.uk](https://www.walkhighlands.co.uk/ullapool/anteallach.shtml)
-- [An Teallach parking](https://goo.gl/maps/YNkV2ew7gk4MyXWQ7) can get pretty busy: 57.840167218662415, -5.215196767640914

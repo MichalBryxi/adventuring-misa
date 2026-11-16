@@ -23,6 +23,20 @@ gallery:
     caption: "My selfie with hopelessly lying person behind me"
   - src: ./02.png
     caption: "Strava profile"
+facts:
+  location: "[UK - Scotland - Kinlochleven](https://goo.gl/maps/QZEhFqK7aTtBJTvh8)"
+  distance: 28.5
+  ascent: 2468
+  time: "6:34:24"
+  more:
+    "Price": "99£"
+    "Position": "302 of 690"
+    "Category position": "178 of 331"
+    "Loss on the winner": "3:14:47"
+  links:
+    "Photo album": "https://photos.app.goo.gl/iVfrrmbQbRcHgpAQA"
+    "Strava": "https://www.strava.com/activities/2728138351/overview"
+    "Relive": "https://www.relive.cc/view/vxOQAAYmX2O"
 ---
 
 An epic adventure in the Scottish Mamores.
@@ -319,20 +333,6 @@ Hand over the chip and live GPS device.
 Final photo.
 And collapse on the curb next to heaps of other runners.
 What an adventure.
-
-## Stats
-
-- Location: [UK - Scotland - Kinlochleven](https://goo.gl/maps/QZEhFqK7aTtBJTvh8)
-- Price: 99£
-- Distance: 28.5km
-- Altitude gain: 2468m
-- Time: 6:34:24
-- Position: 302 of 690
-- Category position: 178 of 331
-- Loss on the winner: 3:14:47
-- [Photo album](https://photos.app.goo.gl/iVfrrmbQbRcHgpAQA)
-- [Strava](https://www.strava.com/activities/2728138351/overview)
-- [Relive](https://www.relive.cc/view/vxOQAAYmX2O)
 
 ## Verdict
 

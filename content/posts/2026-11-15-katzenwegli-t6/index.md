@@ -29,24 +29,23 @@ gallery:
     caption: "Ledges along the T5"
   - src: ./08.jpg
     caption: "Stream hopping on the way down"
+facts:
+  date: "2024-06-25"
+  grade: "T6"
+  distance: 13.8
+  ascent: 1820
+  time: "5:36"
+  more:
+    "SAC route": "[Von Stechelberg über das Katzenwegli](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)"
+    "Start / finish": "[Stechelberg](https://en.wikipedia.org/wiki/Stechelberg), 910 m"
+    "Destination": "[Silberhornhütte](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/), 2663 m (turned back at ~2650 m)"
+    "Conditions": "unexpected snow above ~2450 m"
+    "Gear": "microspikes; no ice axe (mistake ⚠️); no rope"
+  links:
+    "Strava": "https://www.strava.com/activities/11735388468"
 ---
 
 *The T6 that taught me what “mandatory” means.*
-
-## The facts
-
-| Name | Value |
-|------|-------|
-| Date | 25 June 2024 |
-| SAC route | [Von Stechelberg über das Katzenwegli](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/) |
-| Grade | [T6](https://de.wikipedia.org/wiki/SAC-Wanderskala) |
-| Start / finish | [Stechelberg](https://en.wikipedia.org/wiki/Stechelberg), 910 m |
-| Destination | [Silberhornhütte](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/), 2663 m (turned back at ~2650 m) |
-| Distance | 13.8 km |
-| Ascent | ~1820 m |
-| Duration | 5 h 36 min ([Strava](https://www.strava.com/activities/11735388468)) |
-| Conditions | unexpected snow above ~2450 m |
-| Gear | microspikes; no ice axe (mistake ⚠️); no rope |
 
 ## The story
 

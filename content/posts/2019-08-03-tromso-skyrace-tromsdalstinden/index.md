@@ -23,6 +23,21 @@ gallery:
     caption: "Tromsø skyrace - Tromsdalstind race map"
   - src: ./2019-08-03-tromso-skyrace-tromsdalstind-graph.png
     caption: "Tromsø skyrace - Tromsdalstind elevation profile"
+facts:
+  location: "[Norway - Tromsø](https://goo.gl/maps/T6s1X6vdTHm5pBQt8)"
+  distance: 32
+  ascent: 1739
+  time: "5:27:46"
+  more:
+    "Price": "73£"
+    "Position": "281 of 422"
+    "Category position": "219 of 300"
+    "Loss on the winner": "2:29:44"
+    "Pace": "10:15 min/km"
+  links:
+    "Official website": "https://tromsoskyrace.com/"
+    "Photo album": "https://photos.app.goo.gl/rm1gYDrNx9mRv2p39"
+    "Strava": "https://www.strava.com/activities/2587033578"
 ---
 
 Amazing views & heavy legs.
@@ -50,21 +65,6 @@ At **km 20** we finally meet another river. It was only **8.5 km** since the las
 Next part was pretty much flat, very nice running. But my energy levels were so low, that I'm struggling to even keep half-and-half of running/walking ratio. The only socially enforced run is happening at **km 24** and here is why: I was told about this before. Apparently [Kílian](https://en.wikipedia.org/wiki/Kílian_Jornet_Burgada) loves to joke about this part during the briefing. At this point you can se Tromsø right in front of you. You can see the beautiful dusty path getting there. But instead of going back to Tromsø the route goes "nope" and turns sharp left back to the hills. There were several volunteers making sure exhausted runners know where to go. And of course I did not want to just walk past them, so a little bit of running happened here.
 
 Another **184 m** of altitude gain and we're back on the summit of *Storsteinen*. From here (**km 27**), it's only going downhill. My energy levels are deeply in red numbers and I have to descend **420 m** of altitude. After getting back on tarmac we had just *3 km* to go. Very supportive volunteers on every corner showed us the way. Cross the bridge, run next to the marinas, pretend to speed up for the last kilometer or so and finally sweet, sweet finish line.
-
-## Stats
-
-- [Official website](https://tromsoskyrace.com/)
-- Location: [Norway - Tromsø](https://goo.gl/maps/T6s1X6vdTHm5pBQt8)
-- Price: 73£
-- Distance: 32km
-- Altitude gain: 1739m
-- Time: 5:27:46
-- Position: 281 of 422
-- Category position: 219 of 300
-- Loss on the winner: 2:29:44
-- Pace: 10:15min/km
-- [Photo album](https://photos.app.goo.gl/rm1gYDrNx9mRv2p39)
-- [Strava](https://www.strava.com/activities/2587033578)
 
 ## Verdict
 

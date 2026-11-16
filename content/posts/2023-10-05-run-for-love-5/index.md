@@ -32,6 +32,13 @@ gallery:
     caption: "Me and Leti going through the forest."
   - src: ./2023-10-05-run-for-love-day5-03.jpg
     caption: "Me, Hannah and Leti at the finish line."
+facts:
+  location: "Swedish High Coast"
+  distance: 225
+  more:
+    "Dates": "17 – 23 September 2023"
+    "Duration": "5 days"
+    "Average daily distance": "45 km/day"
 ---
 
 First times are always special. First kiss, first tattoo, first multi-stage race. They don't have to be good or bad, they are just special. And exactly that was my first multi-stage event called [Run For Love](https://triberunforlove.com/).
@@ -47,12 +54,6 @@ In continuation of stealing from the official website:
 
 > TRIBE Run for Love 5 is an epic multi-day running adventure, following the spectacular Swedish High Coast Trail that stretches through the unique Höga Kusten UNESCO World Heritage Site. It is unbelievably beautiful and will be the most stunning Run for Love location to date, without question.
 > -- [triberunforlove.com/faqs](https://triberunforlove.com/faqs)
-
-- Place: Swedish High Coast
-- Dates: 17 – 23 September 2023
-- Distance: 225 km
-- Duration: 5 days
-- Average daily distance: 45 km/day
 
 ## Personal report
 ### Day -1
