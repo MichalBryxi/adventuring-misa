@@ -89,6 +89,12 @@ module('Acceptance | blog', function (hooks) {
 
     assert.strictEqual(currentURL(), '/?tags=munro');
     assert.dom('[data-test-post]').exists({ count: 4 });
+    assert
+      .dom('[data-test-cloud-tag="5-stars"]')
+      .hasAttribute('data-test-leads-nowhere', '', 'no ★★★★★ Munro yet');
+    assert
+      .dom('[data-test-cloud-tag="2-stars"]')
+      .doesNotHaveAttribute('data-test-leads-nowhere', 'but ★★☆☆☆ ones');
 
     await click('[data-test-cloud-tag="4-stars"]');
 

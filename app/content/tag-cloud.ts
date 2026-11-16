@@ -44,6 +44,18 @@ export interface TagGroup {
 
 export const tagName = (id: string) => TAGS.get(id)?.name ?? id;
 
+const POST_TAGS = Object.values(POSTS).map((post) => post.tags ?? []);
+
+/**
+ * Whether adding the tag to the filter would leave no posts: no post with
+ * all the selected tags has it too.
+ */
+export const leadsNowhere = (selected: string[], id: string) =>
+  !selected.includes(id) &&
+  !POST_TAGS.some(
+    (tags) => tags.includes(id) && selected.every((tag) => tags.includes(tag)),
+  );
+
 const counts = new Map<string, number>();
 
 for (const post of Object.values(POSTS)) {

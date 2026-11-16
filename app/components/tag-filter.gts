@@ -3,7 +3,7 @@ import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 import { service } from '@ember/service';
 
-import { TAG_CLOUD, TAG_GROUPS } from '../content/tag-cloud.ts';
+import { leadsNowhere, TAG_CLOUD, TAG_GROUPS } from '../content/tag-cloud.ts';
 import { selectedTags, toggleTag } from '../content/tag-filter.ts';
 
 import type { TOC } from '@ember/component/template-only';
@@ -25,9 +25,11 @@ const TagLink: TOC<{
         (includes @selected @tag.id)
         'rounded-md bg-current/10 px-1.5 py-0.5 ring-1 ring-current'
         'hover:underline'
-      }}"
+      }}
+      {{if (leadsNowhere @selected @tag.id) 'line-through opacity-50'}}"
     title="{{@tag.count}} {{if (eq @tag.count 1) 'post' 'posts'}}"
     data-test-selected={{includes @selected @tag.id}}
+    data-test-leads-nowhere={{leadsNowhere @selected @tag.id}}
     data-test-cloud-tag={{@tag.id}}
   >{{@tag.name}}</LinkTo>
 </template>;
