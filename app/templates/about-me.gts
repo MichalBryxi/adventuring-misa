@@ -141,7 +141,7 @@ const SECTIONS: Section[] = [
       {
         heading: 'EmberFest 2026, Prague',
         icon: '🎤',
-        text: `<a href="https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime">4,207 Days of Uptime: Evolving an Ember App Without a Rewrite</a>, on eleven years of beauty-pay.cz without a rewrite.`,
+        text: `<a href="https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime">4,207 Days of Uptime: Evolving an Ember App Without a Rewrite</a>: how a booking app for beauty salons has kept evolving in production for eleven years without ever being rewritten.`,
       },
     ],
   },
