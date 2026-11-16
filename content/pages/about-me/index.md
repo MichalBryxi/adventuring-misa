@@ -9,7 +9,7 @@ date: Tue Jun 12 2018 17:50:55 GMT+0100 (IST)
 tags:
 ---
 
-Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburgh and Inverness, and now I live in [Interlaken](https://en.wikipedia.org/wiki/Interlaken), between the lakes, with the Swiss Alps on the doorstep. This blog is where I write up my adventures in the mountains: the good days, the [type 3 fun](/tag/type-3-fun) ones, and the gear that came along.
+Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburgh and Inverness, and now I live in [Interlaken](https://en.wikipedia.org/wiki/Interlaken), between the lakes, with the Swiss Alps on the doorstep. This blog is where I write up my adventures in the mountains and things around.
 
 ## Outdoors
 
