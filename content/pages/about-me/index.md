@@ -17,7 +17,7 @@ Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburg
 - **Hiking and scrambling.** From [Munros](/tag/munro) in Scotland to [T6 routes](/2026-11-15-katzenwegli-t6) in the Bernese Oberland.
 - **Climbing.** A hobby climber up to 6b+, mostly sport, plus bouldering, multi-pitch and trad, and via ferratas up to D. I've introduced plenty of people to climbing and bouldering, and did the SAC course for setting boulder routes.
 - **Paragliding.** Solo pilot (IPPI 4), flying in Switzerland, around Central Europe and in Nepal.
-- **Skiing and ski touring.** With a powder skiing course and a basic avalanche course behind me.
+- **Skiing and ski touring.** I taught myself to ski on the pistes a few years ago, and now I'm heading off them, ski touring for the freedom of the open Alps.
 - **Biking.** Bikepacking from Czechia to the sea, from Havana to the westernmost point of Cuba, and along part of Ireland's Wild Atlantic Way. I'm an active [Warmshowers](https://www.warmshowers.org) host, so if you're cycling through Interlaken, get in touch.
 - **Guiding.** I've guided e-bike tours around Interlaken, for Loop Tours in 2024 and [Flying Wheels](https://www.flyingwheels.ch) in 2025.
 
