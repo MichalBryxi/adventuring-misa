@@ -1,9 +1,6 @@
 ---
 title: Scott Kinabalu Ultra Rc review
-image: ./cover.jpg
-imageMeta:
-  attribution: "Dall-E: Image of a sad runner because their old, used, dirty running shoes are falling apart --ar 16:9"
-  attributionLink:
+image: ./01.jpg
 featured: true
 date: Thu May 30 2024 08:27:13 GMT+0200 (Central European Summer Time)
 tags: 
@@ -11,8 +8,6 @@ tags:
   - gear
   - shoes
 gallery:
-  - src: ./01.jpg
-    caption: "Scott Kinabalu Ultra RC"
   - src: ./02.jpg
     caption: "Scott Kinabalu Ultra RC"
 ---
