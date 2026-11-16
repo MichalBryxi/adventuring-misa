@@ -5,8 +5,6 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-authors: 
-  - michal-bryxi
 date: Sun Aug 03 2019 09:23:03 GMT+0100 (BST)
 tags:
   - 4-stars

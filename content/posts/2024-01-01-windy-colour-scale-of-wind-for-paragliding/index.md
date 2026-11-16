@@ -5,8 +5,6 @@ imageMeta:
   attribution: "Midjourney: Weather man from 60s showing the perticipation model for switzerland; Isobars; Dr Who vibes --ar 16:9"
   attributionLink:
 featured: true
-authors:
-  - michal-bryxi
 date: Mon Jan 01 2024 18:10:16 GMT+0100 (Central European Standard Time)
 tags:
 ---

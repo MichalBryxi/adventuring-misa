@@ -5,8 +5,6 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-authors: 
-  - michal-bryxi
 date: Sat Sep 07 2019 17:53:33 GMT+0100 (BST)
 tags:
   - review

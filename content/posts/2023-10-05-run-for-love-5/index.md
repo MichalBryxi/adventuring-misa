@@ -5,8 +5,6 @@ imageMeta:
   attribution: Leo Francis Photography
   attributionLink: https://instagram.com/leofrancisphotography?igshid=MzRlODBiNWFlZA==
 featured: true
-authors:
-  - michal-bryxi
 date: Thu Oct 05 2023 07:27:49 GMT+0200 (GMT+02:00)
 tags:
 gallery:

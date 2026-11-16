@@ -5,8 +5,6 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-authors:
-  - michal-bryxi
 date: Sun Nov 15 2026 12:00:00 GMT+0100 (Central European Standard Time)
 tags:
   - hiking

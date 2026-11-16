@@ -5,8 +5,6 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-authors:
-  - michal-bryxi
 date: Thu May 11 2023 14:07:49 GMT+0200 (Central European Summer Time)
 tags:
 ---

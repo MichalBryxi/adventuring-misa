@@ -5,8 +5,6 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-authors:
-  - michal-bryxi
 date: Wed May 10 2023 21:32:43 GMT+0200 (Central European Summer Time)
 tags:
   - schweiz

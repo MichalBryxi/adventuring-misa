@@ -5,8 +5,6 @@ imageMeta:
   attribution: Views from the top of Sgurr Fiona
   attributionLink:
 featured: true
-authors:
-  - michal-bryxi
 date: Mon Jun 07 2021 07:49:12 GMT+0100 (British Summer Time)
 tags:
  - 4-stars

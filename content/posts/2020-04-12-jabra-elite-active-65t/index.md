@@ -5,8 +5,6 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-authors: 
-  - michal-bryxi
 date: Sun Apr 12 2020 17:42:50 GMT+0100 (British Summer Time)
 tags:
   - review

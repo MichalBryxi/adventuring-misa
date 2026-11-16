@@ -5,8 +5,6 @@ imageMeta:
   attribution: "Dall-E: Image of a sad runner because their old, used, dirty running shoes are falling apart --ar 16:9"
   attributionLink:
 featured: true
-authors:
-  - michal-bryxi
 date: Thu May 30 2024 08:27:13 GMT+0200 (Central European Summer Time)
 tags: 
   - review

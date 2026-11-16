@@ -5,8 +5,6 @@ imageMeta:
   attribution:
   attributionLink:
 featured: true
-authors:
-  - michal-bryxi
 date: Mon Jun 21 2021 21:59:26 GMT+0100 (British Summer Time)
 tags: 
   - 2-stars
