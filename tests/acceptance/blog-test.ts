@@ -122,10 +122,13 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-fact="Ascent"] td').hasText('1,820 m');
     assert.dom('[data-test-fact="Duration"] td').hasText('5 h 36 min');
     assert
+      .dom('[data-test-fact="Points"] td')
+      .hasText('Stechelberg, 910 m → Silberhornhütte, 2,663 m');
+    assert
       .dom('[data-test-fact="Grade"] a')
       .hasText('T6')
       .hasAttribute('href', /SAC-Wanderskala/);
-    assert.dom('[data-test-fact="Links"] a').hasText('Strava');
+    assert.dom('[data-test-fact="Links"] td').hasText('SAC route · Strava');
   });
 
   test('posts can be filtered by their facts', async function (assert) {
