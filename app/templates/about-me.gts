@@ -125,7 +125,7 @@ const SECTIONS: Section[] = [
       {
         heading: 'Paragliding flight stats',
         icon: '📈',
-        text: `<a href="https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv">Vario Skytraxx to CSV</a> exports the statistics of my flights from a Skytraxx 2.0 vario.`,
+        text: `<a href="https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv">Vario Skytraxx to CSV</a> exports the statistics of paraglider and hang glider flights from a Skytraxx 2.0 vario.`,
       },
       {
         heading: 'This blog',
