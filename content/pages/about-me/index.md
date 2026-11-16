@@ -29,7 +29,7 @@ Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburg
 - [SAC boulder route-setting course](https://www.sac-cas.ch/de/leistungssport/sportklettern/routenbaukurse/) (2024)
 - Paragliding licence: IPPI 4
 
-## Behind the screen
+## Computers
 
 By day I'm a full-stack web developer, mostly with [Ember.js](https://emberjs.com). I've built front ends at Puppet and CrowdStrike, and for eleven years I've run [beauty-pay.cz](https://beauty-pay.cz), a booking and management app for beauty salons. At [EmberFest 2026](https://emberfest.eu) in Prague I gave a talk about it: [4,207 Days of Uptime: Evolving an Ember App Without a Rewrite](https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime).
 
