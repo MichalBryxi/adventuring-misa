@@ -99,6 +99,17 @@ const SECTIONS: Section[] = [
     ],
   },
   {
+    title: 'Vegan',
+    layout: 'cards',
+    items: [
+      {
+        heading: 'Vegan fondue',
+        icon: '🫕',
+        text: `Fondue is a Swiss mountain classic, and it works just as well without the cheese. I help put on vegan fondue evenings in the Bernese Oberland, with skiing first at the <a href="https://www.mountainhostel.com">Mountain Hostel</a> in Gimmelwald in January 2026, and next up the Heimwehfluh above Interlaken. Supported by <a href="https://newroots.ch">New Roots</a> and <a href="https://www.tier-im-fokus.ch">Tier im Fokus</a>.`,
+      },
+    ],
+  },
+  {
     title: 'Computers',
     layout: 'cards',
     items: [
