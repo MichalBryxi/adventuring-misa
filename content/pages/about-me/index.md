@@ -43,4 +43,3 @@ Some of the code ends up outdoors too: [Magic Pass places as GPX](/2023-05-10-ma
 - [LinkedIn](https://www.linkedin.com/in/michalbryxi)
 - [Outdoor CV](https://michalbryxi.github.io/2025/Michal_Bryxi_outdoor_CV.pdf) (PDF)
 - [RSS feed](/rss.xml) of this blog
-- [Sportsting Míša](https://sportsting-misa.pudr.com), the blog before this one
