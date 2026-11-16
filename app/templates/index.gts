@@ -28,7 +28,7 @@ export default <template>
           class="mt-4 flex flex-wrap items-center gap-2 text-sm/6"
           data-test-filter
         >
-          <span class="font-mono text-slate-500">Tagged</span>
+          <span class="font-mono text-slate-500">Filters</span>
           {{#each @model.filter as |tag|}}
             <LinkTo
               @route="index"
