@@ -93,7 +93,7 @@ const Explore: TOC<{ Element: HTMLElement }> = <template>
           <p class="text-xl font-bold text-slate-900">
             <LinkTo @route="index">{{site.title}}</LinkTo>
           </p>
-          <p class="mt-3 text-lg/8 font-medium text-slate-700">
+          <p class="mt-3 text-xs/5 font-medium text-slate-600">
             {{site.description}}
           </p>
         </div>
