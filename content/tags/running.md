@@ -1,5 +1,3 @@
 ---
 name: Running
-image:
-imageMeta:
 ---

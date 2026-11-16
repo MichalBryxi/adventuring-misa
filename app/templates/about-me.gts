@@ -29,12 +29,12 @@ const SECTIONS: Section[] = [
       {
         heading: 'Trail running',
         icon: '🏃',
-        text: `Races up to 100 km: Baroko 100, Matterhorn Ultraks Extreme, E51, Ben Nevis Ultra, the <a href="/2019-09-21-salomon-ring-of-steall-skyrace">Ring of Steall</a>, the <a href="/2019-08-24-thieves-road-race">Thieves Road</a>, the <a href="/2019-08-03-tromso-skyrace-tromsdalstinden">Tromsø Skyrace</a>, the Niesen Treppenlauf and the Vertical Kilometre du Mont Blanc. All the race reports are under <a href="/tag/race">race</a>.`,
+        text: `Races up to 100 km: Baroko 100, Matterhorn Ultraks Extreme, E51, Ben Nevis Ultra, the <a href="/2019-09-21-salomon-ring-of-steall-skyrace">Ring of Steall</a>, the <a href="/2019-08-24-thieves-road-race">Thieves Road</a>, the <a href="/2019-08-03-tromso-skyrace-tromsdalstinden">Tromsø Skyrace</a>, the Niesen Treppenlauf and the Vertical Kilometre du Mont Blanc. All the race reports are under <a href="/?tags=race">race</a>.`,
       },
       {
         heading: 'Hiking and scrambling',
         icon: '🥾',
-        text: `From <a href="/tag/munro">Munros</a> in Scotland to <a href="/2026-11-15-katzenwegli-t6">T6 routes</a> in the Bernese Oberland.`,
+        text: `From <a href="/?tags=munro">Munros</a> in Scotland to <a href="/2026-11-15-katzenwegli-t6">T6 routes</a> in the Bernese Oberland.`,
       },
       {
         heading: 'Climbing',

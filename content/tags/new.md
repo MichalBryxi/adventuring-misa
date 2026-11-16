@@ -1,5 +1,3 @@
 ---
 name: New
-image:
-imageMeta:
 ---

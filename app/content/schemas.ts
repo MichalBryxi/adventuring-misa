@@ -46,10 +46,7 @@ export const PageSchema = withDefaults({
 
 export const TagSchema = withDefaults({
   type: 'tag',
-  fields: [
-    { kind: 'field', name: 'name' },
-    { kind: 'field', name: 'excerpt' },
-  ],
+  fields: [{ kind: 'field', name: 'name' }],
 });
 
 export const schemas = [PostSchema, PageSchema, TagSchema];
@@ -58,7 +55,6 @@ export interface Tag {
   [Type]: 'tag';
   id: string;
   name: string;
-  excerpt: string;
 }
 
 /**

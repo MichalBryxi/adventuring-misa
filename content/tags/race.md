@@ -1,5 +1,3 @@
 ---
 name: Race
-image:
-imageMeta:
 ---

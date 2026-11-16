@@ -1,4 +1,4 @@
-// Checks the production build (pnpm build): every post, page and tag
+// Checks the production build (pnpm build): every post and page
 // was prerendered with its content, and the feed exists.
 //
 // Usage: pnpm build && pnpm test:output
@@ -86,11 +86,13 @@ for (const post of posts) {
   });
 }
 
-for (const tag of new Set(posts.flatMap((post) => post.tags ?? []))) {
-  test(`tag ${tag}`, () => {
-    assert.match(page(`/tag/${tag}`), /data-test-post=/);
-  });
-}
+test('old tag pages redirect to the filter', () => {
+  assert.ok(!existsSync(join(dist, 'tag')), 'no tag pages');
+  assert.match(
+    readFileSync(join(root, 'netlify.toml'), 'utf8'),
+    /from = "\/tag\/:id"\n\s*to = "\/\?tags=:id"/,
+  );
+});
 
 test('page about-me', () => {
   const html = page('/page/about-me');

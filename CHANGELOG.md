@@ -28,4 +28,5 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 
 ### Removed
 
+- Tag pages and the tag descriptions: tags filter the front page instead, and old `/tag/<id>` links redirect to `/?tags=<id>`.
 - Authors: posts aren't signed, and there are no author pages. Old `/author/…` links redirect to the front page.

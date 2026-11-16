@@ -12,7 +12,7 @@ Node 24 + pnpm 10 (`.node-version`, `mise.toml`, `packageManager`, `netlify.toml
 
 - `pnpm start` — dev server (Vite, http://localhost:4200), content edits reload live
 - `pnpm build` — production build into `dist/`, including the prerender of every route
-- `pnpm test:output` — after `pnpm build`: every post/page/tag was prerendered with its content, RSS is complete (`tests/output/`, `node --test`). Netlify runs it after the build.
+- `pnpm test:output` — after `pnpm build`: every post/page was prerendered with its content, RSS is complete (`tests/output/`, `node --test`). Netlify runs it after the build.
 - `pnpm test` — builds in test mode (no prerender) and runs the QUnit acceptance tests in headless Chrome against the real content
 - `pnpm lint` / `pnpm lint:fix`, `pnpm lint:types` (Glint)
 
@@ -25,8 +25,8 @@ All content is Markdown under `content/`, front matter in YAML:
   What I carried goes in `gear:`, a list of `{ item, packed: true|false, note }` shown as a checklist after the story, before the gallery (`lib/gear.mjs`); a note says why a missing item mattered.
   Photos of the trip go in the front matter rather than the text: `gallery:` is a list of `{ src: ./01.jpg, caption: … }`, shown as a masonry grid with a lightbox at the end of the post (`app/components/gallery.gts`). Keep a photo inline only when the text refers to it where it is (the Windy, Suunto and Magic Pass posts).
 - `content/pages/<slug>/index.md` — standalone pages (`/page/<slug>`)
-- `content/tags/<id>.md` — `name:` plus a description body. Every tag a post uses needs a file here (the build fails otherwise). A tag can have `parent: <tag id>` (one level): the sidebar shows it under that tag's name instead of in the cloud. Ratings are tags `1-star` … `5-stars` with `parent: rating`.
-- The sidebar tags (`app/components/tag-filter.gts`, `app/content/tag-cloud.ts`) filter the front page: `/?tags=munro,4-stars` lists posts with all of them (AND, `app/content/tag-filter.ts`). Tag links in posts go there too; `/tag/<id>` pages stay for old links.
+- `content/tags/<id>.md` — front matter only: `name:` (how the tag is shown). Every tag a post uses needs a file here (the build fails otherwise). A tag can have `parent: <tag id>` (one level): the sidebar shows it under that tag's name instead of in the cloud. Ratings are tags `1-star` … `5-stars` with `parent: rating`.
+- The sidebar tags (`app/components/tag-filter.gts`, `app/content/tag-cloud.ts`) filter the front page: `/?tags=munro,4-stars` lists posts with all of them (AND, `app/content/tag-filter.ts`). Tag links in posts go there too. There are no tag pages: `netlify.toml` redirects the old `/tag/<id>` URLs to `/?tags=<id>`.
 - `content/cover.jpg` — the sidebar image
 - `public/gpx/` — GPX/KML route files. They stay outside the bundler because the swisstopo map embed needs a stable absolute URL for the KML.
 

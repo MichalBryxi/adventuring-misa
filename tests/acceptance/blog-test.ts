@@ -126,13 +126,6 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-no-posts]').exists();
   });
 
-  test('a tag page lists its posts', async function (assert) {
-    await visit('/tag/munro');
-
-    assert.dom('h1').hasText('Munro');
-    assert.dom('[data-test-post]').exists({ count: 4 });
-  });
-
   test('the About me page renders its sections', async function (assert) {
     await visit('/page/about-me');
 

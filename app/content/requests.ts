@@ -1,6 +1,6 @@
 import { withReactiveResponse } from '@warp-drive/core/request';
 
-import type { Page, Post, Tag } from './schemas.ts';
+import type { Page, Post } from './schemas.ts';
 
 /**
  * The requests the routes make. ContentHandler answers them.
@@ -28,6 +28,3 @@ export const findPost = (id: string) =>
 
 export const findPage = (id: string) =>
   withReactiveResponse<Page>(get(`/pages/${id}`, 'page', 'findRecord'));
-
-export const findTag = (id: string) =>
-  withReactiveResponse<Tag>(get(`/tags/${id}`, 'tag', 'findRecord'));

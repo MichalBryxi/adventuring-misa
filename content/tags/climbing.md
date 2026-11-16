@@ -1,5 +1,3 @@
 ---
 name: Climbing
-image:
-imageMeta:
 ---
