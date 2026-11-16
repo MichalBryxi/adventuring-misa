@@ -27,7 +27,7 @@ facts:
   location: "[UK - Scotland - Kinlochleven](https://goo.gl/maps/QZEhFqK7aTtBJTvh8)"
   distance: 28.5
   ascent: 2468
-  time: "6:34:24"
+  duration: "6:34:24"
   more:
     "Price": "99£"
     "Position": "302 of 690"

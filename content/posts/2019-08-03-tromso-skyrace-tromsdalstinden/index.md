@@ -27,7 +27,7 @@ facts:
   location: "[Norway - Tromsø](https://goo.gl/maps/T6s1X6vdTHm5pBQt8)"
   distance: 32
   ascent: 1739
-  time: "5:27:46"
+  duration: "5:27:46"
   more:
     "Price": "73£"
     "Position": "281 of 422"

@@ -127,7 +127,7 @@ module('Acceptance | blog', function (hooks) {
 
     assert.dom('[data-test-facts]').exists();
     assert.dom('[data-test-fact="Ascent"] td').hasText('1,820 m');
-    assert.dom('[data-test-fact="Time"] td').hasText('5 h 36 min');
+    assert.dom('[data-test-fact="Duration"] td').hasText('5 h 36 min');
     assert
       .dom('[data-test-fact="Grade"] a')
       .hasText('T6')

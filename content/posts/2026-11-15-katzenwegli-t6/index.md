@@ -34,7 +34,7 @@ facts:
   grade: "T6"
   distance: 13.8
   ascent: 1820
-  time: "5:36"
+  duration: "5:36"
   more:
     "SAC route": "[Von Stechelberg über das Katzenwegli](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)"
     "Start / finish": "[Stechelberg](https://en.wikipedia.org/wiki/Stechelberg), 910 m"

@@ -92,7 +92,7 @@ export interface Facts {
   /** m */
   ascent?: number;
   /** h:mm or h:mm:ss */
-  time?: string;
+  duration?: string;
   movingTime?: string;
   /** The table to show: labels are text, values HTML */
   rows: { label: string; html: string }[];

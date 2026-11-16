@@ -29,7 +29,7 @@ facts:
   location: "[UK - Scotland - Peebles](https://goo.gl/maps/PzCZTYbym2fDngAq8)"
   distance: 69.7
   ascent: 1690
-  time: "10:06:42"
+  duration: "10:06:42"
   more:
     "Price": "42£"
     "Position": "17 of 41"
