@@ -8,6 +8,14 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/*
+ * A section heading: the h2 of a post (app/components/prose.gts), "The facts"
+ * and "Photo gallery". The coloured marker's colour is set where it's used.
+ */
+@utility section-heading {
+  @apply flex scroll-mt-8 items-center text-xl font-bold tracking-tight text-slate-900 before:mr-3 before:h-6 before:w-1.5 before:shrink-0 before:rounded-r-full sm:text-2xl;
+}
+
 /* The page behind an open photo (app/components/gallery.gts) stays put */
 html:has(dialog[open]) {
   overflow: hidden;

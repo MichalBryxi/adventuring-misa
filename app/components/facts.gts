@@ -9,10 +9,7 @@ import type { Facts as FactsData } from '../content/schemas.ts';
  */
 export const Facts: TOC<{ Args: { facts: FactsData } }> = <template>
   <section class="mb-12" aria-labelledby="facts-title" data-test-facts>
-    <h2
-      id="facts-title"
-      class="flex items-center font-mono text-sm/7 font-medium text-slate-900 before:mr-3 before:h-3 before:w-1.5 before:rounded-r-full before:bg-emerald-200"
-    >
+    <h2 id="facts-title" class="section-heading before:bg-emerald-300">
       The facts
     </h2>
     <table class="mt-6 w-full text-left text-sm/6 text-slate-700">

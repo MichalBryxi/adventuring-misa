@@ -16,6 +16,8 @@ export default {
         ],
       },
     ],
+    // @apply takes Tailwind classes, variants like before: included
+    'at-rule-prelude-no-invalid': [true, { ignoreAtRules: ['apply'] }],
     'import-notation': 'string',
   },
 };

@@ -90,10 +90,7 @@ export class Gallery extends Component<{
 
   <template>
     <section class="mt-16" aria-labelledby="gallery-title" data-test-gallery>
-      <h2
-        id="gallery-title"
-        class="flex items-center font-mono text-sm/7 font-medium text-slate-900 before:mr-3 before:h-3 before:w-1.5 before:rounded-r-full before:bg-sky-200"
-      >
+      <h2 id="gallery-title" class="section-heading before:bg-sky-300">
         Photo gallery
       </h2>
 
