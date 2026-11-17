@@ -1,20 +1,10 @@
 # Changelog
 
-## Unreleased
-
-### Added
-
-- "All adventures" as the first link under Explore: the front page with every post, the filter cleared.
-
-### Changed
-
-- The round photo in the phone's top bar is zoomed in on my face.
-- "Trail Running" in the tagline is just "Running".
-
 ## 2026-11-17
 
 ### Added
 
+- "All adventures" as the first link under Explore: the front page with every post, the filter cleared.
 - About me page built from data in `app/templates/about-me.gts`: cards for Outdoors and Computers, a timeline of courses and certificates, talks, and links to find me elsewhere.
 - About me content: what I do outdoors, courses and certificates, my projects (beauty-pay.cz, winds.mobi, Forkcast, Magic Pass on the map, paragliding flight stats, this blog), my EmberFest 2026 talk, and Strava, Mastodon, GitHub, LinkedIn and my outdoor CV.
 - "Written by" in the sidebar and footer links to the About me page.
@@ -33,6 +23,8 @@
 
 ### Changed
 
+- The round photo in the phone's top bar is zoomed in on my face.
+- "Trail Running" in the tagline is just "Running".
 - On phones and tablets the sidebar is a menu: a slim bar at the top with a menu button opens the links and tags in a drawer from the left (Frontile). Tags picked there keep it open, and its button shows how many adventures match; the menu button shows how many filters are on.
 - The favicon has a white tile behind the face, so it shows in dark browser tabs and on dark home screens.
 - Rebuilt from sportsting-misa.pudr.com (empress-blog) as a compatless Ember 7 app on Vite, with WarpDrive and Tailwind CSS, keeping the old post URLs.
