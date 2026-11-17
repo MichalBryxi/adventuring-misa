@@ -196,3 +196,13 @@ test('the CSP allows every inline script of the prerendered pages', () => {
     }
   }
 });
+
+test('links to other posts, written as ../<id>/index.md, are post URLs', () => {
+  assert.match(
+    page('/2024-05-30-scott-kinabalu-ultra-rc'),
+    /href="\/2023-10-05-run-for-love-5"/,
+  );
+
+  for (const post of posts)
+    assert.doesNotMatch(page(`/${post.id}`), /href="[^"]*index\.md/, post.id);
+});
