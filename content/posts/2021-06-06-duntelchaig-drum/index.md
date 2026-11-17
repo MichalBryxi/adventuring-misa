@@ -9,6 +9,7 @@ date: Sun Jun 06 2021 18:59:08 GMT+0100 (British Summer Time)
 tags:
   - rating/3-stars
   - climbing
+  - scotland
 gallery:
   - src: ./02.jpg
     caption: "Duntelchaig - Drum; Wet start of the path"

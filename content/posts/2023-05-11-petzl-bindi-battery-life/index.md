@@ -7,6 +7,8 @@ imageMeta:
 featured: true
 date: Thu May 11 2023 14:07:49 GMT+0200 (Central European Summer Time)
 tags:
+  - review
+  - gear
 ---
 
 Good friend of mine recently replaced her [Petzl Bindi][1] headtorch,

@@ -10,6 +10,7 @@ tags:
   - rating/5-stars
   - running
   - race
+  - scotland
 gallery:
   - src: ./03.jpg
     caption: "First ridge"
@@ -48,7 +49,7 @@ The plan was simple:
 Rent a car, 
 arrive at the [Kinlochleven](https://goo.gl/maps/QZEhFqK7aTtBJTvh8) couple of days earlier,
 enjoy the beautiful, wild, Scottish nature,
-warm-up on Friday at [Mamores VK](/2019-09-20-salomon-mamores-vk),
+warm-up on Friday at [Mamores VK](../2019-09-20-salomon-mamores-vk/index.md),
 and enjoy the [Ring of Steall](http://www.skylinescotland.com/ring-of-steall-skyrace/) on Saturday.
 
 Most of the "roof included" accommodations in the extended area are hopelessly sold out a long time before the race. 

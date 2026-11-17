@@ -9,6 +9,7 @@ date: Fri Jun 25 2021 22:39:23 GMT+0100 (British Summer Time)
 tags:
   - rating/4-stars
   - climbing
+  - scotland
 gallery:
   - src: ./02.jpg
     caption: "Pinnalce Crag"

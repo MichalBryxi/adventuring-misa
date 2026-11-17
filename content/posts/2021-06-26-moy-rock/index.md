@@ -7,8 +7,9 @@ imageMeta:
 featured: true
 date: Sat Jun 26 2021 08:02:42 GMT+0100 (British Summer Time)
 tags:
- - rating/5-stars
- - climbing
+  - climbing
+  - scotland
+  - rating/5-stars
 gallery:
   - src: ./02.jpg
     caption: "Moy Rock (Dingwall)"

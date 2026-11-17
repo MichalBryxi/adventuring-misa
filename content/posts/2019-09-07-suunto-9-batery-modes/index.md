@@ -8,6 +8,8 @@ featured: true
 date: Sat Sep 07 2019 17:53:33 GMT+0100 (BST)
 tags:
   - review
+  - gear
+  - running
 ---
 
 A brief comparison of the measurement precision of the different battery saving modes provided by in **Suunto 9**.

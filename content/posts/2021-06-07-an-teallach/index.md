@@ -7,8 +7,10 @@ imageMeta:
 featured: true
 date: Mon Jun 07 2021 07:49:12 GMT+0100 (British Summer Time)
 tags:
- - rating/4-stars
- - munro
+  - hiking
+  - munro
+  - scotland
+  - rating/4-stars
 gallery:
   - src: ./01.jpg
     caption: "Going up to An Teallach"

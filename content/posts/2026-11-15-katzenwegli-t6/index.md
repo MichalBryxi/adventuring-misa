@@ -11,6 +11,7 @@ tags:
   - schweiz
   - type-3-fun
   - t-grade/t6
+  - rating/3-stars
 gallery:
   - src: ./01.jpg
     caption: "Morning on the way up, above the Lauterbrunnen valley"

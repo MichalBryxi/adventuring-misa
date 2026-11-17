@@ -9,6 +9,8 @@ date: Sat May 29 2021 11:56:46 GMT+0100 (British Summer Time)
 tags:
   - rating/2-stars
   - munro
+  - hiking
+  - scotland
 gallery:
   - src: ./01.jpg
     caption: "Views from the top of Ben Lomond"

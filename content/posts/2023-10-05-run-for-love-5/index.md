@@ -7,6 +7,8 @@ imageMeta:
 featured: true
 date: Sun Sep 17 2023 07:27:49 GMT+0200 (GMT+02:00)
 tags:
+  - running
+  - race
 gallery:
   - src: ./2023-10-05-run-for-love-day1-01.jpg
     caption: "Bridge next to our hotel."

@@ -10,6 +10,7 @@ tags:
   - rating/4-stars
   - running
   - race
+  - scotland
 gallery:
   - src: ./01.png
     caption: "Strava profile"

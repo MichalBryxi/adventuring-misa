@@ -8,6 +8,7 @@ featured: true
 date: Sun Apr 12 2020 17:42:50 GMT+0100 (British Summer Time)
 tags:
   - review
+  - gear
 ---
 
 Video review of _wireless_ sports headphones from _Jabra_. 2 ~months of daily and very intense usage in various use-cases:

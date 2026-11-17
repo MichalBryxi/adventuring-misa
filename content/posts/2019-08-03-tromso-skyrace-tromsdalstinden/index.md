@@ -10,6 +10,7 @@ tags:
   - rating/4-stars
   - running
   - race
+  - norway
 gallery:
   - src: ./2019-08-03-tromso-skyrace-tromsdalstind-02.jpg
     caption: "Me and my random friends at the start of the race"

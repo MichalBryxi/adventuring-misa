@@ -3,7 +3,8 @@ title: Scott Kinabalu Ultra Rc review
 image: ./01.jpg
 featured: true
 date: Thu May 30 2024 08:27:13 GMT+0200 (Central European Summer Time)
-tags: 
+tags:
+  - running
   - review
   - gear
   - shoes
@@ -20,7 +21,7 @@ I got mine on an offer from [bergzeit](https://www.bergzeit.ch/search/?q=SCOTT+K
 
 Sadly I have to report that this was the pair of shoes with the **shortest lifespan** I ever owned. Overall I took them for:
 
-- 50% of [Run For Love 5](../2023-10-05-run-for-love-5)
+- 50% of [Run For Love 5](../2023-10-05-run-for-love-5/index.md)
 - Few local trail runs in the Alps
 
 That's it. The shoes clocked pretty much **exactly 345.4km** (thanks [Strava](https://www.strava.com/settings/gear)). They are really destroyed from the upper mesh part, which developed the usual "squat holes", my specific "toe hole" and other minor wounds. And parts of the under-grippy-sole, has pretty much transformed to a completely flat surface with next to zero grip.

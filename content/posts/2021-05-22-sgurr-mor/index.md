@@ -9,6 +9,8 @@ date: Sat May 22 2021 09:19:42 GMT+0100 (British Summer Time)
 tags:
   - rating/4-stars
   - munro
+  - hiking
+  - scotland
 gallery:
   - src: ./02.jpg
     caption: "Sgùrr Mòr"

@@ -4,6 +4,8 @@ image: ./2024-01-01-windy-cover.jpg
 featured: true
 date: Mon Jan 01 2024 18:10:16 GMT+0100 (Central European Standard Time)
 tags:
+  - tip
+  - paragliding
 ---
 
 [Windy](https://play.google.com/store/apps/details?id=com.windyty.android&hl=de&gl=US) is a great application for weather forecast. Sadly the default heatmap colour coding for wind strength is borderline useless for *paragliding*, because the scale has too low of a resolution for non-lethal wind speeds.

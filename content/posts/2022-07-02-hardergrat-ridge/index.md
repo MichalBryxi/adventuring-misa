@@ -9,6 +9,7 @@ date: Sat Jul 02 2022 07:54:32 GMT+0200 (Central European Summer Time)
 tags:
   - rating/5-stars
   - schweiz
+  - hiking
 gallery:
   - src: ./03.jpg
     caption: "Me on Tannhorn"
@@ -86,7 +87,7 @@ Exactly **one-hour** after the start we met the **crux** of the route: The **Tan
 > but it is very steep.
 > The rest of the climb to the peak of Tannhorn along its long backbone is the most exposed and narrow section of the trail.
 
-Speaking from personal experience from [some UK scrambles](/2021-06-07-an-teallach),
+Speaking from personal experience from [some UK scrambles](../2021-06-07-an-teallach/index.md),
 I doubt that in Scottish guidebooks
 this would be marked as "exposed"
 and even less so "with few bold moves".

@@ -9,6 +9,7 @@ date: Sat May 15 2021 22:00:00 GMT+0100 (British Summer Time)
 tags:
   - rating/4-stars
   - hiking
+  - scotland
 gallery:
   - src: ./2021-05-17-loch-ness-360-map.jpg
     caption: "Loch Ness 360° map"

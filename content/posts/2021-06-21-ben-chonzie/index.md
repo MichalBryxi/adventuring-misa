@@ -6,7 +6,9 @@ imageMeta:
   attributionLink:
 featured: true
 date: Sun May 30 2021 21:59:26 GMT+0100 (British Summer Time)
-tags: 
+tags:
+  - hiking
+  - scotland
   - rating/2-stars
   - munro
 gallery:

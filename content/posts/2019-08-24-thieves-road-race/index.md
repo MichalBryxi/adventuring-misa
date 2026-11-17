@@ -10,6 +10,7 @@ tags:
   - rating/2-stars
   - running
   - race
+  - scotland
 gallery:
   - src: ./map.jpg
     caption: "Thieves Road Race 2019 course map"

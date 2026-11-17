@@ -4,6 +4,8 @@
 
 ### Added
 
+- Links between posts work in Obsidian too.
+- Tags on every post, and new ones: Tip, Paragliding, Scotland, Norway.
 - "Send me a comment" button under every post, by email.
 - "All adventures" as the first link under Explore: the front page with every post, the filter cleared.
 - About me page built from data in `app/templates/about-me.gts`: cards for Outdoors and Computers, a timeline of courses and certificates, talks, and links to find me elsewhere.
