@@ -187,6 +187,26 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-post]').exists({ count: 21 });
   });
 
+  test('a post asks for a note by email instead of comments', async function (assert) {
+    await visit('/2026-11-15-katzenwegli-t6');
+
+    const href = document
+      .querySelector('[data-test-feedback-link]')!
+      .getAttribute('href')!;
+    const url = new URL(href);
+
+    assert.strictEqual(url.protocol, 'mailto:');
+    assert.strictEqual(url.pathname, 'michal.bryxi@gmail.com');
+    assert.strictEqual(
+      url.searchParams.get('subject'),
+      'T6: Von Stechelberg über das Katzenwegli',
+    );
+    assert.strictEqual(
+      url.searchParams.get('body'),
+      'Hey Míša,\r\n\r\nI read your article "T6: Von Stechelberg über das Katzenwegli" (https://adventuring-misa.pudr.com/2026-11-15-katzenwegli-t6) and I wanted to say:\r\n\r\n[fill in your text here]\r\n',
+    );
+  });
+
   test('the changelog is a page, from CHANGELOG.md', async function (assert) {
     await visit('/');
     await click('[data-test-explore] a[href="/changelog"]');

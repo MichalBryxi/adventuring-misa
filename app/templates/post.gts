@@ -10,6 +10,7 @@ import { postCover } from '../content/covers.ts';
 import { tagKey } from '../content/tag-cloud.ts';
 import { PROSE_SIZES, photoUrl } from '../content/photo.ts';
 import { Facts } from '../components/facts.gts';
+import { Feedback } from '../components/feedback.gts';
 import { FormattedDate } from '../components/formatted-date.gts';
 import { Gear } from '../components/gear.gts';
 import { Gallery } from '../components/gallery.gts';
@@ -111,6 +112,8 @@ export default <template>
           {{#if @model.gallery.length}}
             <Gallery @photos={{@model.gallery}} />
           {{/if}}
+
+          <Feedback @post={{post}} class="mt-16" />
 
           <nav
             class="mt-16 grid gap-6 border-t border-slate-200 pt-8 text-sm/6 font-bold sm:grid-cols-2"

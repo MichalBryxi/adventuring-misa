@@ -4,6 +4,7 @@
 
 ### Added
 
+- "Send me a note" under every post instead of comments: it opens your email app with a note to me, the article's title and link already in it.
 - "All adventures" as the first link under Explore: the front page with every post, the filter cleared.
 - About me page built from data in `app/templates/about-me.gts`: cards for Outdoors and Computers, a timeline of courses and certificates, talks, and links to find me elsewhere.
 - About me content: what I do outdoors, courses and certificates, my projects (beauty-pay.cz, winds.mobi, Forkcast, Magic Pass on the map, paragliding flight stats, this blog), my EmberFest 2026 talk, and Strava, Mastodon, GitHub, LinkedIn and my outdoor CV.

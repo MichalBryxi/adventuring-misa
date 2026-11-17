@@ -8,6 +8,8 @@ export default {
   host: 'https://adventuring-misa.pudr.com',
   // Whose blog it is, in the sidebar
   owner: 'Michal Bryxí',
+  // Where the "Send me a note" button under a post writes to
+  email: 'michal.bryxi@gmail.com',
   /** @type {{ label: string; route: string; id?: string }[]} */
   navigation: [
     { label: 'About me', route: 'about-me' },
