@@ -94,12 +94,17 @@ export class MobileNav extends Component<{ Element: HTMLDivElement }> {
         @route="index"
         class="flex min-w-0 items-center gap-2.5 font-bold text-slate-900"
       >
-        <ResponsiveImage
-          @src={{cover}}
-          @width={{32}}
-          alt=""
-          class="size-8 shrink-0 rounded-full object-cover ring-1 ring-black/10"
-        />
+        {{! Zoomed in 4.5× on the face: 55% across, 38% down content/cover.jpg }}
+        <span
+          class="relative size-8 shrink-0 overflow-hidden rounded-full ring-1 ring-black/10"
+        >
+          <ResponsiveImage
+            @src={{cover}}
+            @width={{144}}
+            alt=""
+            class="absolute top-[-121%] left-[-197.5%] w-[450%] max-w-none"
+          />
+        </span>
         <span class="truncate">{{site.title}}</span>
       </LinkTo>
     </div>
