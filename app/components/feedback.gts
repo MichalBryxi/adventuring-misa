@@ -32,7 +32,7 @@ export const Feedback: TOC<{
   Args: { post: Post };
 }> = <template>
   <aside
-    class="flex flex-col items-center gap-3 rounded-2xl bg-emerald-50 px-6 py-8 text-center"
+    class="flex flex-col items-center rounded-2xl bg-emerald-50 px-6 py-8 text-center"
     data-test-feedback
     ...attributes
   >
@@ -54,9 +54,7 @@ export const Feedback: TOC<{
         <rect x="3" y="5" width="18" height="14" rx="2" />
         <path d="m3 7 9 6 9-6" />
       </svg>
-      Send me a note
+      Send me a comment
     </a>
-    <p class="text-sm text-slate-600">It opens your email app, with the article
-      already in it.</p>
   </aside>
 </template>;
