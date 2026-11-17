@@ -1,8 +1,6 @@
 # Changelog
 
-What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest first. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-
-## Unreleased
+## 2026-11-17
 
 ### Added
 
@@ -19,11 +17,8 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 - Responsive images: 480, 960 and 1440 px, in WebP and JPEG.
 - RSS feed with the facts, gear and gallery of each post.
 - Every page prerendered to static HTML.
+- Changelog page at `/changelog`, linked under Explore: this file, rendered with the posts' Markdown pipeline.
 - Installable as an app on Android, iOS and desktop (vite-plugin-pwa): a web app manifest, home screen icons, and a service worker that keeps every page readable offline and the photos once seen.
-
-### Fixed
-
-- The mobile menu opens with a tap: the tap's click closed the drawer it had just opened.
 
 ### Changed
 
@@ -33,6 +28,10 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 - Layout adapted from the Tailwind Plus "Transmit" template.
 - h2 headings stand out more from h3.
 - Facts and stats moved out of the post text into front matter; Katzenwegli's gear, start and destination, and SAC route moved into the gear checklist, points and links.
+
+### Fixed
+
+- On the live site the page didn't react to taps or clicks: the Content Security Policy blocked the small script that tells the app to take over the prerendered page, so it drew a second copy of the page below instead.
 
 ### Removed
 

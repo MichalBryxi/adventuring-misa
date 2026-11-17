@@ -111,6 +111,15 @@ for (const { id, title } of readAll(root, 'pages')) {
   });
 }
 
+test('page changelog', () => {
+  const html = page('/changelog');
+
+  assert.equal(titleOf(html), escape(`Changelog – ${site.title}`));
+  // The Markdown, rendered at build time
+  // Versions are release dates
+  assert.match(html, /<h2[^>]*>\d{4}-\d{2}-\d{2}<\/h2>/);
+});
+
 test('the RSS feed has every post, with absolute image URLs', () => {
   const rss = readFileSync(join(dist, 'rss.xml'), 'utf8');
 

@@ -16,7 +16,7 @@ export const Explore: TOC<{
   Element: HTMLElement;
   Args: { onNavigate?: () => void };
 }> = <template>
-  <section ...attributes>
+  <section data-test-explore ...attributes>
     <h2
       class="flex items-center font-mono text-sm/7 font-medium text-slate-900"
     >

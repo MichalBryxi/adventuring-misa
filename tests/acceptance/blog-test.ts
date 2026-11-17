@@ -178,6 +178,16 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-link="Strava"]').hasAttribute('href', /strava\.com/);
   });
 
+  test('the changelog is a page, from CHANGELOG.md', async function (assert) {
+    await visit('/');
+    await click('[data-test-explore] a[href="/changelog"]');
+
+    assert.strictEqual(currentURL(), '/changelog');
+    assert.dom('h1').exists({ count: 1 }).hasText('Changelog');
+    assert.dom('[data-test-page="changelog"] h2').exists();
+    assert.dom('[data-test-page="changelog"] h3').includesText('Added');
+  });
+
   test('an unknown post is a 404', async function (assert) {
     await visit('/no-such-post');
 
