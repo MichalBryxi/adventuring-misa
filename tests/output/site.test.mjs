@@ -124,3 +124,41 @@ test('the RSS feed has every post, with absolute image URLs', () => {
   // Gallery photos are in the feed too
   assert.match(rss, /Photo gallery/);
 });
+
+test('the site installs as an app, with icons that exist', () => {
+  const manifest = JSON.parse(
+    readFileSync(join(dist, 'manifest.webmanifest'), 'utf8'),
+  );
+
+  assert.equal(manifest.name, site.title);
+  assert.equal(manifest.display, 'standalone');
+  assert.ok(manifest.icons.some((icon) => icon.purpose === 'maskable'));
+
+  for (const icon of manifest.icons)
+    assert.ok(existsSync(join(dist, icon.src)), icon.src);
+
+  // Every page, not only the front page: a post can be the first one opened
+  for (const html of [page('/'), page(`/${posts[0].id}`)]) {
+    assert.match(html, /<link rel="manifest" href="\/manifest\.webmanifest">/);
+    assert.match(
+      html,
+      /<link rel="apple-touch-icon" href="\/apple-touch-icon-180x180\.png">/,
+    );
+    assert.match(
+      html,
+      /<script id="vite-plugin-pwa:register-sw" src="\/registerSW\.js">/,
+    );
+  }
+
+  assert.ok(existsSync(join(dist, 'apple-touch-icon-180x180.png')));
+});
+
+test('the service worker precaches every prerendered page', () => {
+  const sw = readFileSync(join(dist, 'sw.js'), 'utf8');
+
+  for (const post of posts)
+    assert.ok(sw.includes(`url:"${post.id}/index.html"`), post.id);
+
+  assert.doesNotMatch(sw, /\.woff2"/, 'precaches fonts the site does not use');
+  assert.doesNotMatch(sw, /url:"gpx\//);
+});

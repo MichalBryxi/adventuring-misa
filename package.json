@@ -57,6 +57,7 @@
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.5",
     "@types/qunit": "^2.19.14",
+    "@vite-pwa/assets-generator": "2.0.0",
     "@warp-drive/core": "~5.9.1",
     "@warp-drive/ember": "~5.9.1",
     "@warp-drive/json-api": "~5.9.1",
@@ -102,7 +103,8 @@
     "vfile": "^6.0.3",
     "vfile-matter": "^5.0.1",
     "vite": "^8.3.6",
-    "vite-ember-ssr": "^0.7.0"
+    "vite-ember-ssr": "^0.7.0",
+    "vite-plugin-pwa": "2.0.0"
   },
   "engines": {
     "node": ">= 24"

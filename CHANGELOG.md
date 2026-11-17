@@ -19,10 +19,16 @@ What changed on [Adventuring Míša](https://adventuring-misa.pudr.com), newest 
 - Responsive images: 480, 960 and 1440 px, in WebP and JPEG.
 - RSS feed with the facts, gear and gallery of each post.
 - Every page prerendered to static HTML.
+- Installable as an app on Android, iOS and desktop (vite-plugin-pwa): a web app manifest, home screen icons, and a service worker that keeps every page readable offline and the photos once seen.
+
+### Fixed
+
+- The mobile menu opens with a tap: the tap's click closed the drawer it had just opened.
 
 ### Changed
 
 - On phones and tablets the sidebar is a menu: a slim bar at the top with a menu button opens the links and tags in a drawer from the left (Frontile). Tags picked there keep it open, and its button shows how many adventures match; the menu button shows how many filters are on.
+- The favicon has a white tile behind the face, so it shows in dark browser tabs and on dark home screens.
 - Rebuilt from sportsting-misa.pudr.com (empress-blog) as a compatless Ember 7 app on Vite, with WarpDrive and Tailwind CSS, keeping the old post URLs.
 - Layout adapted from the Tailwind Plus "Transmit" template.
 - h2 headings stand out more from h3.
