@@ -11,8 +11,11 @@
   for = "/*"
   [headers.values]
     # The share-free, analytics-free site: own scripts only. Satoshi comes from
-    # Fontshare; posts embed YouTube and the swisstopo map.
-    Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://api.fontshare.com; font-src 'self' https://cdn.fontshare.com; img-src 'self' https://s.gravatar.com; connect-src 'self'; frame-src https://www.youtube.com/embed/ https://www.youtube-nocookie.com/embed/ https://map.geo.admin.ch/; manifest-src 'self'; base-uri 'self'; form-action 'none'"
+    # Fontshare; posts embed YouTube and the swisstopo map. The hash is
+    # vite-ember-ssr's inline window.__vite_ember_ssr_rehydrate__=true in every
+    # prerendered page: without it the app renders a second copy of the page
+    # instead of taking over the prerendered one (tests/output checks it).
+    Content-Security-Policy = "default-src 'none'; script-src 'self' 'sha256-MfYh/LekLsLcPVuIvVP7z6hB2DLOW2rpVtqBX4Q+3+w='; style-src 'self' 'unsafe-inline' https://api.fontshare.com; font-src 'self' https://cdn.fontshare.com; img-src 'self' https://s.gravatar.com; connect-src 'self'; frame-src https://www.youtube.com/embed/ https://www.youtube-nocookie.com/embed/ https://map.geo.admin.ch/; manifest-src 'self'; base-uri 'self'; form-action 'none'"
 
 # Fingerprinted by Vite: never change, cache forever
 [[headers]]

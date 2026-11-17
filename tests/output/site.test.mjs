@@ -3,6 +3,7 @@
 //
 // Usage: pnpm build && pnpm test:output
 
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -161,4 +162,28 @@ test('the service worker precaches every prerendered page', () => {
 
   assert.doesNotMatch(sw, /\.woff2"/, 'precaches fonts the site does not use');
   assert.doesNotMatch(sw, /url:"gpx\//);
+});
+
+test('the CSP allows every inline script of the prerendered pages', () => {
+  const csp = readFileSync(join(root, 'netlify.toml'), 'utf8').match(
+    /Content-Security-Policy = "([^"]+)"/,
+  )[1];
+  const scriptSrc = csp.match(/script-src ([^;]+)/)[1];
+  const pages = ['/', '/changelog', `/${posts[0].id}`];
+
+  for (const url of pages) {
+    const inline = [...page(url).matchAll(/<script>([^<]+)<\/script>/g)];
+
+    // At least vite-ember-ssr's rehydration flag
+    assert.ok(inline.length > 0, url);
+
+    for (const [, code] of inline) {
+      const hash = createHash('sha256').update(code).digest('base64');
+
+      assert.ok(
+        scriptSrc.includes(`'sha256-${hash}'`),
+        `${url}: the CSP blocks <script>${code}</script>`,
+      );
+    }
+  }
 });
