@@ -1,3 +1,5 @@
+import { byFolder } from './by-folder.ts';
+
 import type { ImageData } from '@responsive-image/core';
 
 /**
@@ -6,20 +8,22 @@ import type { ImageData } from '@responsive-image/core';
  * a set of URLs plus functions, not data to cache.
  */
 const COVERS = {
-  posts: import.meta.glob<ImageData | undefined>('/content/posts/*/index.md', {
-    query: '?meta',
-    import: 'cover',
-    eager: true,
-  }),
-  pages: import.meta.glob<ImageData | undefined>('/content/pages/*/index.md', {
-    query: '?meta',
-    import: 'cover',
-    eager: true,
-  }),
+  posts: byFolder(
+    import.meta.glob<ImageData | undefined>('@content/posts/*/index.md', {
+      query: '?meta',
+      import: 'cover',
+      eager: true,
+    }),
+  ),
+  pages: byFolder(
+    import.meta.glob<ImageData | undefined>('@content/pages/*/index.md', {
+      query: '?meta',
+      import: 'cover',
+      eager: true,
+    }),
+  ),
 };
 
-export const postCover = (id: string) =>
-  COVERS.posts[`/content/posts/${id}/index.md`];
+export const postCover = (id: string) => COVERS.posts.get(id);
 
-export const pageCover = (id: string) =>
-  COVERS.pages[`/content/pages/${id}/index.md`];
+export const pageCover = (id: string) => COVERS.pages.get(id);

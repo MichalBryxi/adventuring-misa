@@ -21,13 +21,14 @@ type Meta = { id: string; [key: string]: unknown };
 type Loader = () => Promise<string>;
 
 // Vite reads the glob options statically: they have to be written out each time
+// A draft's meta is null in a build (lib/vite-plugin-blog.mjs)
 const META = {
-  posts: import.meta.glob<Meta>('/content/posts/*/index.md', {
+  posts: import.meta.glob<Meta | null>('@content/posts/*/index.md', {
     query: '?meta',
     import: 'default',
     eager: true,
   }),
-  pages: import.meta.glob<Meta>('/content/pages/*/index.md', {
+  pages: import.meta.glob<Meta | null>('@content/pages/*/index.md', {
     query: '?meta',
     import: 'default',
     eager: true,
@@ -35,10 +36,10 @@ const META = {
 };
 
 const HTML: Partial<Record<keyof typeof META, Record<string, Loader>>> = {
-  posts: import.meta.glob<string>('/content/posts/*/index.md', {
+  posts: import.meta.glob<string>('@content/posts/*/index.md', {
     import: 'default',
   }),
-  pages: import.meta.glob<string>('/content/pages/*/index.md', {
+  pages: import.meta.glob<string>('@content/pages/*/index.md', {
     import: 'default',
   }),
 };
@@ -52,10 +53,9 @@ type Collection = keyof typeof META;
 
 const byId = (collection: Collection) =>
   new Map(
-    Object.entries(META[collection]).map(([path, meta]) => [
-      meta.id,
-      { path, meta },
-    ]),
+    Object.entries(META[collection])
+      .filter((entry): entry is [string, Meta] => entry[1] !== null)
+      .map(([path, meta]) => [meta.id, { path, meta }]),
   );
 
 const INDEX = {

@@ -6,7 +6,9 @@ import { t } from 'ember-intl';
 import { pageTitle } from 'ember-page-title';
 
 import { Container } from '../components/container.gts';
+import { DraftRibbon } from '../components/draft-ribbon.gts';
 import { postCover } from '../content/covers.ts';
+import { splitAtGear } from '../content/gear.ts';
 import { tagKey } from '../content/tag-cloud.ts';
 import { PROSE_SIZES, photoUrl } from '../content/photo.ts';
 import { Facts } from '../components/facts.gts';
@@ -41,7 +43,8 @@ export default <template>
         @type="article"
       />
 
-      <article class="py-16 lg:py-36" data-test-post-page={{post.id}}>
+      <article class="relative py-16 lg:py-36" data-test-post-page={{post.id}}>
+        <DraftRibbon @post={{post}} />
         <Container>
           <header class="flex flex-col">
             <h1 class="mt-2 text-4xl font-bold text-slate-900">
@@ -101,13 +104,19 @@ export default <template>
             <Facts @facts={{post.facts}} />
           {{/if}}
 
-          {{#if post.html}}
-            <Prose @html={{post.html}} />
-          {{/if}}
+          {{#let (splitAtGear post.html) as |story|}}
+            {{#if story.before}}
+              <Prose @html={{story.before}} />
+            {{/if}}
 
-          {{#if post.gear.length}}
-            <Gear @gear={{post.gear}} class="mt-16" />
-          {{/if}}
+            {{#if post.gear.length}}
+              <Gear @gear={{post.gear}} class="mt-16" />
+            {{/if}}
+
+            {{#if story.after}}
+              <Prose @html={{story.after}} class="mt-16" />
+            {{/if}}
+          {{/let}}
 
           {{#if @model.gallery.length}}
             <Gallery @photos={{@model.gallery}} />

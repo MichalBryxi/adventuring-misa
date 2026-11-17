@@ -7,6 +7,7 @@ import { t } from 'ember-intl';
 import { postCover } from '../content/covers.ts';
 import { tagKey } from '../content/tag-cloud.ts';
 import { Container } from './container.gts';
+import { DraftRibbon } from './draft-ribbon.gts';
 import { FormattedDate } from './formatted-date.gts';
 
 import type { TOC } from '@ember/component/template-only';
@@ -15,9 +16,10 @@ import type { Post } from '../content/schemas.ts';
 const PostEntry: TOC<{ Args: { post: Post } }> = <template>
   <article
     aria-labelledby="post-{{@post.id}}-title"
-    class="py-10 sm:py-12"
+    class="relative py-10 sm:py-12"
     data-test-post={{@post.id}}
   >
+    <DraftRibbon @post={{@post}} />
     <Container>
       <div class="flex flex-col items-start gap-6 sm:flex-row">
         <div class="flex flex-1 flex-col items-start">

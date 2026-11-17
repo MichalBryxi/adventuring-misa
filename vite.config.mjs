@@ -1,5 +1,7 @@
 import { responsiveImage } from '@responsive-image/vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
+import { join } from 'node:path';
+
 import { defineConfig } from 'vite';
 import { extensions, ember } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
@@ -13,6 +15,10 @@ import site from './site.mjs';
 // The test build runs in the browser only, nothing to prerender
 const isTest = process.env.EMBER_ENV === 'test';
 
+// The tests run against a few dummy posts that only change with the tests,
+// not against the real ones. The app imports the Markdown as @content/…
+const content = isTest ? 'tests/fixtures/content' : 'content';
+
 // The app icons, from public/favicon.svg (the face on a white tile, so it
 // doesn't disappear on a dark home screen or dock). The tile has its margin
 // already: a little more keeps the face in a maskable icon's safe circle.
@@ -23,8 +29,11 @@ const icons = {
 };
 
 export default defineConfig({
+  resolve: {
+    alias: { '@content': join(import.meta.dirname, content) },
+  },
   plugins: [
-    blog({ site }),
+    blog({ site, content }),
     // Every photo imported with ?responsive, in the widths app/content/photo.ts expects
     responsiveImage({ w: [480, 960, 1440], format: ['webp', 'jpeg'] }),
     ember(),

@@ -13,7 +13,10 @@ import { allPosts } from '../../app/content/requests.ts';
 
 import type Store from '../../app/services/store.ts';
 
-// These run the real app against the real content/
+// These run the real app against the dummy posts in tests/fixtures/content/
+// (vite.config.mjs): four published ones and a draft
+const SCRAMBLE = '/2023-08-04-a-scramble';
+
 module('Acceptance | blog', function (hooks) {
   setupApplicationTest(hooks);
 
@@ -24,18 +27,22 @@ module('Acceptance | blog', function (hooks) {
       (element) => element.getAttribute('data-test-post') ?? '',
     );
 
-    assert.true(ids.length >= 21, `lists all posts (${ids.length})`);
-    // Post ids start with their date. Only the first is checked: a few 2021
-    // posts have a front-matter date that doesn't match their file name.
-    assert.strictEqual(ids[0], [...ids].sort().at(-1), 'newest first');
+    assert.deepEqual(ids, [
+      '2023-08-04-a-scramble',
+      '2022-07-03-big-skyrace',
+      '2021-06-02-second-munro',
+      '2020-05-01-first-munro',
+    ]);
   });
 
   test('a post renders its content and tags', async function (assert) {
-    await visit('/2021-06-07-an-teallach');
+    await visit(SCRAMBLE);
 
-    assert.dom('h1').hasText('An Teallach');
+    assert.dom('h1').hasText('T6: A scramble');
     assert.dom('.prose p').exists();
-    assert.dom('[data-test-gallery-photo]').exists({ count: 4 });
+    assert
+      .dom('.prose a[href="/2020-05-01-first-munro"]')
+      .exists('a link to ../<id>/index.md is the post URL');
     assert.dom('a[href="/?tags=rating%2F4-stars"]').hasText('★★★★☆');
     assert.dom('a[href^="/author/"]').doesNotExist('no author byline');
     assert
@@ -67,22 +74,14 @@ module('Acceptance | blog', function (hooks) {
   });
 
   test('photos next to the Markdown get bundled URLs', async function (assert) {
-    // A post that keeps its screenshots in the text, and one with a gallery
-    await visit('/2024-01-01-windy-colour-scale-of-wind-for-paragliding');
+    // A photo in the text, and the gallery
+    await visit(SCRAMBLE);
 
-    const sources = [...document.querySelectorAll('.prose img')].map(
-      (img) => img.getAttribute('src') ?? '',
-    );
+    const sources = [
+      ...document.querySelectorAll('.prose img, [data-test-gallery] img'),
+    ].map((img) => img.getAttribute('src') ?? '');
 
-    await visit('/2026-11-15-katzenwegli-t6');
-
-    sources.push(
-      ...[...document.querySelectorAll('[data-test-gallery] img')].map(
-        (img) => img.getAttribute('src') ?? '',
-      ),
-    );
-
-    assert.true(sources.length > 0);
+    assert.strictEqual(sources.length, 4);
     assert.true(
       sources.every((src) => !src.startsWith('./') && !src.includes('__ASSET')),
       sources.join(', '),
@@ -94,7 +93,7 @@ module('Acceptance | blog', function (hooks) {
     await click('[data-test-cloud-tag="munro"]');
 
     assert.strictEqual(currentURL(), '/?tags=munro');
-    assert.dom('[data-test-post]').exists({ count: 4 });
+    assert.dom('[data-test-post]').exists({ count: 3 });
     assert
       .dom('[data-test-cloud-tag="rating/5-stars"]')
       .hasAttribute('data-test-leads-nowhere', '', 'no ★★★★★ Munro yet');
@@ -130,7 +129,7 @@ module('Acceptance | blog', function (hooks) {
     await click('[data-test-menu-button]');
 
     assert.dom('[data-test-mobile-nav]').exists();
-    assert.dom('[data-test-show-posts]').hasText('Show 21 adventures');
+    assert.dom('[data-test-show-posts]').hasText('Show 4 adventures');
 
     await click('[data-test-mobile-nav] [data-test-cloud-tag="munro"]');
 
@@ -138,12 +137,12 @@ module('Acceptance | blog', function (hooks) {
     assert
       .dom('[data-test-mobile-nav]')
       .exists('picking a tag keeps the drawer open');
-    assert.dom('[data-test-show-posts]').hasText('Show 4 adventures');
+    assert.dom('[data-test-show-posts]').hasText('Show 3 adventures');
 
     await click('[data-test-show-posts]');
 
     assert.dom('[data-test-mobile-nav]').doesNotExist();
-    assert.dom('[data-test-post]').exists({ count: 4 });
+    assert.dom('[data-test-post]').exists({ count: 3 });
   });
 
   test('a tap opens the mobile menu and leaves it open', async function (assert) {
@@ -184,11 +183,11 @@ module('Acceptance | blog', function (hooks) {
 
     assert.strictEqual(currentURL(), '/');
     assert.dom('[data-test-filter]').doesNotExist();
-    assert.dom('[data-test-post]').exists({ count: 21 });
+    assert.dom('[data-test-post]').exists({ count: 4 });
   });
 
   test('a post asks for a note by email instead of comments', async function (assert) {
-    await visit('/2026-11-15-katzenwegli-t6');
+    await visit(SCRAMBLE);
 
     const href = document
       .querySelector('[data-test-feedback-link]')!
@@ -197,13 +196,10 @@ module('Acceptance | blog', function (hooks) {
 
     assert.strictEqual(url.protocol, 'mailto:');
     assert.strictEqual(url.pathname, 'michal.bryxi@gmail.com');
-    assert.strictEqual(
-      url.searchParams.get('subject'),
-      'T6: Von Stechelberg über das Katzenwegli',
-    );
+    assert.strictEqual(url.searchParams.get('subject'), 'T6: A scramble');
     assert.strictEqual(
       url.searchParams.get('body'),
-      'Hey Míša,\r\n\r\nI read your article "T6: Von Stechelberg über das Katzenwegli" (https://adventuring-misa.pudr.com/2026-11-15-katzenwegli-t6) and I wanted to say:\r\n\r\n[fill in your text here]\r\n',
+      'Hey Míša,\r\n\r\nI read your article "T6: A scramble" (https://adventuring-misa.pudr.com/2023-08-04-a-scramble) and I wanted to say:\r\n\r\n[fill in your text here]\r\n',
     );
   });
 
@@ -225,16 +221,16 @@ module('Acceptance | blog', function (hooks) {
 
   test('navigating from the index to a post', async function (assert) {
     await visit('/');
-    await click('[data-test-post="2021-06-07-an-teallach"] h2 a');
+    await click('[data-test-post="2020-05-01-first-munro"] h2 a');
 
-    assert.strictEqual(currentURL(), '/2021-06-07-an-teallach');
-    assert.dom('h1').hasText('An Teallach');
+    assert.strictEqual(currentURL(), '/2020-05-01-first-munro');
+    assert.dom('h1').hasText('The first Munro');
   });
 
   test('a photo from the gallery opens in a lightbox', async function (assert) {
-    await visit('/2026-11-15-katzenwegli-t6');
+    await visit(SCRAMBLE);
 
-    assert.dom('[data-test-gallery-photo]').exists({ count: 8 });
+    assert.dom('[data-test-gallery-photo]').exists({ count: 3 });
     assert.dom('[data-test-lightbox]').doesNotExist();
 
     await click('[data-test-gallery-photo]');
@@ -245,36 +241,36 @@ module('Acceptance | blog', function (hooks) {
         .open,
       'opens as a modal dialog',
     );
-    assert.dom('[data-test-lightbox-position]').hasText('1 / 8');
+    assert.dom('[data-test-lightbox-position]').hasText('1 / 3');
     assert.dom('[data-test-lightbox-caption]').hasAnyText();
 
     await click('[data-test-lightbox-next]');
-    assert.dom('[data-test-lightbox-position]').hasText('2 / 8');
+    assert.dom('[data-test-lightbox-position]').hasText('2 / 3');
 
     await triggerKeyEvent('[data-test-lightbox]', 'keydown', 'ArrowLeft');
     await triggerKeyEvent('[data-test-lightbox]', 'keydown', 'ArrowLeft');
     assert
       .dom('[data-test-lightbox-position]')
-      .hasText('8 / 8', 'wraps around');
+      .hasText('3 / 3', 'wraps around');
 
     await click('[data-test-lightbox-close]');
     assert.dom('[data-test-lightbox]').doesNotExist();
   });
 
   test('a post shows its facts before the story', async function (assert) {
-    await visit('/2026-11-15-katzenwegli-t6');
+    await visit(SCRAMBLE);
 
     assert.dom('[data-test-facts]').exists();
-    assert.dom('[data-test-fact="Ascent"] td').hasText('1,820 m');
+    assert.dom('[data-test-fact="Ascent"] td').hasText('1,750 m');
     assert.dom('[data-test-fact="Duration"] td').hasText('5 h 36 min');
     assert
       .dom('[data-test-fact="Points"] td')
-      .hasText('Stechelberg (910 m) → Silberhornhütte (2,663 m)');
+      .hasText('The bottom (900 m) → The top (2,650 m)');
     assert
       .dom('[data-test-fact="Grade"] a')
       .hasText('T6')
       .hasAttribute('href', /SAC-Wanderskala/);
-    assert.dom('[data-test-fact="Links"] td').hasText('SAC route · Strava');
+    assert.dom('[data-test-fact="Links"] td').hasText('Route · Strava');
   });
 
   test('posts can be filtered by their facts', async function (assert) {
@@ -285,13 +281,13 @@ module('Acceptance | blog', function (hooks) {
       .filter((post) => (post.facts?.ascent ?? 0) > 2000)
       .map((post) => post.id);
 
-    assert.deepEqual(bigClimbs, ['2019-09-21-salomon-ring-of-steall-skyrace']);
+    assert.deepEqual(bigClimbs, ['2022-07-03-big-skyrace']);
   });
 
   test('a post shows its gear as a checklist', async function (assert) {
-    await visit('/2026-11-15-katzenwegli-t6');
+    await visit(SCRAMBLE);
 
-    assert.dom('[data-test-gear-item]').exists({ count: 3 });
+    assert.dom('[data-test-gear-item]').exists({ count: 2 });
     assert
       .dom('[data-test-gear-item="Microspikes"]')
       .hasAttribute('data-test-packed', 'true');
@@ -300,5 +296,26 @@ module('Acceptance | blog', function (hooks) {
       .hasAttribute('data-test-packed', 'false')
       .includesText('Mistake');
     assert.dom('[data-test-fact="Gear"]').doesNotExist('not a fact any more');
+    assert.true(
+      document
+        .querySelector('[data-test-gear]')!
+        .nextElementSibling!.querySelector('h2')!
+        .textContent.includes('The route'),
+      'the checklist sits where the story has <!-- gear -->',
+    );
+  });
+
+  test('a draft is left out of a build', async function (assert) {
+    await visit('/');
+
+    assert.dom('[data-test-post="2024-09-05-a-draft"]').doesNotExist();
+    assert.dom('[data-test-draft]').doesNotExist();
+    assert
+      .dom('[data-test-cloud-tag="tip"]')
+      .doesNotExist('its tags are not in the cloud');
+
+    await visit('/2024-09-05-a-draft');
+
+    assert.dom('[data-test-not-found]').exists();
   });
 });

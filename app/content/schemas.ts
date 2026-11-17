@@ -18,6 +18,8 @@ export const PostSchema = withDefaults({
     { kind: 'field', name: 'image' },
     { kind: 'field', name: 'imageMeta' },
     { kind: 'field', name: 'featured' },
+    // false for a draft, which only the dev server has (lib/content.mjs)
+    { kind: 'field', name: 'published' },
     // Typed for filtering, plus the rows to show (lib/facts.mjs)
     { kind: 'field', name: 'facts' },
     // What I had with me, and what I missed (lib/gear.mjs)
@@ -78,6 +80,7 @@ export interface Post {
   image?: string;
   imageMeta?: { attribution?: string; attributionLink?: string };
   featured?: boolean;
+  published?: boolean;
   facts?: Facts;
   gear?: GearItem[];
   html?: string;

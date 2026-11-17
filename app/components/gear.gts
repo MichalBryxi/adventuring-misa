@@ -4,8 +4,9 @@ import type { TOC } from '@ember/component/template-only';
 import type { GearItem } from '../content/schemas.ts';
 
 /**
- * A post's `gear:` front matter as a checklist after the story: ticked what
- * I had, crossed what I should have had, with why (lib/gear.mjs).
+ * A post's `gear:` front matter as a checklist: ticked what I had, crossed
+ * what I should have had, with why (lib/gear.mjs). It goes after the story,
+ * or where the story has a `<!-- gear -->` (app/content/gear.ts).
  */
 export const Gear: TOC<{
   Element: HTMLElement;
@@ -13,7 +14,7 @@ export const Gear: TOC<{
 }> = <template>
   <section aria-labelledby="gear-title" data-test-gear ...attributes>
     <h2 id="gear-title" class="section-heading before:bg-amber-300">
-      The gear
+      The gear I had
     </h2>
     <ul class="mt-6 space-y-3 text-sm/6 text-slate-700" role="list">
       {{#each @gear as |entry|}}

@@ -1,6 +1,7 @@
 type Meta = { id: string; tags?: string[] };
 
-const POSTS = import.meta.glob<Meta>('/content/posts/*/index.md', {
+// A draft's meta is null in a build (lib/vite-plugin-blog.mjs)
+const POSTS = import.meta.glob<Meta | null>('@content/posts/*/index.md', {
   query: '?meta',
   import: 'default',
   eager: true,
@@ -35,7 +36,9 @@ export interface TagGroup {
  */
 export const tagKey = (id: string) => `tag.${id}`;
 
-const POST_TAGS = Object.values(POSTS).map((post) => post.tags ?? []);
+const POST_TAGS = Object.values(POSTS)
+  .filter((post) => post !== null)
+  .map((post) => post.tags ?? []);
 
 /**
  * Whether adding the tag to the filter would leave no posts: no post with

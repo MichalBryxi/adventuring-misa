@@ -1,0 +1,10 @@
+---
+title: The second Munro
+date: 2021-06-02T12:00:00+02:00
+tags:
+  - munro
+  - scotland
+  - rating/2-stars
+---
+
+A dummy post for the tests, without a cover. Rain, mostly.

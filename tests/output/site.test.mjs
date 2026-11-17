@@ -87,6 +87,17 @@ for (const post of posts) {
   });
 }
 
+test('drafts are left out', () => {
+  const rss = readFileSync(join(dist, 'rss.xml'), 'utf8');
+
+  for (const draft of readAll(root, 'posts', { drafts: true }).filter(
+    (post) => post.published === false,
+  )) {
+    assert.ok(!existsSync(join(dist, draft.id)), `${draft.id} prerendered`);
+    assert.ok(!rss.includes(`/${draft.id}<`), `${draft.id} in the feed`);
+  }
+});
+
 test('old tag pages redirect to the filter', () => {
   assert.ok(!existsSync(join(dist, 'tag')), 'no tag pages');
   assert.match(

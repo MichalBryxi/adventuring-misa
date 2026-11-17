@@ -4,6 +4,8 @@
 
 ### Added
 
+- Drafts: a post with `published: false` shows only while I write it, with a Draft ribbon in the list and on the post, and isn't on the site.
+- "The gear I had" can sit in the middle of a post, before its route.
 - Links between posts work in Obsidian too.
 - Tags on every post, and new ones: Tip, Paragliding, Scotland, Norway.
 - "Send me a comment" button under every post, by email.
@@ -26,6 +28,9 @@
 
 ### Changed
 
+- The gear checklist is called "The gear I had".
+- Katzenwegli: the story reworded in places, the Hiking and Schweiz tags dropped, and "What I take on a T6" moved out into a post of its own (a draft for now).
+- The tests run against a few dummy posts in `tests/fixtures/content/`, so editing a post doesn't break them.
 - The round photo in the phone's top bar is zoomed in on my face.
 - "Trail Running" in the tagline is just "Running".
 - On phones and tablets the sidebar is a menu: a slim bar at the top with a menu button opens the links and tags in a drawer from the left (Frontile). Tags picked there keep it open, and its button shows how many adventures match; the menu button shows how many filters are on.
