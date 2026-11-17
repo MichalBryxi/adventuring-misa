@@ -1,5 +1,11 @@
 import { module, test } from 'qunit';
-import { click, currentURL, triggerKeyEvent, visit } from '@ember/test-helpers';
+import {
+  click,
+  currentURL,
+  triggerEvent,
+  triggerKeyEvent,
+  visit,
+} from '@ember/test-helpers';
 
 import { setupApplicationTest } from '../helpers/index.ts';
 
@@ -138,6 +144,20 @@ module('Acceptance | blog', function (hooks) {
 
     assert.dom('[data-test-mobile-nav]').doesNotExist();
     assert.dom('[data-test-post]').exists({ count: 4 });
+  });
+
+  test('a tap opens the mobile menu and leaves it open', async function (assert) {
+    await visit('/');
+
+    // A finger: pointerdown and pointerup, then the click the browser sends
+    // after them, which must not close the drawer it just opened
+    const touch = { pointerType: 'touch', isPrimary: true };
+
+    await triggerEvent('[data-test-menu-button]', 'pointerdown', touch);
+    await triggerEvent('[data-test-menu-button]', 'pointerup', touch);
+    await click('[data-test-menu-button]');
+
+    assert.dom('[data-test-mobile-nav]').exists();
   });
 
   test('a filter nothing matches says so', async function (assert) {

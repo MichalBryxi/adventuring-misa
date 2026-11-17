@@ -1,6 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { LinkTo } from '@ember/routing';
+import { on } from '@ember/modifier';
 import { service } from '@ember/service';
 
 import { ResponsiveImage } from '@responsive-image/ember';
@@ -59,10 +60,13 @@ export class MobileNav extends Component<{ Element: HTMLDivElement }> {
       class="sticky top-0 z-30 flex items-center gap-3 border-b border-slate-200 bg-white/90 px-4 py-2 backdrop-blur sm:px-6 lg:hidden"
       ...attributes
     >
+      {{! Opens on click, not @onPress: a tap's click comes after pointerup,
+          and would land on the backdrop of the just-opened drawer and close
+          it again (Frontile 0.18.10 stops it too late) }}
       <Button
         @variant="plain"
         @size="sm"
-        @onPress={{this.open}}
+        {{on "click" this.open}}
         aria-label="Menu"
         aria-expanded={{if this.isOpen "true" "false"}}
         @class="relative -ml-2"
