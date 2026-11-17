@@ -41,6 +41,12 @@
   [headers.values]
     Content-Type = "application/vnd.google-earth.kml+xml"
 
+# There was a changelog page for a day; the history is on GitHub now
+[[redirects]]
+  from = "/changelog"
+  to = "https://github.com/MichalBryxi/adventuring-misa/commits/main"
+  status = 301
+
 # The Katzenwegli post was first published under its old route name
 # Tags are a filter of the front page now, not pages of their own.
 # The ratings and grades are in groups: they come first, the first match wins.

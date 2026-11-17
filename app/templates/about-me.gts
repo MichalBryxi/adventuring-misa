@@ -141,7 +141,8 @@ const SECTIONS: Section[] = [
       {
         heading: 'This blog',
         icon: '📝',
-        text: `The website you're reading, built with Ember and Tailwind CSS. Its <a href="https://github.com/MichalBryxi/adventuring-misa">source code</a> is on GitHub.`,
+        link: 'https://github.com/MichalBryxi/adventuring-misa',
+        text: `The website you're reading, built with Ember and Tailwind CSS. Its <a href="https://github.com/MichalBryxi/adventuring-misa">source code</a>, and the history of every change, are on GitHub.`,
       },
     ],
   },

@@ -175,6 +175,9 @@ module('Acceptance | blog', function (hooks) {
       .dom('[data-test-timeline="Basic avalanche training"] time')
       .hasText('Feb 2024');
     assert.dom('[data-test-link="Strava"]').hasAttribute('href', /strava\.com/);
+    assert
+      .dom('[data-test-card="This blog"] h3 a')
+      .hasAttribute('href', 'https://github.com/MichalBryxi/adventuring-misa');
   });
 
   test('All adventures in Explore lists every post, without the filter', async function (assert) {
@@ -201,16 +204,6 @@ module('Acceptance | blog', function (hooks) {
       url.searchParams.get('body'),
       'Hey Míša,\r\n\r\nI read your article "T6: A scramble" (https://adventuring-misa.pudr.com/2023-08-04-a-scramble) and I wanted to say:\r\n\r\n[fill in your text here]\r\n',
     );
-  });
-
-  test('the changelog is a page, from CHANGELOG.md', async function (assert) {
-    await visit('/');
-    await click('[data-test-explore] a[href="/changelog"]');
-
-    assert.strictEqual(currentURL(), '/changelog');
-    assert.dom('h1').exists({ count: 1 }).hasText('Changelog');
-    assert.dom('[data-test-page="changelog"] h2').exists();
-    assert.dom('[data-test-page="changelog"] h3').includesText('Added');
   });
 
   test('an unknown post is a 404', async function (assert) {

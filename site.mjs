@@ -11,8 +11,5 @@ export default {
   // Where the "Send me a comment" button under a post writes to
   email: 'michal.bryxi@gmail.com',
   /** @type {{ label: string; route: string; id?: string }[]} */
-  navigation: [
-    { label: 'About me', route: 'about-me' },
-    { label: 'Changelog', route: 'changelog' },
-  ],
+  navigation: [{ label: 'About me', route: 'about-me' }],
 };
