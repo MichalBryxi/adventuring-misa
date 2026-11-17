@@ -1,4 +1,4 @@
-import { array } from '@ember/helper';
+import { array, hash } from '@ember/helper';
 import { on } from '@ember/modifier';
 import { LinkTo } from '@ember/routing';
 
@@ -27,6 +27,18 @@ export const Explore: TOC<{
       role="list"
       class="mt-4 flex flex-col gap-3 text-base/7 font-semibold text-slate-900"
     >
+      <li class="flex items-center gap-2">
+        <span class="text-sky-500" aria-hidden="true">→</span>
+        {{! Without the tags too: query params are sticky, a plain link to the
+            front page would bring back the last filter }}
+        <LinkTo
+          @route="index"
+          @query={{hash tags=""}}
+          class="hover:text-emerald-700"
+          data-test-all-adventures
+          {{on "click" (if @onNavigate @onNavigate noop)}}
+        >All adventures</LinkTo>
+      </li>
       {{#each site.navigation as |item|}}
         <li class="flex items-center gap-2">
           <span class="text-sky-500" aria-hidden="true">→</span>

@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- "All adventures" as the first link under Explore: the front page with every post, the filter cleared.
+
+### Changed
+
+- The round photo in the phone's top bar is zoomed in on my face.
+- "Trail Running" in the tagline is just "Running".
+
 ## 2026-11-17
 
 ### Added

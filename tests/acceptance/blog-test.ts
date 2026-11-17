@@ -178,6 +178,15 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-link="Strava"]').hasAttribute('href', /strava\.com/);
   });
 
+  test('All adventures in Explore lists every post, without the filter', async function (assert) {
+    await visit('/?tags=munro');
+    await click('[data-test-explore] [data-test-all-adventures]');
+
+    assert.strictEqual(currentURL(), '/');
+    assert.dom('[data-test-filter]').doesNotExist();
+    assert.dom('[data-test-post]').exists({ count: 21 });
+  });
+
   test('the changelog is a page, from CHANGELOG.md', async function (assert) {
     await visit('/');
     await click('[data-test-explore] a[href="/changelog"]');
