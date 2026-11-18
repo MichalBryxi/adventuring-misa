@@ -139,6 +139,22 @@ const SECTIONS: Section[] = [
         text: `<a href="https://gitlab.com/michal-bryxi/open-source/vario-skytraxx-to-csv">Vario Skytraxx to CSV</a> exports the statistics of paraglider and hang glider flights from a Skytraxx 2.0 vario.`,
       },
       {
+        heading: 'Rental shop check-in',
+        icon: '🧩',
+        link: 'https://github.com/MichalBryxi/approom-customiser',
+        text: `<a href="https://chromewebstore.google.com/detail/approom-customiser/nknnolnmhnmikpopfakfpmoggccciefb">AppRoom Customiser</a>, a Chrome extension that adds workflow helpers to the App-Room ERP: print buttons, barcode check-in and registration automation.`,
+      },
+      {
+        heading: 'Poll to calendar',
+        icon: '📅',
+        text: `<a href="https://nuudel-to-ics.netlify.app">nuudel to ICS</a> turns a nuudel "Termin finden" poll into calendar files you can import anywhere.`,
+      },
+      {
+        heading: 'Song flipbook',
+        icon: '🎵',
+        text: `<a href="https://spotify-flipbook.netlify.app">Spotify Flipbook</a> makes a printable flipbook from a Spotify playlist.`,
+      },
+      {
         heading: 'This blog',
         icon: '📝',
         link: 'https://github.com/MichalBryxi/adventuring-misa',
@@ -148,12 +164,64 @@ const SECTIONS: Section[] = [
   },
   {
     title: 'Talks',
-    layout: 'cards',
+    layout: 'timeline',
     items: [
       {
-        heading: 'EmberFest 2026, Prague',
+        heading: 'Intro to Razor',
         icon: '🎤',
-        text: `<a href="https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime">4,207 Days of Uptime: Evolving an Ember App Without a Rewrite</a>: how a booking app for beauty salons has kept evolving in production for eleven years without ever being rewritten.`,
+        date: '2015',
+        link: 'https://drive.google.com/file/d/1y20VCkIx0N5OrE3G9VHUXvjVBtEdSNXr/view?usp=sharing',
+        text: `At EurOpen.`,
+      },
+      {
+        heading: 'GitHub tricks you should know',
+        icon: '🎤',
+        date: '2016',
+        link: 'https://docs.google.com/presentation/d/1r8V1kr3T9Ot7ctQlkOf7895iKFSoqg_wFZPdpKeq01g/edit?usp=sharing',
+        text: `At DevOpsDays Berlin.`,
+      },
+      {
+        heading: 'Ember related goodness to blow our minds',
+        icon: '🎤',
+        date: '2017',
+        link: 'https://docs.google.com/presentation/d/17GuQDFzFBBhk3clD77heYypoRHWpIzSKR37X8YCcfXM/edit?usp=sharing',
+        text: `At BelfastJS.`,
+      },
+      {
+        heading: 'Surprising a11y',
+        icon: '🎤',
+        date: '2018',
+        link: 'https://docs.google.com/presentation/d/1RKmsvEUc96h9L9JFBEuxy8dZcYrHQBucT-igyzaPZeE/edit?usp=sharing',
+        text: `At BelfastJS.`,
+      },
+      {
+        heading: 'How to make a flawless software 101',
+        icon: '🎤',
+        date: '2020',
+        link: 'https://docs.google.com/presentation/d/1T3CnBkWr_1viQQW5ELit5mRpkqgoEdGc4NlZZDYHOK0/edit?usp=sharing',
+        text: `Remote.`,
+      },
+      {
+        heading: "You're a contributor!",
+        icon: '🎤',
+        date: '2021',
+        link: 'https://docs.google.com/presentation/d/1h5Ums3b_ljEa0dUqF8DRFcckvb-mFBzkWHd0DfGF1YU/edit?usp=sharing',
+        text: `At EmberFest.`,
+      },
+      {
+        heading: 'The case for consistency in 2022+ frontend apps',
+        icon: '🎤',
+        date: '2022',
+        link: 'https://docs.google.com/presentation/d/1B1XjniRb-TOTEC5hcybS-H3TbMaVELrWFj5nVDqHXLY/edit?usp=sharing',
+        text: `Remote.`,
+      },
+      {
+        heading:
+          '4,207 Days of Uptime: Evolving an Ember App Without a Rewrite',
+        icon: '🎤',
+        date: '2026',
+        link: 'https://github.com/MichalBryxi/EmberFest-2026-Prague-4207-Days-of-Uptime',
+        text: `At EmberFest in Prague: how a booking app for beauty salons has kept evolving in production for eleven years without ever being rewritten.`,
       },
     ],
   },
@@ -168,6 +236,10 @@ const SECTIONS: Section[] = [
       {
         heading: 'Outdoor CV (PDF)',
         link: 'https://michalbryxi.github.io/2025/Michal_Bryxi_outdoor_CV.pdf',
+      },
+      {
+        heading: 'IT CV (PDF)',
+        link: 'https://michalbryxi.github.io/2026/Michal_Bryxi_CV.pdf',
       },
       { heading: 'RSS feed', link: '/rss.xml' },
     ],
