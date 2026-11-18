@@ -41,13 +41,6 @@
   [headers.values]
     Content-Type = "application/vnd.google-earth.kml+xml"
 
-# There was a changelog page for a day; the history is on GitHub now
-[[redirects]]
-  from = "/changelog"
-  to = "https://github.com/MichalBryxi/adventuring-misa/commits/main"
-  status = 301
-
-# The Katzenwegli post was first published under its old route name
 # Tags are a filter of the front page now, not pages of their own.
 # The ratings and grades are in groups: they come first, the first match wins.
 [[redirects]]
@@ -89,26 +82,6 @@
 [[redirects]]
   from = "/author/*"
   to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/2026-11-15-chatzenpfad-t6"
-  to = "/2026-11-15-katzenwegli-t6/"
-  status = 301
-
-[[redirects]]
-  from = "/2026-11-15-chatzenpfad-t6/*"
-  to = "/2026-11-15-katzenwegli-t6/:splat"
-  status = 301
-
-[[redirects]]
-  from = "/gpx/2026-11-15-chatzenpfad-t6.gpx"
-  to = "/gpx/2026-11-15-katzenwegli-t6.gpx"
-  status = 301
-
-[[redirects]]
-  from = "/gpx/2026-11-15-chatzenpfad-t6.kml"
-  to = "/gpx/2026-11-15-katzenwegli-t6.kml"
   status = 301
 
 # Anything that wasn't prerendered: the app renders its 404 page

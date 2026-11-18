@@ -94,6 +94,6 @@ About 5½ hours up and 2–3 down. Very happy to be off it. Proper [type 3 fun](
 
 ## The route
 
-<iframe src="https://map.geo.admin.ch/#/embed?lang=en&center=2636753,1155689&z=6.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2026-11-15-katzenwegli-t6.kml" style="border: 0; width: 100%; height: 450px;" allow="geolocation" title="Katzenwegli route on the swisstopo map"></iframe>
+<iframe src="https://map.geo.admin.ch/#/embed?lang=en&center=2636753,1155689&z=6.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2024-06-25-katzenwegli-t6.kml" style="border: 0; width: 100%; height: 450px;" allow="geolocation" title="Katzenwegli route on the swisstopo map"></iframe>
 
-[Download the GPX](/gpx/2026-11-15-katzenwegli-t6.gpx) · [Open in the swisstopo map](https://map.geo.admin.ch/#/map?lang=en&center=2636753,1155689&z=6.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2026-11-15-katzenwegli-t6.kml) · [SAC route description](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)
+[Download the GPX](/gpx/2024-06-25-katzenwegli-t6.gpx) · [Open in the swisstopo map](https://map.geo.admin.ch/#/map?lang=en&center=2636753,1155689&z=6.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2024-06-25-katzenwegli-t6.kml) · [SAC route description](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)

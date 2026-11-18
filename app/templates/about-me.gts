@@ -34,7 +34,7 @@ const SECTIONS: Section[] = [
       {
         heading: 'Hiking and scrambling',
         icon: '🥾',
-        text: `From <a href="/?tags=munro">Munros</a> in Scotland to <a href="/2026-11-15-katzenwegli-t6">T6 routes</a> in the Bernese Oberland.`,
+        text: `From <a href="/?tags=munro">Munros</a> in Scotland to <a href="/2024-06-25-katzenwegli-t6">T6 routes</a> in the Bernese Oberland.`,
       },
       {
         heading: 'Climbing',
