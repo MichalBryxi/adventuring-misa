@@ -27,19 +27,19 @@ facts:
   links:
     "Route": "https://example.com/route"
     "Strava": "https://example.com/strava"
-gear:
-  - item: Microspikes
-    packed: true
-  - item: Ice axe
-    packed: false
-    note: "⚠️ Mistake. Nothing to stop a slide."
+learnings:
+  - text: Microspikes
+    good: true
+  - text: No ice axe
+    good: false
+    note: "Nothing to stop a slide."
 ---
 
 A dummy post for the tests, with everything a post can have. It goes back to [the first Munro](../2020-05-01-first-munro/index.md).
 
 ![An inline photo](./inline.jpg)
 
-<!-- gear -->
+<!-- learnings -->
 
 ## The route
 

@@ -42,15 +42,22 @@ facts:
   links:
     "SAC route": "https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/"
     "Strava": "https://www.strava.com/activities/11735388468"
-gear:
-  - item: Microspikes
-    packed: true
-  - item: Ice axe
-    packed: false
-    note: "⚠️ Mistake. On the snowfield on the way down I had nothing for my hands and no way to stop a slide."
-  - item: Accessory cord
-    packed: false
+learnings:
+  - text: Microspikes
+    good: true
+    note: "On the steep snowfield on the way down my feet were fine. Surprise snow is a thing in the Alps even deep into summer. Microspikes go with me on most trips."
+  - text: No ice axe
+    good: false
+    note: "On the same snowfield I had nothing for my hands and no way to stop a slide."
+  - text: No accessory cord
+    good: false
     note: "The waterfall traverse has bolts for anyone carrying a rope. Without one, I made a move I couldn't reverse."
+  - text: Stopped to plan the descent
+    good: true
+    note: "When the snow and my slow progress scared me, I sat down on dry rocks, planned the way down and left the hut for another day."
+  - text: Ignored the warning signals
+    good: false
+    note: "I didn't know the terrain or how the snow behaves in those conditions, and went onto the snowfield anyway. It went, but it was pure luck."
 ---
 
 *The T6 that taught me what “mandatory” means.*
@@ -83,7 +90,7 @@ Round the corner the slope eased onto bare rock, and the rest was easy: a few ch
 
 About 5½ hours up and 2–3 down. Very happy to be off it. Proper [type 3 fun](https://www.rei.com/blog/climb/fun-scale).
 
-<!-- gear -->
+<!-- learnings -->
 
 ## The route
 

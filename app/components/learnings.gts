@@ -1,29 +1,30 @@
 import { htmlSafe } from '@ember/template';
 
 import type { TOC } from '@ember/component/template-only';
-import type { GearItem } from '../content/schemas.ts';
+import type { Learning } from '../content/schemas.ts';
 
 /**
- * A post's `gear:` front matter as a checklist: ticked what I had, crossed
- * what I should have had, with why (lib/gear.mjs). It goes after the story,
- * or where the story has a `<!-- gear -->` (app/content/gear.ts).
+ * A post's `learnings:` front matter as a checklist: ticked what I did right,
+ * crossed what I did wrong, with why (lib/learnings.mjs). It goes after the
+ * story, or where the story has a `<!-- learnings -->`
+ * (app/content/learnings.ts).
  */
-export const Gear: TOC<{
+export const Learnings: TOC<{
   Element: HTMLElement;
-  Args: { gear: GearItem[] };
+  Args: { learnings: Learning[] };
 }> = <template>
-  <section aria-labelledby="gear-title" data-test-gear ...attributes>
-    <h2 id="gear-title" class="section-heading before:bg-amber-300">
-      The gear I had
+  <section aria-labelledby="learnings-title" data-test-learnings ...attributes>
+    <h2 id="learnings-title" class="section-heading before:bg-amber-300">
+      Learnings
     </h2>
     <ul class="mt-6 space-y-3 text-sm/6 text-slate-700" role="list">
-      {{#each @gear as |entry|}}
+      {{#each @learnings as |entry|}}
         <li
           class="flex gap-3"
-          data-test-gear-item={{entry.item}}
-          data-test-packed={{if entry.packed "true" "false"}}
+          data-test-learning={{entry.text}}
+          data-test-good={{if entry.good "true" "false"}}
         >
-          {{#if entry.packed}}
+          {{#if entry.good}}
             <svg
               viewBox="0 0 20 20"
               class="mt-0.5 size-5 shrink-0 rounded-md bg-emerald-100 p-0.5 text-emerald-700"
@@ -54,11 +55,11 @@ export const Gear: TOC<{
             </svg>
           {{/if}}
           <div>
-            <span class="font-medium text-slate-900">{{entry.item}}</span>
+            <span class="font-medium text-slate-900">{{entry.text}}</span>
             <span class="sr-only">{{if
-                entry.packed
-                "(had it)"
-                "(didn't have it)"
+                entry.good
+                "(did right)"
+                "(did wrong)"
               }}</span>
             {{#if entry.note}}
               <p

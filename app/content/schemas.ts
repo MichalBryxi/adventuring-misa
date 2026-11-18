@@ -22,8 +22,8 @@ export const PostSchema = withDefaults({
     { kind: 'field', name: 'published' },
     // Typed for filtering, plus the rows to show (lib/facts.mjs)
     { kind: 'field', name: 'facts' },
-    // What I had with me, and what I missed (lib/gear.mjs)
-    { kind: 'field', name: 'gear' },
+    // What I did right, and what I did wrong (lib/learnings.mjs)
+    { kind: 'field', name: 'learnings' },
     // Only loaded with the single post, the list pages don't need it
     { kind: 'field', name: 'html' },
     // Ids like munro or rating/4-stars, named in translations/
@@ -62,11 +62,12 @@ export interface Facts {
 }
 
 /**
- * One line of the `gear:` front matter, read at build time by lib/gear.mjs.
+ * One line of the `learnings:` front matter, read at build time by
+ * lib/learnings.mjs.
  */
-export interface GearItem {
-  item: string;
-  packed: boolean;
+export interface Learning {
+  text: string;
+  good: boolean;
   /** Why it mattered, as HTML */
   note?: string;
 }
@@ -82,7 +83,7 @@ export interface Post {
   featured?: boolean;
   published?: boolean;
   facts?: Facts;
-  gear?: GearItem[];
+  learnings?: Learning[];
   html?: string;
   tags?: string[];
 }

@@ -277,24 +277,24 @@ module('Acceptance | blog', function (hooks) {
     assert.deepEqual(bigClimbs, ['2022-07-03-big-skyrace']);
   });
 
-  test('a post shows its gear as a checklist', async function (assert) {
+  test('a post shows its learnings as a checklist', async function (assert) {
     await visit(SCRAMBLE);
 
-    assert.dom('[data-test-gear-item]').exists({ count: 2 });
+    assert.dom('[data-test-learning]').exists({ count: 2 });
     assert
-      .dom('[data-test-gear-item="Microspikes"]')
-      .hasAttribute('data-test-packed', 'true');
+      .dom('[data-test-learning="Microspikes"]')
+      .hasAttribute('data-test-good', 'true');
     assert
-      .dom('[data-test-gear-item="Ice axe"]')
-      .hasAttribute('data-test-packed', 'false')
-      .includesText('Mistake');
+      .dom('[data-test-learning="No ice axe"]')
+      .hasAttribute('data-test-good', 'false')
+      .includesText('Nothing to stop a slide');
     assert.dom('[data-test-fact="Gear"]').doesNotExist('not a fact any more');
     assert.true(
       document
-        .querySelector('[data-test-gear]')!
+        .querySelector('[data-test-learnings]')!
         .nextElementSibling!.querySelector('h2')!
         .textContent.includes('The route'),
-      'the checklist sits where the story has <!-- gear -->',
+      'the checklist sits where the story has <!-- learnings -->',
     );
   });
 

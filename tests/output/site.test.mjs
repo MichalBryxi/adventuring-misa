@@ -66,11 +66,11 @@ for (const post of posts) {
       'facts table',
     );
 
-    // The gear: front matter, as a checklist
+    // The learnings: front matter, as a checklist
     assert.equal(
-      /data-test-gear\b/.test(html),
-      post.gear !== undefined,
-      'gear checklist',
+      /data-test-learnings\b/.test(html),
+      post.learnings !== undefined,
+      'learnings checklist',
     );
 
     // The gallery: front matter, each photo a link to its largest JPEG
