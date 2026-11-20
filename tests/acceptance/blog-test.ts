@@ -137,7 +137,7 @@ module('Acceptance | blog', function (hooks) {
       .hasText('< 2000 m');
     assert
       .dom('[data-test-cloud-tag="ascent/over-2000m"]')
-      .hasText('Sky high (> 2000 m)', 'the last interval is open');
+      .hasText('> 2000 m', 'the last interval is open');
 
     await click('[data-test-cloud-tag="ascent/under-2000m"]');
 
