@@ -124,6 +124,30 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-filter]').doesNotExist();
   });
 
+  test('the facts filter the posts too, by round limits', async function (assert) {
+    // The dummy posts have 1100 m, 1750 m and 2500 m of ascent
+    await visit('/');
+
+    assert.dom('[data-test-tag-group="ascent"]').hasText('Altitude gain');
+    assert
+      .dom('[data-test-cloud-tag="ascent/over-1000m"]')
+      .doesNotExist('every post is over the smallest limit: it goes');
+    assert.dom('[data-test-cloud-tag="ascent/over-1500m"]').hasText('> 1500 m');
+    assert.dom('[data-test-cloud-tag="ascent/over-2000m"]').hasText('> 2000 m');
+
+    await click('[data-test-cloud-tag="ascent/over-2000m"]');
+
+    assert.strictEqual(currentURL(), '/?tags=ascent%2Fover-2000m');
+    assert.dom('[data-test-post]').exists({ count: 1 });
+    assert.dom('[data-test-filter-tag]').hasText('> 2000 m×');
+
+    await visit('/?tags=ascent/over-1500m');
+
+    assert
+      .dom('[data-test-post]')
+      .exists({ count: 2 }, 'over 1500 m holds for over 2000 m too');
+  });
+
   test('the mobile menu opens the sidebar in a drawer', async function (assert) {
     await visit('/');
     await click('[data-test-menu-button]');

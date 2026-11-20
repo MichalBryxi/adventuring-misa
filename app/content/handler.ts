@@ -1,7 +1,10 @@
 import type { Handler, NextFn } from '@warp-drive/core/request';
 import type { RequestContext } from '@warp-drive/core/types/request';
 
+import { tagsOf } from './fact-tags.ts';
 import { schemas } from './schemas.ts';
+
+import type { PostMeta } from './fact-tags.ts';
 
 /**
  * Answers the store's requests from the Markdown under content/,
@@ -116,7 +119,7 @@ function findPosts(filters: URLSearchParams) {
   const tags = filters.getAll('tag');
 
   const posts = POSTS.filter((post) =>
-    tags.every((tag) => (post.tags as string[] | undefined)?.includes(tag)),
+    tags.every((tag) => tagsOf(post as PostMeta).includes(tag)),
   );
 
   return {

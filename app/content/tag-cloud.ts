@@ -1,7 +1,9 @@
-type Meta = { id: string; tags?: string[] };
+import { factKey, factLimit, tagsOf } from './fact-tags.ts';
+
+import type { PostMeta } from './fact-tags.ts';
 
 // A draft's meta is null in a build (lib/vite-plugin-blog.mjs)
-const POSTS = import.meta.glob<Meta | null>('@content/posts/*/index.md', {
+const POSTS = import.meta.glob<PostMeta | null>('@content/posts/*/index.md', {
   query: '?meta',
   import: 'default',
   eager: true,
@@ -32,13 +34,16 @@ export interface TagGroup {
 }
 
 /**
- * The translation key of a tag's name (translations/en-us.json).
+ * The translation key of a tag's name (translations/en-us.json). A fact tag
+ * shares one with its group, and gets its limit as `value` (tagValue).
  */
-export const tagKey = (id: string) => `tag.${id}`;
+export const tagKey = (id: string) => factKey(id) ?? `tag.${id}`;
+
+export const tagValue = (id: string) => factLimit(id)?.toString();
 
 const POST_TAGS = Object.values(POSTS)
   .filter((post) => post !== null)
-  .map((post) => post.tags ?? []);
+  .map(tagsOf);
 
 /**
  * Whether adding the tag to the filter would leave no posts: no post with
@@ -96,6 +101,12 @@ export const TAG_CLOUD: CloudTag[] = topLevel
     colour: COLOURS[index % COLOURS.length]!,
   }));
 
+// Fact tags go from the smallest limit up (> 5 km, > 10 km, …)
+const byValue = (a: string, b: string) =>
+  factLimit(a) !== undefined && factLimit(b) !== undefined
+    ? factLimit(a)! - factLimit(b)!
+    : b.localeCompare(a, 'en', { numeric: true });
+
 /**
  * The tags in a group (`group/value`), under it, highest value first: one
  * colour and size a group, as they are values of one thing (★★★★★ … ★☆☆☆☆).
@@ -108,7 +119,7 @@ export const TAG_GROUPS: TagGroup[] = [
     id: parent,
     tags: used
       .filter((id) => parentOf(id) === parent)
-      .sort((a, b) => b.localeCompare(a, 'en', { numeric: true }))
+      .sort(byValue)
       .map((id) => ({
         id,
         count: counts.get(id)!,

@@ -10,6 +10,7 @@ import {
   TAG_CLOUD,
   TAG_GROUPS,
   tagKey,
+  tagValue,
 } from '../content/tag-cloud.ts';
 import { currentTags, toggleTag } from '../content/tag-filter.ts';
 
@@ -38,7 +39,7 @@ const TagLink: TOC<{
     data-test-selected={{includes @selected @tag.id}}
     data-test-leads-nowhere={{leadsNowhere @selected @tag.id}}
     data-test-cloud-tag={{@tag.id}}
-  >{{t (tagKey @tag.id)}}</LinkTo>
+  >{{t (tagKey @tag.id) value=(tagValue @tag.id)}}</LinkTo>
 </template>;
 
 /**
