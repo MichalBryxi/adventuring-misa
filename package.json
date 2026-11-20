@@ -2,7 +2,7 @@
   "name": "adventuring-misa",
   "version": "0.0.0",
   "private": true,
-  "description": "Adventuring Míša — a personal outdoor blog, built with Ember, WarpDrive, Vite and Tailwind",
+  "description": "Adventuring Míša - a personal outdoor blog, built with Ember, WarpDrive, Vite and Tailwind",
   "repository": "github:MichalBryxi/adventuring-misa",
   "license": "SEE LICENSE IN LICENSE",
   "author": "Michal Bryxí",

@@ -36,7 +36,7 @@ facts:
   location: "Swedish High Coast"
   distance: 225
   more:
-    "Dates": "17 – 23 September 2023"
+    "Dates": "17 - 23 September 2023"
     "Duration": "5 days"
     "Average daily distance": "45 km/day"
 ---
@@ -46,7 +46,7 @@ First times are always special. First kiss, first tattoo, first multi-stage race
 ## Why
 According to the official website:
 
-> TRIBE Freedom Foundation was established by the TRIBE community in 2017. Our mission is to fight modern slavery and end human trafficking. Inspired by Run for Love – an epic 1,000-mile journey to fight human trafficking, thousands of everyday athletes and adventurers have pushed their limits to raise over £1.2 million for TRIBE Freedom Foundation, enabling us to support over 10,000 survivors and potential victims across the UK. We work by raising awareness of trafficking and supporting frontline projects to fight modern slavery. We empower the TRIBE community to create an impact.
+> TRIBE Freedom Foundation was established by the TRIBE community in 2017. Our mission is to fight modern slavery and end human trafficking. Inspired by Run for Love - an epic 1,000-mile journey to fight human trafficking, thousands of everyday athletes and adventurers have pushed their limits to raise over £1.2 million for TRIBE Freedom Foundation, enabling us to support over 10,000 survivors and potential victims across the UK. We work by raising awareness of trafficking and supporting frontline projects to fight modern slavery. We empower the TRIBE community to create an impact.
 > -- [triberunforlove.com/faqs](https://triberunforlove.com/faqs)
 
 ## What

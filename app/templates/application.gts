@@ -12,7 +12,7 @@ import { Ridge } from '../components/ridge.gts';
 import { TagFilter } from '../components/tag-filter.gts';
 
 <template>
-  {{pageTitle site.title separator=" – "}}
+  {{pageTitle site.title separator=" - "}}
 
   <div class="w-full">
     <MobileNav />

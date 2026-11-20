@@ -50,7 +50,7 @@ for (const post of posts) {
   test(`post ${post.id}`, () => {
     const html = page(`/${post.id}`);
 
-    assert.equal(titleOf(html), escape(`${post.title} – ${site.title}`));
+    assert.equal(titleOf(html), escape(`${post.title} - ${site.title}`));
     assert.match(html, /class="prose/);
     // Photos are resized (lib/vite-plugin-blog.mjs, app/content/photo.ts)
     assert.doesNotMatch(html, /<img[^>]*src="\.\//, 'unbundled photo');
@@ -109,7 +109,7 @@ test('old tag pages redirect to the filter', () => {
 test('page about-me', () => {
   const html = page('/page/about-me');
 
-  assert.equal(titleOf(html), escape(`Michal Bryxí – ${site.title}`));
+  assert.equal(titleOf(html), escape(`Michal Bryxí - ${site.title}`));
   assert.match(html, /data-test-section="Outdoors"/);
 });
 
@@ -117,7 +117,7 @@ for (const { id, title } of readAll(root, 'pages')) {
   test(`page ${id}`, () => {
     assert.equal(
       titleOf(page(`/page/${id}`)),
-      escape(`${title} – ${site.title}`),
+      escape(`${title} - ${site.title}`),
     );
   });
 }
