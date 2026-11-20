@@ -95,6 +95,6 @@ Honestly, I'm not sure I'd call it a T6.
 
 ## The route
 
-<iframe src="https://map.geo.admin.ch/#/embed?lang=en&center=2633103,1158783&z=6.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2024-07-25-bietenhorn-nordgrat-t6.kml" style="border: 0; width: 100%; height: 450px;" allow="geolocation" title="Bietenhorn Nordgrat route on the swisstopo map"></iframe>
+<iframe src="https://map.geo.admin.ch/#/embed?lang=en&center=2633103,1158783&z=5.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2024-07-25-bietenhorn-nordgrat-t6.kml" style="border: 0; width: 100%; height: 450px;" allow="geolocation" title="Bietenhorn Nordgrat route on the swisstopo map"></iframe>
 
-[Download the GPX](/gpx/2024-07-25-bietenhorn-nordgrat-t6.gpx) · [Open in the swisstopo map](https://map.geo.admin.ch/#/map?lang=en&center=2633103,1158783&z=6.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2024-07-25-bietenhorn-nordgrat-t6.kml) · [SAC route description](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/bietenhorn-schwarzbirg-177/mountain-hiking/nordgrat-4192/)
+[Download the GPX](/gpx/2024-07-25-bietenhorn-nordgrat-t6.gpx) · [Open in the swisstopo map](https://map.geo.admin.ch/#/map?lang=en&center=2633103,1158783&z=5.5&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7Chttps://adventuring-misa.pudr.com/gpx/2024-07-25-bietenhorn-nordgrat-t6.kml) · [SAC route description](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/bietenhorn-schwarzbirg-177/mountain-hiking/nordgrat-4192/)
