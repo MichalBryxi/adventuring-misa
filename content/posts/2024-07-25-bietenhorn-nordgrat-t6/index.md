@@ -5,7 +5,7 @@ date: Thu Jul 25 2024 12:00:00 GMT+0200 (Central European Summer Time)
 tags:
   - fun/type-1
   - t-grade/t6
-  - rating/3-stars
+  - rating/2-stars
 gallery:
   - src: ./02.jpg
     caption: "Avalanche barriers under the Jungfrau"
