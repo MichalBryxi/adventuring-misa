@@ -101,10 +101,11 @@ export const TAG_CLOUD: CloudTag[] = topLevel
     colour: COLOURS[index % COLOURS.length]!,
   }));
 
-// Fact tags go from the smallest limit up (> 5 km, > 10 km, …)
+// Fact tags go from the smallest limit up (< 5 km, < 15 km, … > 100 km)
+const isOpen = (id: string) => id.includes('/over-');
 const byValue = (a: string, b: string) =>
   factLimit(a) !== undefined && factLimit(b) !== undefined
-    ? factLimit(a)! - factLimit(b)!
+    ? factLimit(a)! - factLimit(b)! || Number(isOpen(a)) - Number(isOpen(b))
     : b.localeCompare(a, 'en', { numeric: true });
 
 /**

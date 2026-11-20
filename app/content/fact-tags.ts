@@ -19,8 +19,9 @@ const hours = (time: string) => {
 
 /**
  * The numbers in `facts:` that the front page can be filtered by, as tags
- * that aren't in the front matter: `ascent/over-1500m` is every post with
- * more than 1500 m of ascent.
+ * that aren't in the front matter. They are intervals named by their upper
+ * limit: `distance/under-20km` is every post with 15 to 20 km, when the
+ * limit below is 15 km. The last one is open: `distance/over-100km`.
  */
 const DIMENSIONS = [
   { group: 'ascent', unit: 'm', of: (facts: Facts) => facts.ascent },
@@ -40,47 +41,54 @@ const DIMENSIONS = [
 const STEPS = [1, 1.5, 2, 3, 5];
 
 /**
- * The biggest round number below the value.
+ * The smallest round number above the value.
  */
-function roundBelow(value: number) {
-  for (let scale = 10 ** Math.floor(Math.log10(value)); ; scale /= 10) {
-    for (const step of [...STEPS].reverse()) {
+function roundAbove(value: number) {
+  for (let scale = 10 ** Math.floor(Math.log10(value)); ; scale *= 10) {
+    for (const step of STEPS) {
       const limit = Number((step * scale).toPrecision(6));
 
-      if (limit < value) return limit;
+      if (limit > value) return limit;
     }
   }
 }
 
 const MAX_LIMITS = 5;
 
+// The interval a value is in: the first limit above it
+const intervalOf = (limits: number[], value: number) =>
+  limits.find((limit) => value < limit)!;
+
 /**
  * The limits of a group come from the posts: for every post the round
- * number just below its value, so each limit is close to a real post. The
- * smallest is below every post, so it filters nothing out and goes. Then,
- * while there are too many, the limit with the fewest posts up to the next
- * one merges into the one below it.
+ * number just above its value, so each limit is close to a real post.
+ * While there are too many, the interval with the fewest posts merges into
+ * its neighbour with fewer posts.
  */
 function limitsOf(values: number[]) {
-  let limits = [...new Set(values.map(roundBelow))]
-    .sort((a, b) => a - b)
-    .slice(1);
+  let limits = [...new Set(values.map(roundAbove))].sort((a, b) => a - b);
 
-  const postsFrom = (index: number) =>
-    values.filter(
-      (value) =>
-        value > limits[index]! &&
-        (index === limits.length - 1 || value <= limits[index + 1]!),
-    ).length;
+  const postsIn = (index: number) =>
+    values.filter((value) => intervalOf(limits, value) === limits[index])
+      .length;
 
   while (limits.length > MAX_LIMITS) {
     let fewest = 0;
 
     for (let index = 1; index < limits.length; index++) {
-      if (postsFrom(index) < postsFrom(fewest)) fewest = index;
+      if (postsIn(index) < postsIn(fewest)) fewest = index;
     }
 
-    limits = limits.filter((_, index) => index !== fewest);
+    // Without its limit, an interval joins the one above; without the
+    // limit below it, the one below
+    const below = fewest - 1;
+    const joinBelow =
+      fewest === limits.length - 1 ||
+      (below >= 0 && postsIn(below) < postsIn(fewest + 1));
+
+    limits = limits.filter(
+      (_, index) => index !== (joinBelow ? below : fewest),
+    );
   }
 
   return limits;
@@ -97,11 +105,11 @@ const LIMITS = new Map(
   ]),
 );
 
-const FACT_TAG = /^(ascent|distance|time)\/over-([\d.]+)(?:m|km|h)$/;
+const FACT_TAG = /^(ascent|distance|time)\/(under|over)-([\d.]+)(?:m|km|h)$/;
 
 /**
- * The limits a post is over: all of them from the round number below its
- * value down, as "over 1500 m" holds for "over 2000 m" too.
+ * The interval a post is in, one a group. Above the last limit but one is
+ * the open interval at the top.
  */
 function factTags(facts: Facts | undefined): string[] {
   if (!facts) return [];
@@ -109,11 +117,16 @@ function factTags(facts: Facts | undefined): string[] {
   return DIMENSIONS.flatMap(({ group, unit, of }) => {
     const value = of(facts);
 
-    if (value === undefined) return [];
+    if (value === undefined || value <= 0) return [];
 
-    return LIMITS.get(group)!
-      .filter((limit) => value > limit)
-      .map((limit) => `${group}/over-${limit}${unit}`);
+    const limits = LIMITS.get(group)!;
+    const top = limits.at(-2);
+
+    return [
+      top !== undefined && value > top
+        ? `${group}/over-${top}${unit}`
+        : `${group}/under-${intervalOf(limits, value)}${unit}`,
+    ];
   });
 }
 
@@ -126,21 +139,23 @@ export const tagsOf = (post: PostMeta) => [
 ];
 
 /**
- * The limit of a fact tag (1500 for ascent/over-1500m), for its name and
- * its order; undefined for any other tag.
+ * The limit of a fact tag (1500 for ascent/under-1500m), for its name and
+ * its order; undefined for any other tag. The open interval goes after the
+ * one that ends at its limit.
  */
 export function factLimit(id: string): number | undefined {
   const match = FACT_TAG.exec(id);
 
-  return match ? Number(match[2]) : undefined;
+  return match ? Number(match[3]) : undefined;
 }
 
 /**
  * The translation key of a fact tag's name: one for the group, which takes
- * the limit (`tag.ascent/over`: "> {value} m").
+ * the limit (`tag.ascent/under`: "< {value} m"), and one for its open
+ * interval (`tag.ascent/over`).
  */
 export function factKey(id: string): string | undefined {
   const match = FACT_TAG.exec(id);
 
-  return match ? `tag.${match[1]}/over` : undefined;
+  return match ? `tag.${match[1]}/${match[2]}` : undefined;
 }

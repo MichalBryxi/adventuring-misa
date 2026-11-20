@@ -124,28 +124,32 @@ module('Acceptance | blog', function (hooks) {
     assert.dom('[data-test-filter]').doesNotExist();
   });
 
-  test('the facts filter the posts too, by round limits', async function (assert) {
+  test('the facts filter the posts too, in intervals', async function (assert) {
     // The dummy posts have 1100 m, 1750 m and 2500 m of ascent
     await visit('/');
 
     assert.dom('[data-test-tag-group="ascent"]').hasText('Altitude gain');
     assert
-      .dom('[data-test-cloud-tag="ascent/over-1000m"]')
-      .doesNotExist('every post is over the smallest limit: it goes');
-    assert.dom('[data-test-cloud-tag="ascent/over-1500m"]').hasText('> 1500 m');
-    assert.dom('[data-test-cloud-tag="ascent/over-2000m"]').hasText('> 2000 m');
+      .dom('[data-test-cloud-tag="ascent/under-1500m"]')
+      .hasText('< 1500 m');
+    assert
+      .dom('[data-test-cloud-tag="ascent/under-2000m"]')
+      .hasText('< 2000 m');
+    assert
+      .dom('[data-test-cloud-tag="ascent/over-2000m"]')
+      .hasText('Sky high (> 2000 m)', 'the last interval is open');
 
-    await click('[data-test-cloud-tag="ascent/over-2000m"]');
+    await click('[data-test-cloud-tag="ascent/under-2000m"]');
 
-    assert.strictEqual(currentURL(), '/?tags=ascent%2Fover-2000m');
-    assert.dom('[data-test-post]').exists({ count: 1 });
-    assert.dom('[data-test-filter-tag]').hasText('> 2000 m×');
-
-    await visit('/?tags=ascent/over-1500m');
-
+    assert.strictEqual(currentURL(), '/?tags=ascent%2Funder-2000m');
     assert
       .dom('[data-test-post]')
-      .exists({ count: 2 }, 'over 1500 m holds for over 2000 m too');
+      .exists({ count: 1 }, 'only 1500 to 2000 m, not the one under 1500 m');
+    assert.dom('[data-test-filter-tag]').hasText('< 2000 m×');
+
+    await visit('/?tags=ascent/over-2000m');
+
+    assert.dom('[data-test-post]').exists({ count: 1 });
   });
 
   test('the mobile menu opens the sidebar in a drawer', async function (assert) {
