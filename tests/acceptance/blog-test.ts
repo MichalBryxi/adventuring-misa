@@ -150,6 +150,11 @@ module('Acceptance | blog', function (hooks) {
     await visit('/?tags=ascent/over-2000m');
 
     assert.dom('[data-test-post]').exists({ count: 1 });
+
+    // 1750 m over 12.5 km
+    assert
+      .dom('[data-test-cloud-tag="gradient/under-15pct"]')
+      .hasText('< 15 %', 'the gradient is ascent over distance');
   });
 
   test('the mobile menu opens the sidebar in a drawer', async function (assert) {

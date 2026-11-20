@@ -23,7 +23,12 @@ const hours = (time: string) => {
  * limit: `distance/under-20km` is every post with 15 to 20 km, when the
  * limit below is 15 km. The last one is open: `distance/over-100km`.
  */
-const DIMENSIONS = [
+const DIMENSIONS: {
+  group: string;
+  unit: string;
+  of: (facts: Facts) => number | undefined;
+  round?: (value: number) => number;
+}[] = [
   { group: 'ascent', unit: 'm', of: (facts: Facts) => facts.ascent },
   { group: 'distance', unit: 'km', of: (facts: Facts) => facts.distance },
   {
@@ -34,6 +39,15 @@ const DIMENSIONS = [
 
       return time === undefined ? undefined : hours(time);
     },
+  },
+  {
+    // Ascent over distance, in % (pct in the id, as % is no good in a URL)
+    group: 'gradient',
+    unit: 'pct',
+    of: ({ ascent, distance }: Facts) =>
+      ascent === undefined || !distance ? undefined : ascent / distance / 10,
+    // Steps of 5 %: a hill doesn't get twice as steep a step
+    round: (value: number) => Math.floor(value / 5) * 5 + 5,
   },
 ];
 
@@ -65,8 +79,8 @@ const intervalOf = (limits: number[], value: number) =>
  * While there are too many, the interval with the fewest posts merges into
  * its neighbour with fewer posts.
  */
-function limitsOf(values: number[]) {
-  let limits = [...new Set(values.map(roundAbove))].sort((a, b) => a - b);
+function limitsOf(values: number[], round = roundAbove) {
+  let limits = [...new Set(values.map(round))].sort((a, b) => a - b);
 
   const postsIn = (index: number) =>
     values.filter((value) => intervalOf(limits, value) === limits[index])
@@ -95,17 +109,19 @@ function limitsOf(values: number[]) {
 }
 
 const LIMITS = new Map(
-  DIMENSIONS.map(({ group, of }) => [
+  DIMENSIONS.map(({ group, of, round }) => [
     group,
     limitsOf(
       POSTS.map((post) => post.facts && of(post.facts)).filter(
         (value): value is number => value !== undefined && value > 0,
       ),
+      round,
     ),
   ]),
 );
 
-const FACT_TAG = /^(ascent|distance|time)\/(under|over)-([\d.]+)(?:m|km|h)$/;
+const FACT_TAG =
+  /^(ascent|distance|time|gradient)\/(under|over)-([\d.]+)(?:m|km|h|pct)$/;
 
 /**
  * The interval a post is in, one a group. Above the last limit but one is
