@@ -1,5 +1,8 @@
 {
   "tag.climbing": "Climbing",
+  "tag.fun": "Fun scale",
+  "tag.fun/type-1": "Type 1 fun",
+  "tag.fun/type-3": "Type 3 fun",
   "tag.gear": "Gear",
   "tag.hiking": "Hiking",
   "tag.munro": "Munro",
@@ -19,6 +22,5 @@
   "tag.shoes": "Shoes",
   "tag.t-grade": "T-grade",
   "tag.t-grade/t6": "T6",
-  "tag.tip": "Tip",
-  "tag.type-3-fun": "Type 3 fun"
+  "tag.tip": "Tip"
 }

@@ -42,7 +42,7 @@
     Content-Type = "application/vnd.google-earth.kml+xml"
 
 # Tags are a filter of the front page now, not pages of their own.
-# The ratings and grades are in groups: they come first, the first match wins.
+# The ratings, grades and fun scale are in groups: they come first, the first match wins.
 [[redirects]]
   from = "/tag/1-star"
   to = "/?tags=rating/1-star"
@@ -71,6 +71,11 @@
 [[redirects]]
   from = "/tag/t6"
   to = "/?tags=t-grade/t6"
+  status = 301
+
+[[redirects]]
+  from = "/tag/type-3-fun"
+  to = "/?tags=fun/type-3"
   status = 301
 
 [[redirects]]

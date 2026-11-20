@@ -7,7 +7,7 @@ imageMeta:
 featured: true
 date: Tue Jun 25 2024 12:00:00 GMT+0200 (Central European Summer Time)
 tags:
-  - type-3-fun
+  - fun/type-3
   - t-grade/t6
   - rating/3-stars
 gallery:
@@ -88,7 +88,7 @@ I didn't call [Rega](https://www.rega.ch/en). I was convinced it would go. It di
 
 Round the corner the slope eased onto bare rock, and the rest was easy: a few chains, a gorge, some stream hopping.
 
-About 5½ hours up and 2–3 down. Very happy to be off it. Proper [type 3 fun](https://www.rei.com/blog/climb/fun-scale).
+About 5½ hours up and 2-3 down. Very happy to be off it. Proper [type 3 fun](https://www.rei.com/blog/climb/fun-scale).
 
 <!-- learnings -->
 
