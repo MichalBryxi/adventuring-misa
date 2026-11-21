@@ -1,0 +1,23 @@
+# Die Wörter des Blogs auf Deutsch, mit "language: de" in site.yaml.
+
+# Die Namen deiner Tags, so wie sie die Seitenleiste zeigt. Ein Tag ohne
+# Namen hier zeigt seine Wörter: "trail-running" ist "Trail Running". Ein
+# Tag kann in einer Gruppe sein, wie in einem Ordner: "country/norway" ist
+# das Tag "norway" in der Gruppe "country".
+tags:
+  alp: Alp
+  grass: Gras
+  howto: Anleitung
+  country: Land
+  country/norway: Norwegen
+  country/scotland: Schottland
+  country/switzerland: Schweiz
+
+# Alle anderen Wörter des Blogs ("Entdecken", "Die Fakten",
+# "Fotogalerie"...) sind schon dabei, und du kannst jedes hier ändern. Die
+# ganze Liste, mit wo jedes erscheint, ist in
+# https://github.com/vast-ch/cowtent-core/blob/main/languages/de.yaml
+# Kopiere die Zeilen, die du ändern willst, mit den Überschriften darüber:
+#
+# sidebar:
+#   all-posts: Alle meine Touren

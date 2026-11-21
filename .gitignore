@@ -1,0 +1,4 @@
+/node_modules/
+/dist/
+# Every build installs the newest cowtent-core, nothing is pinned
+/pnpm-lock.yaml

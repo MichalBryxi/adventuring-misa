@@ -1,0 +1,13 @@
+{
+  "name": "cowtent-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bella's Cowtent - a sample blog on cowtent: fork it to start your own",
+  "scripts": {
+    "build": "cowtent build",
+    "start": "cowtent start"
+  },
+  "dependencies": {
+    "cowtent-core": "github:vast-ch/cowtent-core"
+  }
+}
