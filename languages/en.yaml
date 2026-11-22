@@ -1,17 +1,9 @@
-# The words of the blog in English, used with "language: en" in site.yaml.
-
-# The names of your tags, as the sidebar shows them. A tag without a name
-# here shows as its words: "trail-running" is "Trail Running". A tag can be
-# in one group, like a folder: "country/norway" is the tag "norway" in the
-# group "country".
-tags:
-  howto: How to
-
-# Every other word of the blog ("Explore", "The facts", "Photo gallery"...)
-# comes with it, and you can change any of them here. The full list, with
-# where each one shows up, is in
+# The names of the tags that don't read right as their words
+# ("trail-running" shows as "Trail Running" by itself). Any of cowtent's own
+# words can be reworded here too, see
 # https://github.com/vast-ch/cowtent-core/blob/main/languages/en.yaml
-# Copy the lines you want to change, keeping the headings above them:
-#
-# sidebar:
-#   all-posts: All my trips
+tags:
+  fun: Fun scale
+  fun/type-1: Type 1 fun
+  fun/type-3: Type 3 fun
+  t-grade: T-grade

@@ -1,21 +1,24 @@
-# Bella's Cowtent
+# Adventuring Míša
 
-**👉 To make this your own blog, start with
-[How to make this blog your own](posts/2026-11-21-how-this-blog-works/index.md).**
-Everything works from the GitHub website: nothing to install.
+The content of [adventuring-misa.pudr.com](https://adventuring-misa.pudr.com), Michal Bryxí's outdoor blog: trail running, T6 scrambles, Munros, paragliding and gear.
 
-A sample blog written by Bella the cow, on **cowtent** (cow + tent =
-content). Its posts, pages and photos are plain files; GitHub builds them
-into the website after every commit
-([.github/workflows/publish.yml](.github/workflows/publish.yml)) with
-[cowtent-core](https://github.com/vast-ch/cowtent-core).
+It's a [cowtent](https://github.com/vast-ch/cowtent-core) blog, started from [cowtent-starter](https://github.com/vast-ch/cowtent-starter): only Markdown, photos and settings live here, and cowtent builds them into the site. Netlify builds it on every commit (`netlify.toml`).
 
 ```
-site.yaml               title, colour, menu, language, theme
-languages/en.yaml       tag names, and any word of the blog to reword
-cover.jpg               the sidebar photo
-posts/<name>/index.md   a post, its photos next to it
-pages/<name>/index.md   a page (About me)
+site.yaml                       title, colour, menu, theme
+languages/en.yaml               names of the tags
+cover.jpg                       the sidebar photo
+posts/<date>-<slug>/index.md    a post at /<date>-<slug>
+posts/<...>/gallery/            its gallery: "01 The caption.jpg"
+pages/about-me/index.md         the About me page at /page/about-me
 ```
 
-Version 0.1.0, see [CHANGELOG.md](CHANGELOG.md).
+```sh
+pnpm install
+pnpm start    # http://localhost:4200
+pnpm build    # dist/, every page prerendered and checked
+```
+
+## Licence
+
+The posts, pages, photos and route files are © Michal Bryxí, [CC BY-NC-SA 4.0](LICENSE.md). cowtent itself is MIT.

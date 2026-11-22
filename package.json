@@ -1,13 +1,13 @@
 {
-  "name": "cowtent-starter",
-  "version": "0.1.0",
+  "name": "adventuring-misa",
   "private": true,
-  "description": "Bella's Cowtent - a sample blog on cowtent: fork it to start your own",
+  "description": "Adventuring Míša, Michal Bryxí's outdoor blog, on cowtent",
   "scripts": {
     "build": "cowtent build",
     "start": "cowtent start"
   },
   "dependencies": {
     "cowtent-core": "github:vast-ch/cowtent-core"
-  }
+  },
+  "packageManager": "pnpm@10.34.9"
 }

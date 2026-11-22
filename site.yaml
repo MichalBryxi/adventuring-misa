@@ -1,53 +1,21 @@
-# The settings of the blog. Change anything here in the GitHub editor and
-# commit: the site rebuilds with it in a couple of minutes.
+# The settings of the blog. Every setting is explained in
+# https://github.com/vast-ch/cowtent-starter/blob/main/site.yaml
 
-# The name of the blog, in the sidebar, the browser tab and the RSS feed
-title: Bella's Cowtent
+title: Adventuring Míša
 
-# Optional: a shorter name, under the icon when the blog is installed as an
-# app on a phone. Without it, that's the title.
-# short-title: Cowtent
+#   keeps each emoji on the line of its word
+description: "🪂 Paragliding · ⛰️🏃‍♂️ Running · 🧗‍♂️ Climbing · 🚴‍♂️ Biking · ⛷️ Skiing · 🌱 Vegan"
 
-# One line under the title
-description: A cow on summer holidays in the Alps. Grass reviews, trail etiquette and views.
+owner: Michal Bryxí
+colour: "#047857"
+email: michal.bryxi@gmail.com
+url: https://adventuring-misa.pudr.com
 
-# Your name, shown as "by ..." at the top and bottom of every page
-owner: Bella
-
-# The colour of links, buttons and highlights: any "#rrggbb"
-# (pick one on https://htmlcolorcodes.com)
-colour: "#b45309"
-
-# Optional: with an email address, every post ends with a "Send me a comment"
-# button that opens the reader's email app
-# email: bella@example.com
-
-# Optional: the address of the site. Only needed with your own domain,
-# otherwise it's the one GitHub Pages gives the site.
-# url: https://bellascowtent.ch
-
-# The page your name links to: pages/about/index.md
-about: about
-
-# Links under "Explore" in the sidebar, each to a page in pages/
+# The page my name links to, and the links under "Explore"
+about: about-me
 menu:
   - label: About me
-    page: about
+    page: about-me
 
-# The language of the words around the posts ("Explore", "The facts",
-# dates...): en or de. Their texts, and the names of your tags, are in
-# languages/en.yaml (or languages/de.yaml).
 language: en
-
-# The look of the blog:
-#   alps      the sidebar on the left with your cover photo, and snowy
-#             mountains over the page (the one you get without this line)
-#   basecamp  the name across the top, the sidebar on the right in cards
-#   night     dark, with a menu bar under the stars across the top
 theme: alps
-
-# Let visitors pick a theme themselves: a "Theme" choice appears at the end
-# of the sidebar and in the menu on phones. Each visitor's browser remembers
-# their pick; everyone else still gets the theme above. Delete the line (or
-# write false) to turn it off.
-theme-switcher: true

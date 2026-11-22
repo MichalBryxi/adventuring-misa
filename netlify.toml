@@ -1,0 +1,28 @@
+[build]
+  # cowtent build: every page prerendered, then checked; a post or page that
+  # didn't make it fails the deploy
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  # Node version comes from .node-version
+  PNPM_VERSION = "10.34.9"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Own scripts only. The hashes are vite-ember-ssr's inline
+    # window.__vite_ember_ssr_rehydrate__=true in every prerendered page
+    # (without it the app renders a second copy of the page instead of taking
+    # over the prerendered one) and Glimmer's empty rehydration marker. The
+    # inline style is the blog's colour; data: images are the CSS's SVG masks
+    # and badges. Posts embed YouTube and the swisstopo map.
+    Content-Security-Policy = "default-src 'none'; script-src 'self' 'sha256-MfYh/LekLsLcPVuIvVP7z6hB2DLOW2rpVtqBX4Q+3+w=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src https://www.youtube.com/embed/ https://www.youtube-nocookie.com/embed/ https://map.geo.admin.ch/; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'none'"
+
+# Fingerprinted by Vite: never change, cache forever. The swisstopo map
+# viewer (map.geo.admin.ch) loads a post's GPX from here cross-origin.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
