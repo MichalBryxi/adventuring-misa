@@ -1,7 +1,9 @@
 [build]
   # cowtent build: every page prerendered, then checked; a post or page that
-  # didn't make it fails the deploy
-  command = "pnpm build"
+  # didn't make it fails the deploy. pnpm update first: Netlify restores
+  # node_modules from its cache, and pnpm would keep the cowtent-core it
+  # has there instead of the newest from its main branch
+  command = "pnpm update cowtent-core && pnpm build"
   publish = "dist"
 
 [build.environment]
