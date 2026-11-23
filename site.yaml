@@ -9,7 +9,7 @@ description: "🪂 Paragliding · ⛰️🏃‍♂️ Running · 🧗‍♂️
 owner: Michal Bryxí
 colour: "#047857"
 email: michal.bryxi@gmail.com
-url: https://adventuring-misa.pudr.com
+# url: https://adventuring-misa.pudr.com  (Netlify gives the blog its address)
 
 # The page my name links to, and the links under "Explore"
 about: about-me

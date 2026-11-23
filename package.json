@@ -3,7 +3,7 @@
   "private": true,
   "description": "Adventuring Míša, Michal Bryxí's outdoor blog, on cowtent",
   "scripts": {
-    "build": "cowtent build",
+    "build": "pnpm update cowtent-core && cowtent build",
     "start": "cowtent start"
   },
   "dependencies": {

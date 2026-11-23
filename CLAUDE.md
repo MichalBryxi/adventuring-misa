@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 "Adventuring Míša" - a personal outdoor blog (trail running, hiking, T6 scrambles, Munros, gear reviews) at https://adventuring-misa.pudr.com. It is a [cowtent](https://github.com/vast-ch/cowtent-core) blog, started from cowtent-starter: this repo holds only the content and the settings. The platform (Ember app, build, themes) is `cowtent-core` (`~/vast/cowtent-core`), installed from its `main` branch on every build: there's no lockfile and nothing is pinned. A change the blog needs from the platform goes into cowtent-core, never here.
 
-Netlify builds and hosts it (`netlify.toml`): `pnpm build` runs `cowtent build`, which prerenders every page and fails if a post, page, photo or link didn't make it.
+Netlify builds and hosts it. Its build files (`package.json` scripts, `netlify.toml`, `.node-version`, `.gitignore`) are the starter's, as in a fresh fork: change them in cowtent-starter, not here. `pnpm build` runs `pnpm update cowtent-core && cowtent build`, which prerenders every page and fails if a post, page, photo or link didn't make it. The site's address comes from Netlify (its `URL`), so site.yaml has no `url:`.
 
 ## Commands
 
@@ -35,4 +35,4 @@ Never use an em dash or en dash anywhere (content, settings, docs, titles): writ
 
 ## Netlify
 
-`netlify.toml` has the Content-Security-Policy and the CORS header swisstopo needs to load a GPX.
+`netlify.toml` is only the build command and folder. The Content-Security-Policy (a `<meta>` in every page) and the headers (`dist/_headers`: assets cached forever, CORS for swisstopo's GPX) come with cowtent-core's build (its `lib/host.mjs`).
