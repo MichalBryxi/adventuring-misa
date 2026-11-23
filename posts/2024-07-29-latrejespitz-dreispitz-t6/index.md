@@ -64,6 +64,3 @@ The way down goes along the ridge to the west, past an alp hut to **Renggpass**,
 
 It's a lot of up for a very short bit of fun, but it was a fun day out.
 
-## The route
-
-![Latrejespitz - Dreispitz route](./route.gpx)

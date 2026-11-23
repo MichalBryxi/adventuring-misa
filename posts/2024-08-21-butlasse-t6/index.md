@@ -55,6 +55,3 @@ The first half, from the saddle up, is a **scree field** where you constantly kn
 
 The SAC route is an out-and-back from Griesalp. I came back down the ridge to Sefinenfurgge and went over to the other side instead: down the **ladders** below the pass, past the **Rotstockhütte** and on to Gimmelwald. So much nicer than going back the same way.
 
-## The route
-
-![Bütlasse NW ridge route](./route.gpx)

@@ -69,6 +69,3 @@ About 5½ hours up and 2-3 down. Very happy to be off it. Proper [type 3 fun](ht
 - [-] **Ignored the warning signals**
   I didn't know the terrain or how the snow behaves in those conditions, and went onto the snowfield anyway. It went, but it was pure luck.
 
-## The route
-
-![Katzenwegli route](./route.gpx)

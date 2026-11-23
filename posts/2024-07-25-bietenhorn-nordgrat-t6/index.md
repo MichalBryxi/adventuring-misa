@@ -83,6 +83,3 @@ Honestly, I'm not sure I'd call it a T6.
 - [+] **Went around the serac**
   The line led straight under a lone hanging serac. I took worse ground instead of risking it falling on my head.
 
-## The route
-
-![Bietenhorn Nordgrat route](./route.gpx)
