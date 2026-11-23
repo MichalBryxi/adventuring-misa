@@ -1,6 +1,5 @@
 ---
 title: Magic Pass places as GPX
-image: ./cover.jpg
 date: 2023-05-10T21:32:43+02:00
 tags:
   - country/switzerland

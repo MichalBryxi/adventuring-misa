@@ -1,6 +1,5 @@
 ---
 title: Salomon Ring of Steall Skyrace
-image: ./cover.jpg
 date: 2019-09-21T17:53:33+01:00
 tags:
   - running

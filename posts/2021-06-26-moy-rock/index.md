@@ -1,6 +1,5 @@
 ---
 title: Moy Rock
-image: ./01.jpg
 date: 2021-06-26T08:02:42+01:00
 tags:
   - climbing

@@ -1,6 +1,5 @@
 ---
 title: An Teallach
-image: ./03.jpg
 date: 2021-06-07T07:49:12+01:00
 tags:
   - hiking

@@ -1,6 +1,5 @@
 ---
 title: Salomon Mamores VK
-image: ./cover.jpg
 date: 2019-09-20T17:53:33+01:00
 tags:
   - running

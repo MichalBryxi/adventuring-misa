@@ -1,6 +1,5 @@
 ---
 title: Hardergrat ridge
-image: ./01.jpg
 date: 2022-07-02T07:54:32+02:00
 tags:
   - country/switzerland

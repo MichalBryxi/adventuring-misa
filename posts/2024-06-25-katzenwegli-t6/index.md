@@ -1,6 +1,5 @@
 ---
 title: "T6: Von Stechelberg über das Katzenwegli"
-image: ./cover.jpg
 date: 2024-06-25T12:00:00+02:00
 tags:
   - fun/type-3

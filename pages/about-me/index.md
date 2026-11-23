@@ -1,6 +1,5 @@
 ---
 title: Michal Bryxí
-image: ./about-me.jpg
 ---
 
 Hi, I'm Míša. I'm Czech and grew up in Pilsen, then lived in Belfast, Edinburgh and Inverness, and now I live in [Interlaken](https://en.wikipedia.org/wiki/Interlaken), between the lakes, with the Swiss Alps on the doorstep. This blog is where I write up my adventures in the mountains and things around.

@@ -1,6 +1,5 @@
 ---
 title: Scott Kinabalu Ultra Rc review
-image: ./01.jpg
 date: 2024-05-30T08:27:13+02:00
 tags:
   - running

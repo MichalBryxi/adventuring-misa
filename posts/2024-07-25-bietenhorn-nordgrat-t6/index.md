@@ -1,6 +1,5 @@
 ---
 title: "T6: Bietenhorn - Schwarzbirg Nordgrat"
-image: ./cover.jpg
 date: 2024-07-25T12:00:00+02:00
 tags:
   - fun/type-1

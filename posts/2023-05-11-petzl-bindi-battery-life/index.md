@@ -1,6 +1,5 @@
 ---
 title: Petzl Bindi battery life
-image: ./cover.jpg
 date: 2023-05-11T14:07:49+02:00
 tags:
   - review

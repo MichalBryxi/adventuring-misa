@@ -1,6 +1,5 @@
 ---
 title: Suunto 9 FusedTrack
-image: ./cover.jpg
 date: 2019-09-07T17:53:33+01:00
 tags:
   - review

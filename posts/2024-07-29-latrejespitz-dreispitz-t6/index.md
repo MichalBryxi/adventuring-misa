@@ -1,6 +1,5 @@
 ---
 title: "T6: Latrejespitz - Dreispitz"
-image: ./cover.jpg
 date: 2024-07-29T12:00:00+02:00
 tags:
   - fun/type-1

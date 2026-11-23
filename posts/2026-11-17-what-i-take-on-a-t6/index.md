@@ -1,6 +1,5 @@
 ---
 title: What I take on a T6
-image: ./cover.jpg
 published: false
 date: 2026-11-17T12:00:00+01:00
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Jabra Elite Active 65t
-image: ./2020-04-12-jabra-elita-active-65t.jpg
 date: 2020-04-12T17:42:50+01:00
 tags:
   - review

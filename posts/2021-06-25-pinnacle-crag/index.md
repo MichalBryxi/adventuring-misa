@@ -1,6 +1,5 @@
 ---
 title: Pinnacle Crag
-image: ./01.jpg
 date: 2021-06-25T22:39:23+01:00
 tags:
   - climbing

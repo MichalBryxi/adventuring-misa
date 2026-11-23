@@ -1,6 +1,5 @@
 ---
 title: Loch Ness 360° as a three day hike
-image: ./2021-05-17-loch-ness-360-cover.jpg
 date: 2021-05-15T22:00:00+01:00
 tags:
   - hiking

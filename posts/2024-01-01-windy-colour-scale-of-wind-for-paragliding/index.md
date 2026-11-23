@@ -1,6 +1,5 @@
 ---
 title: "'Windy' colour scale of wind for Paragliding"
-image: ./2024-01-01-windy-cover.jpg
 date: 2024-01-01T18:10:16+01:00
 tags:
   - tip

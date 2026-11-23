@@ -1,6 +1,5 @@
 ---
 title: Tromsø skyrace - Tromsdalstinden
-image: ./2019-08-03-tromso-skyrace-tromsdalstind-cover.jpg
 date: 2019-08-03T09:23:03+01:00
 tags:
   - running

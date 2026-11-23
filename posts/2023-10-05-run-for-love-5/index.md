@@ -1,6 +1,5 @@
 ---
 title: Run For Love 5
-image: ./2023-10-05-run-for-love-cover.jpg
 date: 2023-09-17T07:27:49+02:00
 tags:
   - running

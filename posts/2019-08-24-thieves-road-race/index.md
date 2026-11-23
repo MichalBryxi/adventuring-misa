@@ -1,6 +1,5 @@
 ---
 title: Thieves Road Race 2019
-image: ./cover.jpg
 date: 2019-08-24T09:23:03+01:00
 tags:
   - running

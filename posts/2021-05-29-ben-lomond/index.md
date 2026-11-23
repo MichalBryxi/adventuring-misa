@@ -1,6 +1,5 @@
 ---
 title: Ben Lomond
-image: ./02.jpg
 date: 2021-05-29T11:56:46+01:00
 tags:
   - munro

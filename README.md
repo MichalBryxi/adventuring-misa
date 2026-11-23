@@ -9,7 +9,8 @@ site.yaml                       title, colour, menu, theme
 languages/en.yaml               names of the tags
 cover.jpg                       the sidebar photo
 posts/<date>-<slug>/index.md    a post at /<date>-<slug>
-posts/<...>/gallery/            its gallery: "01 The caption.jpg"
+posts/<...>/cover - ….jpg       its cover: "cover - The alt text.jpg"
+posts/<...>/gallery/            its gallery: "01 - The caption.jpg"
 pages/about-me/index.md         the About me page at /page/about-me
 ```
 

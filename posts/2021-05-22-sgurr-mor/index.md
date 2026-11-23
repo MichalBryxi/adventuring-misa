@@ -1,6 +1,5 @@
 ---
 title: Sgùrr Mòr
-image: ./01.jpg 
 date: 2021-05-22T09:19:42+01:00
 tags:
   - munro

@@ -1,6 +1,5 @@
 ---
 title: Ben Chonzie
-image: ./01.jpg
 date: 2021-05-30T21:59:26+01:00
 tags:
   - hiking

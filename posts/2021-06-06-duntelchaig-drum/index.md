@@ -1,6 +1,5 @@
 ---
 title: Duntelchaig - Drum
-image: ./01.jpg
 date: 2021-06-06T18:59:08+01:00
 tags:
   - climbing
