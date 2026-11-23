@@ -11,9 +11,13 @@ facts:
     - name: "Stechelberg"
       altitude: 910
       link: "https://en.wikipedia.org/wiki/Stechelberg"
+      latitude: 46.55532
+      longitude: 7.90201
     - name: "Silberhornhütte"
       altitude: 2663
       link: "https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/"
+      latitude: 46.54904
+      longitude: 7.93358
   distance: 13.8
   ascent: 1820
   duration: "5:36"
@@ -68,5 +72,3 @@ About 5½ hours up and 2-3 down. Very happy to be off it. Proper [type 3 fun](ht
 ## The route
 
 ![Katzenwegli route](./route.gpx)
-
-[SAC route description](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/silberhornhuette-sac-2147000249/mountain-hiking/von-stechelberg-ueber-das-katzenwegli-6805/)

@@ -11,21 +11,35 @@ facts:
     - name: "Grütschalp"
       altitude: 1486
       link: "https://en.wikipedia.org/wiki/Gr%C3%BCtschalp"
+      latitude: 46.59652
+      longitude: 7.89087
     - name: "Soushorn"
       altitude: 2327
+      latitude: 46.59321
+      longitude: 7.87516
     - name: "Ougstmatthorn"
       altitude: 2461
+      latitude: 46.58843
+      longitude: 7.86886
     - name: "Wyssbirg"
       altitude: 2616
+      latitude: 46.58436
+      longitude: 7.86551
     - name: "Bietenhorn"
       altitude: 2755
       link: "https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/bietenhorn-schwarzbirg-177/"
+      latitude: 46.57706
+      longitude: 7.86473
     - name: "Schilthornhütte"
       altitude: 2433
       link: "https://www.schilthornhuette.ch/"
+      latitude: 46.57005
+      longitude: 7.86272
     - name: "Birg"
       altitude: 2684
       link: "https://en.wikipedia.org/wiki/Birg"
+      latitude: 46.5617
+      longitude: 7.856
   distance: 11.3
   ascent: 1746
   duration: "5:00:23"
@@ -72,5 +86,3 @@ Honestly, I'm not sure I'd call it a T6.
 ## The route
 
 ![Bietenhorn Nordgrat route](./route.gpx)
-
-[SAC route description](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/bietenhorn-schwarzbirg-177/mountain-hiking/nordgrat-4192/)

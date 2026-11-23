@@ -11,18 +11,28 @@ facts:
     - name: "Kiental"
       altitude: 958
       link: "https://en.wikipedia.org/wiki/Kiental"
+      latitude: 46.58945
+      longitude: 7.72317
     - name: "First (Kiental)"
       altitude: 2439
       link: "https://www.sac-cas.ch/de/huetten-und-touren/sac-tourenportal/first-kiental-8904/berg-und-alpinwandern/"
+      latitude: 46.59941
+      longitude: 7.76946
     - name: "Latrejespitz"
       altitude: 2436
       link: "https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/latrejespitz-6116/mountain-hiking/"
+      latitude: 46.5957
+      longitude: 7.76829
     - name: "Dreispitz"
       altitude: 2519
       link: "https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/dreispitz-523/mountain-hiking/"
+      latitude: 46.59279
+      longitude: 7.75963
     - name: "Renggpass"
       altitude: 1816
       link: "https://www.sac-cas.ch/de/huetten-und-touren/sac-tourenportal/renggpass-be-2395/berg-und-alpinwandern/"
+      latitude: 46.60611
+      longitude: 7.74594
     - name: "Kiental"
       altitude: 958
   distance: 18.9
@@ -57,5 +67,3 @@ It's a lot of up for a very short bit of fun, but it was a fun day out.
 ## The route
 
 ![Latrejespitz - Dreispitz route](./route.gpx)
-
-[SAC route description](https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/dreispitz-523/mountain-hiking/)
