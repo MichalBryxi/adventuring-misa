@@ -36,4 +36,6 @@ Never use an em dash or en dash anywhere (content, settings, docs, titles): writ
 
 ## Netlify
 
+Netlify builds on every push to main, so check changes locally first (a production build, `node ~/vast.ch/cowtent-core/bin/cowtent.mjs build`, with its `dist` served locally) and push only to release, everything pending at once.
+
 `netlify.toml` is only the build command and folder. The Content-Security-Policy (a `<meta>` in every page) and the headers (`dist/_headers`: assets cached forever, CORS for swisstopo's GPX) come with cowtent-core's build (its `lib/host.mjs`).
