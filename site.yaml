@@ -7,8 +7,18 @@ title: Adventuring Míša
 description: "🪂 Paragliding · ⛰️🏃‍♂️ Running · 🧗‍♂️ Climbing · 🚴‍♂️ Biking · ⛷️ Skiing · 🌱 Vegan"
 
 owner: Michal Bryxí
-colour: "#ff1493"
 email: michal.bryxi@gmail.com
+
+# 80s neon over the theme's colours: hot pink, electric cyan, laser lime,
+# electric purple, blaze orange, neon yellow, electric blue
+colours:
+  - "#ff1493"
+  - "#00e5ff"
+  - "#39ff14"
+  - "#b026ff"
+  - "#ff6b00"
+  - "#ffe600"
+  - "#2d5bff"
 # url: https://adventuring-misa.pudr.com  (Netlify gives the blog its address)
 
 # The page my name links to, and the links under "Explore"
